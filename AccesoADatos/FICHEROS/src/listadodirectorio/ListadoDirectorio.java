@@ -1,6 +1,7 @@
 package listadodirectorio;
 
 import java.io.File;
+import java.text.SimpleDateFormat;
 
 public class ListadoDirectorio {
     public static void main(String[] args) {
@@ -24,10 +25,21 @@ public class ListadoDirectorio {
                 // Recorremos el array y añadimos un prefijo para mostrar
                 // si el objeto es un fichero o diretorio
                 for (File f: ficheros){
+                    // Mostramos si es fichero o directorio
                     String textoDescr = f.isDirectory() ? "/" : f.isFile() ? "_" : "?";
+                    // Enseñamos los permisos que contiene, en formato Linux (ejecución "x", lectura "r",
+                    // escritura "w")
                     String permisos = (f.canExecute() ? "x" : "-") + (f.canRead() ? "r" : "-") + (f.canWrite() ? "w" : "-");
+                    // Mostramos el tamaño que ocupa en bytes
                     Long tamaño = (f.length());
-                    System.out.println("(" + textoDescr + ")" + "(" + permisos + ") " + f.getName() + " Tamaño:" + "(" + tamaño + " bytes)");
+                    // Señalamos la fecha de última modificación del archivo
+                    String fechaMod = new SimpleDateFormat("dd/MM/yyyy").format(f.lastModified());
+                    // Imprimimos por pantalla la información de cada fichero o directorio correspondiente
+                    System.out.println("Tipo: " + "(" + textoDescr + ")" +
+                            " // Permisos: " + "(" + permisos + ") " +
+                            " // Nombre: " + f.getName() +
+                            " // Tamaño: " + "(" + tamaño + " bytes)" +
+                            " // Última modificación: " + "(" + fechaMod + ")");
                 }
             }
         }
