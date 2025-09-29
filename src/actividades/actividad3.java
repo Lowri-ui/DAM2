@@ -37,7 +37,7 @@ public class actividad3 {
 
                 int posicion = linea.indexOf(word);
                 while(posicion != -1) {
-                    System.out.println("La palabra " + word + " está en la línea " + i + ", columna " + posicion + 1);
+                    System.out.println("La palabra " + word + "  está en la línea " + i + ", columna " + posicion + 1);
                     // Buscar la siguiente aparición en la misma línea
                     posicion = linea.indexOf(word, posicion + 1);
                 }
