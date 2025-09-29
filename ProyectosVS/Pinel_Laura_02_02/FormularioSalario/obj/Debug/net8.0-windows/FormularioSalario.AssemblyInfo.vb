@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("FormularioSalario"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+64dfbb5643fda8e8ff0872de3cde8cbea55ca562"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b9934d2e6103ac2fe65998e403c0ef2f61e6f11f"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("FormularioSalario"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("FormularioSalario"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _

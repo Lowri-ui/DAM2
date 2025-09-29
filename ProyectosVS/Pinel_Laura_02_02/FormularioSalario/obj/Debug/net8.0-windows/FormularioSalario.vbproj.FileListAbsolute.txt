@@ -1,0 +1,17 @@
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_02_02\FormularioSalario\bin\Debug\net8.0-windows\FormularioSalario.exe
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_02_02\FormularioSalario\bin\Debug\net8.0-windows\FormularioSalario.deps.json
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_02_02\FormularioSalario\bin\Debug\net8.0-windows\FormularioSalario.runtimeconfig.json
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_02_02\FormularioSalario\bin\Debug\net8.0-windows\FormularioSalario.dll
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_02_02\FormularioSalario\bin\Debug\net8.0-windows\FormularioSalario.pdb
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_02_02\FormularioSalario\obj\Debug\net8.0-windows\FormularioSalario.Form1.resources
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_02_02\FormularioSalario\obj\Debug\net8.0-windows\FormularioSalario.vbproj.GenerateResource.cache
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_02_02\FormularioSalario\obj\Debug\net8.0-windows\FormularioSalario.GeneratedMSBuildEditorConfig.editorconfig
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_02_02\FormularioSalario\obj\Debug\net8.0-windows\FormularioSalario.AssemblyInfoInputs.cache
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_02_02\FormularioSalario\obj\Debug\net8.0-windows\FormularioSalario.AssemblyInfo.vb
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_02_02\FormularioSalario\obj\Debug\net8.0-windows\FormularioSalario.vbproj.CoreCompileInputs.cache
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_02_02\FormularioSalario\obj\Debug\net8.0-windows\FormularioSalario.sourcelink.json
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_02_02\FormularioSalario\obj\Debug\net8.0-windows\FormularioSalario.dll
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_02_02\FormularioSalario\obj\Debug\net8.0-windows\refint\FormularioSalario.dll
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_02_02\FormularioSalario\obj\Debug\net8.0-windows\FormularioSalario.pdb
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_02_02\FormularioSalario\obj\Debug\net8.0-windows\FormularioSalario.genruntimeconfig.cache
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_02_02\FormularioSalario\obj\Debug\net8.0-windows\ref\FormularioSalario.dll
