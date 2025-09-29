@@ -34,17 +34,19 @@ public class actividad3 {
 
             // Bucle que se ejecuta mientras haya líneas para leer (hasta que readLine() devuelva null).
             while (linea != null) {
+
+                int posicion = linea.indexOf(word);
+                while(posicion != -1) {
+                    System.out.println("La palabra " + word + "está en la línea " + i + ", columna " + posicion + 1);
+                    // Buscar la siguiente aparición en la misma línea
+                    posicion = linea.indexOf(word, posicion + 1);
+                }
+
                 // Formatea e imprime el número de línea (incrementado) y el contenido de la línea.
                 System.out.format("[%5d] %s", ++i, linea);
                 System.out.println();
                 linea = fbr.readLine(); // Lee la siguiente línea.
 
-                int posicion = linea.indexOf(word);
-                while(posicion != -1) {
-                    System.out.println("La palabra " + word + "está en la línea " + i + ", columna " + posicion+1);
-                    // Buscar la siguiente aparición en la misma línea
-                    posicion = linea.indexOf(word, posicion + 1);
-                }
             }
         }
         // Captura la excepción si el archivo no se encuentra.
