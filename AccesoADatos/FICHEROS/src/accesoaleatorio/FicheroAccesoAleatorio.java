@@ -1,4 +1,4 @@
-package accesoaleatorio;
+ package accesoaleatorio;
 
 // Almacenamiento de registros de longitud fija en fichero acceso aleatorio
 /*
