@@ -19,14 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Form1.vb [Design]",
+              "Title": "Form1.vb [Dise\u00F1o]",
               "DocumentMoniker": "D:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_04\\Calcular Precio\\Calcular Precio\\Form1.vb",
               "RelativeDocumentMoniker": "Calcular Precio\\Form1.vb",
-              "ToolTip": "D:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_04\\Calcular Precio\\Calcular Precio\\Form1.vb [Design]",
-              "RelativeToolTip": "Calcular Precio\\Form1.vb [Design]",
+              "ToolTip": "D:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_04\\Calcular Precio\\Calcular Precio\\Form1.vb [Dise\u00F1o]",
+              "RelativeToolTip": "Calcular Precio\\Form1.vb [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-10-03T06:33:59.12Z",
-              "EditorCaption": " [Design]"
+              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }

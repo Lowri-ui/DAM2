@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("Calcular Precio"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1f1b35da7a0a7d7fa99c38763bfca7a71b6ee928"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e98570c6c6c8499be369dcede1cf04d29b8373e4"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("Calcular Precio"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("Calcular Precio"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _
