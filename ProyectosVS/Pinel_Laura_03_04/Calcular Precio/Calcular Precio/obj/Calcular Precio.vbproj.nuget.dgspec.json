@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_04\\Calcular Precio\\Calcular Precio\\Calcular Precio.vbproj": {}
+    "C:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_04\\Calcular Precio\\Calcular Precio\\Calcular Precio.vbproj": {}
   },
   "projects": {
-    "D:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_04\\Calcular Precio\\Calcular Precio\\Calcular Precio.vbproj": {
+    "C:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_04\\Calcular Precio\\Calcular Precio\\Calcular Precio.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_04\\Calcular Precio\\Calcular Precio\\Calcular Precio.vbproj",
+        "projectUniqueName": "C:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_04\\Calcular Precio\\Calcular Precio\\Calcular Precio.vbproj",
         "projectName": "Calcular Precio",
-        "projectPath": "D:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_04\\Calcular Precio\\Calcular Precio\\Calcular Precio.vbproj",
-        "packagesPath": "C:\\Users\\DAM2_Diurno\\.nuget\\packages\\",
-        "outputPath": "D:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_04\\Calcular Precio\\Calcular Precio\\obj\\",
+        "projectPath": "C:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_04\\Calcular Precio\\Calcular Precio\\Calcular Precio.vbproj",
+        "packagesPath": "C:\\Users\\laura\\.nuget\\packages\\",
+        "outputPath": "C:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_04\\Calcular Precio\\Calcular Precio\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\DAM2_Diurno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\laura\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

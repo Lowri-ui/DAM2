@@ -1,0 +1,18 @@
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_04\Calcular Precio\Calcular Precio\bin\Debug\net8.0-windows\Calcular Precio.exe
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_04\Calcular Precio\Calcular Precio\bin\Debug\net8.0-windows\Calcular Precio.deps.json
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_04\Calcular Precio\Calcular Precio\bin\Debug\net8.0-windows\Calcular Precio.runtimeconfig.json
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_04\Calcular Precio\Calcular Precio\bin\Debug\net8.0-windows\Calcular Precio.dll
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_04\Calcular Precio\Calcular Precio\bin\Debug\net8.0-windows\Calcular Precio.pdb
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_04\Calcular Precio\Calcular Precio\obj\Debug\net8.0-windows\Calcular_Precio.Form1.resources
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_04\Calcular Precio\Calcular Precio\obj\Debug\net8.0-windows\Calcular_Precio.Resources.resources
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_04\Calcular Precio\Calcular Precio\obj\Debug\net8.0-windows\Calcular Precio.vbproj.GenerateResource.cache
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_04\Calcular Precio\Calcular Precio\obj\Debug\net8.0-windows\Calcular Precio.GeneratedMSBuildEditorConfig.editorconfig
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_04\Calcular Precio\Calcular Precio\obj\Debug\net8.0-windows\Calcular Precio.AssemblyInfoInputs.cache
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_04\Calcular Precio\Calcular Precio\obj\Debug\net8.0-windows\Calcular Precio.AssemblyInfo.vb
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_04\Calcular Precio\Calcular Precio\obj\Debug\net8.0-windows\Calcular Precio.vbproj.CoreCompileInputs.cache
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_04\Calcular Precio\Calcular Precio\obj\Debug\net8.0-windows\Calcular Precio.sourcelink.json
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_04\Calcular Precio\Calcular Precio\obj\Debug\net8.0-windows\Calcular Precio.dll
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_04\Calcular Precio\Calcular Precio\obj\Debug\net8.0-windows\refint\Calcular Precio.dll
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_04\Calcular Precio\Calcular Precio\obj\Debug\net8.0-windows\Calcular Precio.pdb
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_04\Calcular Precio\Calcular Precio\obj\Debug\net8.0-windows\Calcular Precio.genruntimeconfig.cache
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_04\Calcular Precio\Calcular Precio\obj\Debug\net8.0-windows\ref\Calcular Precio.dll

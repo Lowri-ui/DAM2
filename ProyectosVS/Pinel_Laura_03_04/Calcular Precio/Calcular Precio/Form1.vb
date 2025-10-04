@@ -12,30 +12,45 @@
     End Sub
     Private Sub btnGenerar_Click(sender As Object, e As EventArgs) Handles btnGenerar.Click
         Dim PrecioSinIva, PrecioConIva, Descuento, Total As Double
-        If chbIva.Checked Then
-            txtPrecioConIva = PrecioSinIva * 1.21
-            txtPrecioConIva = Format(txtPrecioConIva, "0.00")
-        Else
-            txtPrecioConIva = txtPrecioSinIva
-            txtPrecioConIva = Format(txtPrecioConIva, "0.00")
+
+        'Validar entrada de precio sin IVA
+        If Not Double.TryParse(txtPrecioSinIva.Text, PrecioSinIva) Then
+            MessageBox.Show("Ingrese un número válido para el precio sin IVA.", "Error de entrada", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return
         End If
+
+        'Calcular precio con IVA
+        If chbIva.Checked Then
+            PrecioConIva = PrecioSinIva * 1.21
+        Else
+            PrecioConIva = PrecioSinIva
+        End If
+        'Mostrar precio con IVA
+        txtPrecioConIva.Text = Format(PrecioConIva)
+
+        'Calcular descuento
         If chbDescuento.Checked Then
-            If txtPrecioConIva >= 100 Then
-                txtDescuento = txtPrecioConIva * 0.05
-                txtDescuento = Format(txtDescuento, "0.00")
-            ElseIf txtPrecioConIva >= 500 Then
-                txtPrecioConIva = txtPrecioConIva * 0.1
-                txtDescuento = Format(txtDescuento, "0.00")
-            ElseIf txtPrecioConIva >= 1000 Then
-                txtDescuento = txtPrecioConIva * 0.15
-                txtDescuento = Format(txtDescuento, "0.00")
+            If PrecioConIva >= 1000 Then
+                Descuento = PrecioConIva * 0.15
+            ElseIf PrecioConIva >= 500 Then
+                Descuento = PrecioConIva * 0.1
+            ElseIf PrecioConIva >= 100 Then
+                Descuento = PrecioConIva * 0.05
+            Else
+                'Mostrar mensaje si no hay descuento
+                MessageBox.Show("No hay descuento para precios menores a 100€.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Descuento = 0
             End If
         Else
-            txtDescuento = 0
-            txtDescuento = Format(txtDescuento, "0.00")
+            Descuento = 0
         End If
-        txtTotal = txtPrecioConIva - txtDescuento
-        txtTotal = Format(txtTotal, "0.00")
+        'Mostrar descuento
+        txtDescuento.Text = Format(Descuento)
+
+        'Calcular total a pagar
+        Total = PrecioConIva - Descuento
+        'Mostrar total a pagar
+        txtTotal.Text = Format(Total)
     End Sub
 
 End Class

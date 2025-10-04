@@ -1,9 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_04\\Calcular Precio\\",
+  "WorkspaceRootPath": "C:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_04\\Calcular Precio\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{18FD74FD-5B23-4E87-AE1F-2369907D4CE0}|Calcular Precio\\Calcular Precio.vbproj|d:\\github\\dam2\\proyectosvs\\pinel_laura_03_04\\calcular precio\\calcular precio\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{18FD74FD-5B23-4E87-AE1F-2369907D4CE0}|Calcular Precio\\Calcular Precio.vbproj|c:\\github\\dam2\\proyectosvs\\pinel_laura_03_04\\calcular precio\\calcular precio\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{18FD74FD-5B23-4E87-AE1F-2369907D4CE0}|Calcular Precio\\Calcular Precio.vbproj|solutionrelative:calcular precio\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18FD74FD-5B23-4E87-AE1F-2369907D4CE0}|Calcular Precio\\Calcular Precio.vbproj|c:\\github\\dam2\\proyectosvs\\pinel_laura_03_04\\calcular precio\\calcular precio\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{18FD74FD-5B23-4E87-AE1F-2369907D4CE0}|Calcular Precio\\Calcular Precio.vbproj|solutionrelative:calcular precio\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     }
   ],
@@ -19,10 +23,23 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Form1.vb [Dise\u00F1o]",
-              "DocumentMoniker": "D:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_04\\Calcular Precio\\Calcular Precio\\Form1.vb",
+              "Title": "Form1.vb",
+              "DocumentMoniker": "C:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_04\\Calcular Precio\\Calcular Precio\\Form1.vb",
               "RelativeDocumentMoniker": "Calcular Precio\\Form1.vb",
-              "ToolTip": "D:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_04\\Calcular Precio\\Calcular Precio\\Form1.vb [Dise\u00F1o]",
+              "ToolTip": "C:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_04\\Calcular Precio\\Calcular Precio\\Form1.vb",
+              "RelativeToolTip": "Calcular Precio\\Form1.vb",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAowCIAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-10-03T07:13:35.955Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_04\\Calcular Precio\\Calcular Precio\\Form1.vb",
+              "RelativeDocumentMoniker": "Calcular Precio\\Form1.vb",
+              "ToolTip": "C:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_04\\Calcular Precio\\Calcular Precio\\Form1.vb [Dise\u00F1o]",
               "RelativeToolTip": "Calcular Precio\\Form1.vb [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-10-03T06:33:59.12Z",
