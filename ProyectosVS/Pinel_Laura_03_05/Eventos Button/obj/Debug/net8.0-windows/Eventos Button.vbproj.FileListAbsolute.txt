@@ -1,0 +1,18 @@
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_05\Eventos Button\obj\Debug\net8.0-windows\Eventos_Button.Form1.resources
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_05\Eventos Button\obj\Debug\net8.0-windows\Eventos Button.vbproj.GenerateResource.cache
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_05\Eventos Button\obj\Debug\net8.0-windows\Eventos Button.GeneratedMSBuildEditorConfig.editorconfig
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_05\Eventos Button\obj\Debug\net8.0-windows\Eventos Button.AssemblyInfoInputs.cache
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_05\Eventos Button\obj\Debug\net8.0-windows\Eventos Button.AssemblyInfo.vb
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_05\Eventos Button\obj\Debug\net8.0-windows\Eventos Button.vbproj.CoreCompileInputs.cache
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_05\Eventos Button\obj\Debug\net8.0-windows\Eventos Button.sourcelink.json
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_05\Eventos Button\bin\Debug\net8.0-windows\Eventos Button.exe
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_05\Eventos Button\bin\Debug\net8.0-windows\Eventos Button.deps.json
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_05\Eventos Button\bin\Debug\net8.0-windows\Eventos Button.runtimeconfig.json
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_05\Eventos Button\bin\Debug\net8.0-windows\Eventos Button.dll
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_05\Eventos Button\bin\Debug\net8.0-windows\Eventos Button.pdb
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_05\Eventos Button\obj\Debug\net8.0-windows\Eventos Button.dll
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_05\Eventos Button\obj\Debug\net8.0-windows\refint\Eventos Button.dll
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_05\Eventos Button\obj\Debug\net8.0-windows\Eventos Button.pdb
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_05\Eventos Button\obj\Debug\net8.0-windows\Eventos Button.genruntimeconfig.cache
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_05\Eventos Button\obj\Debug\net8.0-windows\ref\Eventos Button.dll
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_05\Eventos Button\obj\Debug\net8.0-windows\Eventos_Button.Resources.resources
