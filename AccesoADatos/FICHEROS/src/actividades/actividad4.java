@@ -1,23 +1,42 @@
-  package actividades;
+package actividades;
+import java.io.*;
+import java.nio.charset.StandardCharsets;
+
 public class actividad4 {
-    //Crea un programa que, a partir de un fichero de texto codificado en UTF-8,
-    // genere un fichero de texto codificado en ISO-8859-1 y otro en UTF-16
-    static void main(String[] args) {
-        //LECTURA DEL FICHERO
+    public static void main(String[] args) {
+        String archivoEntrada = args[0];
+        String archivoSalidaISO = "salida_iso8859-1.txt";
+        String archivoSalidaUTF16 = "salida_utf16.txt";
+
         try {
-            FileReader fr = new  FileReader("" +
-                    "input.txt");
-            BufferedReader br = new BufferedReader(fr);
+            // Leer el archivo UTF-8 línea a línea
+            BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(archivoEntrada), StandardCharsets.UTF_8));
 
             String linea;
-            while ((linea = br.readLine())!=null){
+            System.out.println("Contenido leído del archivo UTF-8:");
+            while ((linea = reader.readLine()) != null) {
                 System.out.println(linea);
+                // Escribir en ISO-8859-1
+                escribirLinea(archivoSalidaISO, linea, "ISO-8859-1");
+                // Escribir en UTF-16
+                escribirLinea(archivoSalidaUTF16, linea, "UTF-16");
             }
+            reader.close();
 
-            br.close();
+            System.out.println("\nArchivos generados:");
+            System.out.println("- " + archivoSalidaISO + " (ISO-8859-1)");
+            System.out.println("- " + archivoSalidaUTF16 + " (UTF-16)");
+            System.out.println("Verifica los archivos con un editor hexadecimal para ver diferencias.");
 
         } catch (IOException e) {
-            System.out.println("ERROR al leer el archivo."+e.getMessage());
+            System.err.println("Error: " + e.getMessage());
         }
+    }
+
+    private static void escribirLinea(String archivoSalida, String linea, String charset) throws IOException {
+        BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(archivoSalida, true), charset));
+        writer.write(linea);
+        writer.newLine();
+        writer.close();
     }
 }

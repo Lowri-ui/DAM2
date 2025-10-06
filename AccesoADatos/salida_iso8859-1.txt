@@ -1,0 +1,3 @@
+Esto es una línea con vocales acentuadas: Á, É, Í, Ó, Ú, á, é, í, ó, ú.
+También incluye ñ y ç.
+Línea final.
