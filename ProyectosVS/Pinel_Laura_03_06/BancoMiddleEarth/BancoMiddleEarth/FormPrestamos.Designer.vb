@@ -23,18 +23,18 @@ Partial Class FormPrestamos
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         lblBienvenido = New Label()
-        txbNombre = New TextBox()
+        txbNombreUsuario = New TextBox()
         lblDatosPersonales = New Label()
         lblDetallesPrestamo = New Label()
-        ComboBox1 = New ComboBox()
-        ComboBox2 = New ComboBox()
-        ComboBox4 = New ComboBox()
-        TextBox1 = New TextBox()
+        cbRaza = New ComboBox()
+        cbLugarOrigen = New ComboBox()
+        cbCuotas = New ComboBox()
+        txbMonto = New TextBox()
         lblRaza = New Label()
-        Label2 = New Label()
-        Label3 = New Label()
-        Label4 = New Label()
-        btnConfirmar = New Button()
+        lblLugarOrigen = New Label()
+        lblMonto = New Label()
+        lblCuotas = New Label()
+        btnConfirmarSolicitud = New Button()
         btnVolver = New Button()
         SuspendLayout()
         ' 
@@ -48,13 +48,13 @@ Partial Class FormPrestamos
         lblBienvenido.TabIndex = 0
         lblBienvenido.Text = "Bienvenid@, "
         ' 
-        ' txbNombre
+        ' txbNombreUsuario
         ' 
-        txbNombre.Font = New Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        txbNombre.Location = New Point(211, 72)
-        txbNombre.Name = "txbNombre"
-        txbNombre.Size = New Size(210, 29)
-        txbNombre.TabIndex = 1
+        txbNombreUsuario.Font = New Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txbNombreUsuario.Location = New Point(211, 72)
+        txbNombreUsuario.Name = "txbNombreUsuario"
+        txbNombreUsuario.Size = New Size(210, 29)
+        txbNombreUsuario.TabIndex = 1
         ' 
         ' lblDatosPersonales
         ' 
@@ -76,37 +76,39 @@ Partial Class FormPrestamos
         lblDetallesPrestamo.TabIndex = 3
         lblDetallesPrestamo.Text = "Detalles del préstamo"
         ' 
-        ' ComboBox1
+        ' cbRaza
         ' 
-        ComboBox1.FormattingEnabled = True
-        ComboBox1.Items.AddRange(New Object() {"Elfo", "Hobbit", "Humano", "Troll", "Orco", "Mago"})
-        ComboBox1.Location = New Point(106, 247)
-        ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(160, 23)
-        ComboBox1.TabIndex = 4
+        cbRaza.FormattingEnabled = True
+        cbRaza.Items.AddRange(New Object() {"Elfo", "Hobbit", "Humano", "Troll", "Orco", "Mago"})
+        cbRaza.Location = New Point(106, 247)
+        cbRaza.Name = "cbRaza"
+        cbRaza.Size = New Size(160, 23)
+        cbRaza.TabIndex = 4
         ' 
-        ' ComboBox2
+        ' cbLugarOrigen
         ' 
-        ComboBox2.FormattingEnabled = True
-        ComboBox2.Location = New Point(106, 329)
-        ComboBox2.Name = "ComboBox2"
-        ComboBox2.Size = New Size(160, 23)
-        ComboBox2.TabIndex = 5
+        cbLugarOrigen.FormattingEnabled = True
+        cbLugarOrigen.Items.AddRange(New Object() {"Ciudad del Valle", "Rivendell", "Rohan", "Hobbiton", "La Montaña Solitaria", "Mordor"})
+        cbLugarOrigen.Location = New Point(106, 329)
+        cbLugarOrigen.Name = "cbLugarOrigen"
+        cbLugarOrigen.Size = New Size(160, 23)
+        cbLugarOrigen.TabIndex = 5
         ' 
-        ' ComboBox4
+        ' cbCuotas
         ' 
-        ComboBox4.FormattingEnabled = True
-        ComboBox4.Location = New Point(432, 329)
-        ComboBox4.Name = "ComboBox4"
-        ComboBox4.Size = New Size(160, 23)
-        ComboBox4.TabIndex = 7
+        cbCuotas.FormattingEnabled = True
+        cbCuotas.Items.AddRange(New Object() {"3", "6", "12", "18", "24"})
+        cbCuotas.Location = New Point(432, 329)
+        cbCuotas.Name = "cbCuotas"
+        cbCuotas.Size = New Size(160, 23)
+        cbCuotas.TabIndex = 7
         ' 
-        ' TextBox1
+        ' txbMonto
         ' 
-        TextBox1.Location = New Point(432, 247)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(160, 23)
-        TextBox1.TabIndex = 8
+        txbMonto.Location = New Point(432, 247)
+        txbMonto.Name = "txbMonto"
+        txbMonto.Size = New Size(160, 23)
+        txbMonto.TabIndex = 8
         ' 
         ' lblRaza
         ' 
@@ -118,46 +120,46 @@ Partial Class FormPrestamos
         lblRaza.TabIndex = 9
         lblRaza.Text = "Raza"
         ' 
-        ' Label2
+        ' lblLugarOrigen
         ' 
-        Label2.AutoSize = True
-        Label2.Font = New Font("Times New Roman", 11.25F)
-        Label2.Location = New Point(106, 304)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(105, 17)
-        Label2.TabIndex = 10
-        Label2.Text = "Lugar de Origen"
+        lblLugarOrigen.AutoSize = True
+        lblLugarOrigen.Font = New Font("Times New Roman", 11.25F)
+        lblLugarOrigen.Location = New Point(106, 304)
+        lblLugarOrigen.Name = "lblLugarOrigen"
+        lblLugarOrigen.Size = New Size(105, 17)
+        lblLugarOrigen.TabIndex = 10
+        lblLugarOrigen.Text = "Lugar de Origen"
         ' 
-        ' Label3
+        ' lblMonto
         ' 
-        Label3.AutoSize = True
-        Label3.Font = New Font("Times New Roman", 11.25F)
-        Label3.Location = New Point(432, 222)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(125, 17)
-        Label3.TabIndex = 11
-        Label3.Text = "Monto del préstamo"
+        lblMonto.AutoSize = True
+        lblMonto.Font = New Font("Times New Roman", 11.25F)
+        lblMonto.Location = New Point(432, 222)
+        lblMonto.Name = "lblMonto"
+        lblMonto.Size = New Size(125, 17)
+        lblMonto.TabIndex = 11
+        lblMonto.Text = "Monto del préstamo"
         ' 
-        ' Label4
+        ' lblCuotas
         ' 
-        Label4.AutoSize = True
-        Label4.Font = New Font("Times New Roman", 11.25F)
-        Label4.Location = New Point(432, 304)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(49, 17)
-        Label4.TabIndex = 12
-        Label4.Text = "Cuotas"
+        lblCuotas.AutoSize = True
+        lblCuotas.Font = New Font("Times New Roman", 11.25F)
+        lblCuotas.Location = New Point(432, 304)
+        lblCuotas.Name = "lblCuotas"
+        lblCuotas.Size = New Size(49, 17)
+        lblCuotas.TabIndex = 12
+        lblCuotas.Text = "Cuotas"
         ' 
-        ' btnConfirmar
+        ' btnConfirmarSolicitud
         ' 
-        btnConfirmar.BackColor = Color.Tan
-        btnConfirmar.Font = New Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnConfirmar.Location = New Point(292, 404)
-        btnConfirmar.Name = "btnConfirmar"
-        btnConfirmar.Size = New Size(129, 55)
-        btnConfirmar.TabIndex = 13
-        btnConfirmar.Text = "Confirmar solicitud"
-        btnConfirmar.UseVisualStyleBackColor = False
+        btnConfirmarSolicitud.BackColor = Color.Tan
+        btnConfirmarSolicitud.Font = New Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnConfirmarSolicitud.Location = New Point(292, 404)
+        btnConfirmarSolicitud.Name = "btnConfirmarSolicitud"
+        btnConfirmarSolicitud.Size = New Size(129, 55)
+        btnConfirmarSolicitud.TabIndex = 13
+        btnConfirmarSolicitud.Text = "Confirmar solicitud"
+        btnConfirmarSolicitud.UseVisualStyleBackColor = False
         ' 
         ' btnVolver
         ' 
@@ -178,18 +180,18 @@ Partial Class FormPrestamos
         BackColor = Color.BlanchedAlmond
         ClientSize = New Size(703, 496)
         Controls.Add(btnVolver)
-        Controls.Add(btnConfirmar)
-        Controls.Add(Label4)
-        Controls.Add(Label3)
-        Controls.Add(Label2)
+        Controls.Add(btnConfirmarSolicitud)
+        Controls.Add(lblCuotas)
+        Controls.Add(lblMonto)
+        Controls.Add(lblLugarOrigen)
         Controls.Add(lblRaza)
-        Controls.Add(TextBox1)
-        Controls.Add(ComboBox4)
-        Controls.Add(ComboBox2)
-        Controls.Add(ComboBox1)
+        Controls.Add(txbMonto)
+        Controls.Add(cbCuotas)
+        Controls.Add(cbLugarOrigen)
+        Controls.Add(cbRaza)
         Controls.Add(lblDetallesPrestamo)
         Controls.Add(lblDatosPersonales)
-        Controls.Add(txbNombre)
+        Controls.Add(txbNombreUsuario)
         Controls.Add(lblBienvenido)
         Name = "FormPrestamos"
         Text = "FormPréstamos"
@@ -198,17 +200,17 @@ Partial Class FormPrestamos
     End Sub
 
     Friend WithEvents lblBienvenido As Label
-    Friend WithEvents txbNombre As TextBox
+    Friend WithEvents txbNombreUsuario As TextBox
     Friend WithEvents lblDatosPersonales As Label
     Friend WithEvents lblDetallesPrestamo As Label
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents ComboBox4 As ComboBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents cbRaza As ComboBox
+    Friend WithEvents cbLugarOrigen As ComboBox
+    Friend WithEvents cbCuotas As ComboBox
+    Friend WithEvents txbMonto As TextBox
     Friend WithEvents lblRaza As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents btnConfirmar As Button
+    Friend WithEvents lblLugarOrigen As Label
+    Friend WithEvents lblMonto As Label
+    Friend WithEvents lblCuotas As Label
+    Friend WithEvents btnConfirmarSolicitud As Button
     Friend WithEvents btnVolver As Button
 End Class

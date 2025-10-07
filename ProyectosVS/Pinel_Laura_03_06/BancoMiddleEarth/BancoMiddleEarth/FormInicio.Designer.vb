@@ -24,8 +24,8 @@ Partial Class FormInicio
     Private Sub InitializeComponent()
         pbBankImage = New PictureBox()
         lblNombreBanco = New Label()
-        lblNombre = New Label()
-        TextBox1 = New TextBox()
+        lblIndiqueSuNombre = New Label()
+        txbIngresoDeNombre = New TextBox()
         btnSolicitud = New Button()
         btnSalir = New Button()
         CType(pbBankImage, ComponentModel.ISupportInitialize).BeginInit()
@@ -52,23 +52,23 @@ Partial Class FormInicio
         lblNombreBanco.TabIndex = 1
         lblNombreBanco.Text = "Banco de la Montaña Solitaria"
         ' 
-        ' lblNombre
+        ' lblIndiqueSuNombre
         ' 
-        lblNombre.AutoSize = True
-        lblNombre.Font = New Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lblNombre.Location = New Point(143, 249)
-        lblNombre.Name = "lblNombre"
-        lblNombre.Size = New Size(170, 23)
-        lblNombre.TabIndex = 2
-        lblNombre.Text = "Indique su nombre:"
+        lblIndiqueSuNombre.AutoSize = True
+        lblIndiqueSuNombre.Font = New Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblIndiqueSuNombre.Location = New Point(143, 249)
+        lblIndiqueSuNombre.Name = "lblIndiqueSuNombre"
+        lblIndiqueSuNombre.Size = New Size(170, 23)
+        lblIndiqueSuNombre.TabIndex = 2
+        lblIndiqueSuNombre.Text = "Indique su nombre:"
         ' 
-        ' TextBox1
+        ' txbIngresoDeNombre
         ' 
-        TextBox1.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox1.Location = New Point(334, 247)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(211, 29)
-        TextBox1.TabIndex = 3
+        txbIngresoDeNombre.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txbIngresoDeNombre.Location = New Point(334, 247)
+        txbIngresoDeNombre.Name = "txbIngresoDeNombre"
+        txbIngresoDeNombre.Size = New Size(211, 29)
+        txbIngresoDeNombre.TabIndex = 3
         ' 
         ' btnSolicitud
         ' 
@@ -102,8 +102,8 @@ Partial Class FormInicio
         ClientSize = New Size(703, 496)
         Controls.Add(btnSalir)
         Controls.Add(btnSolicitud)
-        Controls.Add(TextBox1)
-        Controls.Add(lblNombre)
+        Controls.Add(txbIngresoDeNombre)
+        Controls.Add(lblIndiqueSuNombre)
         Controls.Add(lblNombreBanco)
         Controls.Add(pbBankImage)
         Name = "FormInicio"
@@ -115,8 +115,8 @@ Partial Class FormInicio
 
     Friend WithEvents pbBankImage As PictureBox
     Friend WithEvents lblNombreBanco As Label
-    Friend WithEvents lblNombre As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents lblIndiqueSuNombre As Label
+    Friend WithEvents txbIngresoDeNombre As TextBox
     Friend WithEvents btnSolicitud As Button
     Friend WithEvents btnSalir As Button
 

@@ -31,7 +31,7 @@ Partial Class FormSolucion
         ' txbCuotaTotal
         ' 
         txbCuotaTotal.Font = New Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        txbCuotaTotal.Location = New Point(245, 241)
+        txbCuotaTotal.Location = New Point(232, 235)
         txbCuotaTotal.Name = "txbCuotaTotal"
         txbCuotaTotal.Size = New Size(210, 29)
         txbCuotaTotal.TabIndex = 3

@@ -8,23 +8,19 @@
     "net8.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\DAM2_Diurno\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\laura\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_06\\BancoMiddleEarth\\BancoMiddleEarth\\BancoMiddleEarth.vbproj",
+      "projectUniqueName": "C:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_06\\BancoMiddleEarth\\BancoMiddleEarth\\BancoMiddleEarth.vbproj",
       "projectName": "BancoMiddleEarth",
-      "projectPath": "D:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_06\\BancoMiddleEarth\\BancoMiddleEarth\\BancoMiddleEarth.vbproj",
-      "packagesPath": "C:\\Users\\DAM2_Diurno\\.nuget\\packages\\",
-      "outputPath": "D:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_06\\BancoMiddleEarth\\BancoMiddleEarth\\obj\\",
+      "projectPath": "C:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_06\\BancoMiddleEarth\\BancoMiddleEarth\\BancoMiddleEarth.vbproj",
+      "packagesPath": "C:\\Users\\laura\\.nuget\\packages\\",
+      "outputPath": "C:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_06\\BancoMiddleEarth\\BancoMiddleEarth\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\DAM2_Diurno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\laura\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
