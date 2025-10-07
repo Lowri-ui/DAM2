@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("BancoMiddleEarth"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9c1f0e6b770453e7ada3a1d764da06fc9823b2a5"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+555917a1e39cb4593624861fc7871e9e2b109c1e"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("BancoMiddleEarth"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("BancoMiddleEarth"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _

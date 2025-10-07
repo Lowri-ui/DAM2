@@ -31,8 +31,7 @@
                 penalizacionLugar = 0
         End Select
         'Cálculo total'
-        solucion = (Val(txbMonto.Text) / Val(cbCuotas.Text)) * penalizacionRaza + penalizacionLugar
-
+        solucion = ((Val(txbMonto.Text) * (1 + penalizacionRaza)) + penalizacionLugar) / Val(cbCuotas.Text)
         FormSolucion.txbCuotaTotal.Text = Int(solucion)
         FormSolucion.Show()
         Me.Hide()

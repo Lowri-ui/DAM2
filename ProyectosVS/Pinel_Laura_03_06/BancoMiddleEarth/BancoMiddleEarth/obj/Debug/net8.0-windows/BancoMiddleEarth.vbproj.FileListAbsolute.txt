@@ -8,3 +8,13 @@ C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_06\BancoMiddleEarth\BancoMiddleEarth\o
 C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_06\BancoMiddleEarth\BancoMiddleEarth\obj\Debug\net8.0-windows\BancoMiddleEarth.AssemblyInfo.vb
 C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_06\BancoMiddleEarth\BancoMiddleEarth\obj\Debug\net8.0-windows\BancoMiddleEarth.vbproj.CoreCompileInputs.cache
 C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_06\BancoMiddleEarth\BancoMiddleEarth\obj\Debug\net8.0-windows\BancoMiddleEarth.sourcelink.json
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_06\BancoMiddleEarth\BancoMiddleEarth\bin\Debug\net8.0-windows\BancoMiddleEarth.exe
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_06\BancoMiddleEarth\BancoMiddleEarth\bin\Debug\net8.0-windows\BancoMiddleEarth.deps.json
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_06\BancoMiddleEarth\BancoMiddleEarth\bin\Debug\net8.0-windows\BancoMiddleEarth.runtimeconfig.json
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_06\BancoMiddleEarth\BancoMiddleEarth\bin\Debug\net8.0-windows\BancoMiddleEarth.dll
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_06\BancoMiddleEarth\BancoMiddleEarth\bin\Debug\net8.0-windows\BancoMiddleEarth.pdb
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_06\BancoMiddleEarth\BancoMiddleEarth\obj\Debug\net8.0-windows\BancoMiddleEarth.dll
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_06\BancoMiddleEarth\BancoMiddleEarth\obj\Debug\net8.0-windows\refint\BancoMiddleEarth.dll
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_06\BancoMiddleEarth\BancoMiddleEarth\obj\Debug\net8.0-windows\BancoMiddleEarth.pdb
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_06\BancoMiddleEarth\BancoMiddleEarth\obj\Debug\net8.0-windows\BancoMiddleEarth.genruntimeconfig.cache
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_06\BancoMiddleEarth\BancoMiddleEarth\obj\Debug\net8.0-windows\ref\BancoMiddleEarth.dll

@@ -7,20 +7,20 @@
       "RelativeMoniker": "D:0:0:{0BEC5A22-9BC8-4D31-8EBF-2A56E950D4B9}|BancoMiddleEarth\\BancoMiddleEarth.vbproj|solutionrelative:bancomiddleearth\\formprestamos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0BEC5A22-9BC8-4D31-8EBF-2A56E950D4B9}|BancoMiddleEarth\\BancoMiddleEarth.vbproj|c:\\github\\dam2\\proyectosvs\\pinel_laura_03_06\\bancomiddleearth\\bancomiddleearth\\formsolucion.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{0BEC5A22-9BC8-4D31-8EBF-2A56E950D4B9}|BancoMiddleEarth\\BancoMiddleEarth.vbproj|solutionrelative:bancomiddleearth\\formsolucion.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0BEC5A22-9BC8-4D31-8EBF-2A56E950D4B9}|BancoMiddleEarth\\BancoMiddleEarth.vbproj|c:\\github\\dam2\\proyectosvs\\pinel_laura_03_06\\bancomiddleearth\\bancomiddleearth\\formsolucion.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{0BEC5A22-9BC8-4D31-8EBF-2A56E950D4B9}|BancoMiddleEarth\\BancoMiddleEarth.vbproj|solutionrelative:bancomiddleearth\\formsolucion.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BEC5A22-9BC8-4D31-8EBF-2A56E950D4B9}|BancoMiddleEarth\\BancoMiddleEarth.vbproj|c:\\github\\dam2\\proyectosvs\\pinel_laura_03_06\\bancomiddleearth\\bancomiddleearth\\forminicio.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{0BEC5A22-9BC8-4D31-8EBF-2A56E950D4B9}|BancoMiddleEarth\\BancoMiddleEarth.vbproj|solutionrelative:bancomiddleearth\\forminicio.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0BEC5A22-9BC8-4D31-8EBF-2A56E950D4B9}|BancoMiddleEarth\\BancoMiddleEarth.vbproj|c:\\github\\dam2\\proyectosvs\\pinel_laura_03_06\\bancomiddleearth\\bancomiddleearth\\forminicio.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{0BEC5A22-9BC8-4D31-8EBF-2A56E950D4B9}|BancoMiddleEarth\\BancoMiddleEarth.vbproj|solutionrelative:bancomiddleearth\\forminicio.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0BEC5A22-9BC8-4D31-8EBF-2A56E950D4B9}|BancoMiddleEarth\\BancoMiddleEarth.vbproj|c:\\github\\dam2\\proyectosvs\\pinel_laura_03_06\\bancomiddleearth\\bancomiddleearth\\forminicio.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{0BEC5A22-9BC8-4D31-8EBF-2A56E950D4B9}|BancoMiddleEarth\\BancoMiddleEarth.vbproj|solutionrelative:bancomiddleearth\\forminicio.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+      "AbsoluteMoniker": "D:0:0:{0BEC5A22-9BC8-4D31-8EBF-2A56E950D4B9}|BancoMiddleEarth\\BancoMiddleEarth.vbproj|c:\\github\\dam2\\proyectosvs\\pinel_laura_03_06\\bancomiddleearth\\bancomiddleearth\\formsolucion.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{0BEC5A22-9BC8-4D31-8EBF-2A56E950D4B9}|BancoMiddleEarth\\BancoMiddleEarth.vbproj|solutionrelative:bancomiddleearth\\formsolucion.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0BEC5A22-9BC8-4D31-8EBF-2A56E950D4B9}|BancoMiddleEarth\\BancoMiddleEarth.vbproj|c:\\github\\dam2\\proyectosvs\\pinel_laura_03_06\\bancomiddleearth\\bancomiddleearth\\formprestamos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
@@ -34,24 +34,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FormSolucion.vb",
-              "DocumentMoniker": "C:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_06\\BancoMiddleEarth\\BancoMiddleEarth\\FormSolucion.vb",
-              "RelativeDocumentMoniker": "BancoMiddleEarth\\FormSolucion.vb",
-              "ToolTip": "C:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_06\\BancoMiddleEarth\\BancoMiddleEarth\\FormSolucion.vb",
-              "RelativeToolTip": "BancoMiddleEarth\\FormSolucion.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-10-07T17:43:29.405Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "FormSolucion.vb [Dise\u00F1o]",
               "DocumentMoniker": "C:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_06\\BancoMiddleEarth\\BancoMiddleEarth\\FormSolucion.vb",
               "RelativeDocumentMoniker": "BancoMiddleEarth\\FormSolucion.vb",
@@ -69,34 +56,9 @@
               "RelativeDocumentMoniker": "BancoMiddleEarth\\FormPrestamos.vb",
               "ToolTip": "C:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_06\\BancoMiddleEarth\\BancoMiddleEarth\\FormPrestamos.vb",
               "RelativeToolTip": "BancoMiddleEarth\\FormPrestamos.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAgwBAAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-10-07T16:49:29.047Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FormInicio.vb [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_06\\BancoMiddleEarth\\BancoMiddleEarth\\FormInicio.vb",
-              "RelativeDocumentMoniker": "BancoMiddleEarth\\FormInicio.vb",
-              "ToolTip": "C:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_06\\BancoMiddleEarth\\BancoMiddleEarth\\FormInicio.vb [Dise\u00F1o]",
-              "RelativeToolTip": "BancoMiddleEarth\\FormInicio.vb [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-10-07T09:52:12.559Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FormInicio.vb",
-              "DocumentMoniker": "C:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_06\\BancoMiddleEarth\\BancoMiddleEarth\\FormInicio.vb",
-              "RelativeDocumentMoniker": "BancoMiddleEarth\\FormInicio.vb",
-              "ToolTip": "C:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_06\\BancoMiddleEarth\\BancoMiddleEarth\\FormInicio.vb",
-              "RelativeToolTip": "BancoMiddleEarth\\FormInicio.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-10-07T16:21:05.143Z",
               "EditorCaption": ""
             },
             {
@@ -109,6 +71,44 @@
               "RelativeToolTip": "BancoMiddleEarth\\FormPrestamos.vb [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-10-07T10:26:05.892Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FormSolucion.vb",
+              "DocumentMoniker": "C:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_06\\BancoMiddleEarth\\BancoMiddleEarth\\FormSolucion.vb",
+              "RelativeDocumentMoniker": "BancoMiddleEarth\\FormSolucion.vb",
+              "ToolTip": "C:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_06\\BancoMiddleEarth\\BancoMiddleEarth\\FormSolucion.vb",
+              "RelativeToolTip": "BancoMiddleEarth\\FormSolucion.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-10-07T17:43:29.405Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FormInicio.vb",
+              "DocumentMoniker": "C:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_06\\BancoMiddleEarth\\BancoMiddleEarth\\FormInicio.vb",
+              "RelativeDocumentMoniker": "BancoMiddleEarth\\FormInicio.vb",
+              "ToolTip": "C:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_06\\BancoMiddleEarth\\BancoMiddleEarth\\FormInicio.vb",
+              "RelativeToolTip": "BancoMiddleEarth\\FormInicio.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-10-07T16:21:05.143Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormInicio.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_06\\BancoMiddleEarth\\BancoMiddleEarth\\FormInicio.vb",
+              "RelativeDocumentMoniker": "BancoMiddleEarth\\FormInicio.vb",
+              "ToolTip": "C:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_06\\BancoMiddleEarth\\BancoMiddleEarth\\FormInicio.vb [Dise\u00F1o]",
+              "RelativeToolTip": "BancoMiddleEarth\\FormInicio.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-10-07T09:52:12.559Z",
               "EditorCaption": " [Dise\u00F1o]"
             }
           ]

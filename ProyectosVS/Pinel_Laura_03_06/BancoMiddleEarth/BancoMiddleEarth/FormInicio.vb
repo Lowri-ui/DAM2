@@ -1,4 +1,5 @@
 ﻿Public Class FormInicio
+
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
         End
     End Sub
@@ -10,7 +11,7 @@
         End If
 
         ' Guardar el nombre en la variable pública o pasarla al siguiente formulario
-        FormPrestamos.lblBienvenido.Text = "Bienvenid@, " & txbIngresoDeNombre.Text
+        FormPrestamos.txbNombreUsuario.Text = txbIngresoDeNombre.Text
 
         ' Mostrar FormPrestamos y ocultar este
         FormPrestamos.Show()
