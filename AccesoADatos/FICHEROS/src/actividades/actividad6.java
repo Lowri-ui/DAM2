@@ -47,8 +47,7 @@ public class actividad6 {
      * @param campos  Una lista de pares (nombre del campo, longitud del campo)
      * @throws IOException Si ocurre un error al acceder al archivo.
      */
-    actividad6(String nomFich, List<Pair<String, Integer>> campos)
-            throws IOException {
+    actividad6(String nomFich, List<Pair<String, Integer>> campos) throws IOException {
         this.campos = campos;
         this.f = new File(nomFich);
         longReg = 0;
