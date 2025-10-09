@@ -154,6 +154,15 @@ public class actividad6 {
             reg.put("CP", "44126");
             faa.insertar(reg, 1);
 
+            //Añadimos un registro en una posición mayor que el número de registros totales
+            reg.clear();
+            reg.put("DNI", "52101234X");
+            reg.put("NOMBRE", "NUEVO REGISTRO");
+            reg.put("CP", "45626");
+            long nuevaPosicion = 5;
+            faa.insertar(reg, nuevaPosicion);
+
+            System.out.println("Registro añadido en posición:" + faa.getNumReg());
         } catch (IOException e) {
             // Maneja errores de entrada/salida.
             System.err.println("Error de E/S: " + e.getMessage());
