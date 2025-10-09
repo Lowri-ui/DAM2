@@ -162,7 +162,7 @@ public class actividad6 {
             long nuevaPosicion = 5;
             faa.insertar(reg, nuevaPosicion);
 
-            System.out.println("Registro añadido en posición:" + faa.getNumReg());
+            System.out.println("Registro añadido en posición:" + nuevaPosicion);
         } catch (IOException e) {
             // Maneja errores de entrada/salida.
             System.err.println("Error de E/S: " + e.getMessage());
