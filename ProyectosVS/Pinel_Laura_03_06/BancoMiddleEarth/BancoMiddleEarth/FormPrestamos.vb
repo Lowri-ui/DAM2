@@ -9,7 +9,7 @@
         Dim penalizacionLugar As Double = 0
 
         'Penalización por raza'
-        Select Case cbRaza.SelectedItem.ToString()
+        Select Case cboRaza.SelectedItem.ToString()
             Case "Elfo"
                 penalizacionRaza = 0.01  ' +1%
             Case "Hobbit"
@@ -24,14 +24,14 @@
                 penalizacionRaza = 0.0   ' sin penalización
         End Select
         'Penalización por lugar'
-        Select Case cbLugarOrigen.SelectedItem.ToString()
+        Select Case cboLugarOrigen.SelectedItem.ToString()
             Case "Mordor", "La Montaña Solitaria"
                 penalizacionLugar = 100
             Case Else
                 penalizacionLugar = 0
         End Select
         'Cálculo total'
-        solucion = ((Val(txbMonto.Text) * (1 + penalizacionRaza)) + penalizacionLugar) / Val(cbCuotas.Text)
+        solucion = ((Val(txbMonto.Text) * (1 + penalizacionRaza)) + penalizacionLugar) / Val(cboCuotas.Text)
         FormSolucion.txbCuotaTotal.Text = Int(solucion)
         FormSolucion.Show()
         Me.Hide()

@@ -26,9 +26,9 @@ Partial Class FormPrestamos
         txbNombreUsuario = New TextBox()
         lblDatosPersonales = New Label()
         lblDetallesPrestamo = New Label()
-        cbRaza = New ComboBox()
-        cbLugarOrigen = New ComboBox()
-        cbCuotas = New ComboBox()
+        cboRaza = New ComboBox()
+        cboLugarOrigen = New ComboBox()
+        cboCuotas = New ComboBox()
         txbMonto = New TextBox()
         lblRaza = New Label()
         lblLugarOrigen = New Label()
@@ -76,32 +76,32 @@ Partial Class FormPrestamos
         lblDetallesPrestamo.TabIndex = 3
         lblDetallesPrestamo.Text = "Detalles del préstamo"
         ' 
-        ' cbRaza
+        ' cboRaza
         ' 
-        cbRaza.FormattingEnabled = True
-        cbRaza.Items.AddRange(New Object() {"Elfo", "Hobbit", "Humano", "Troll", "Orco", "Mago"})
-        cbRaza.Location = New Point(106, 247)
-        cbRaza.Name = "cbRaza"
-        cbRaza.Size = New Size(160, 23)
-        cbRaza.TabIndex = 4
+        cboRaza.FormattingEnabled = True
+        cboRaza.Items.AddRange(New Object() {"Elfo", "Hobbit", "Humano", "Troll", "Orco", "Mago"})
+        cboRaza.Location = New Point(106, 247)
+        cboRaza.Name = "cboRaza"
+        cboRaza.Size = New Size(160, 23)
+        cboRaza.TabIndex = 4
         ' 
-        ' cbLugarOrigen
+        ' cboLugarOrigen
         ' 
-        cbLugarOrigen.FormattingEnabled = True
-        cbLugarOrigen.Items.AddRange(New Object() {"Ciudad del Valle", "Rivendell", "Rohan", "Hobbiton", "La Montaña Solitaria", "Mordor"})
-        cbLugarOrigen.Location = New Point(106, 329)
-        cbLugarOrigen.Name = "cbLugarOrigen"
-        cbLugarOrigen.Size = New Size(160, 23)
-        cbLugarOrigen.TabIndex = 5
+        cboLugarOrigen.FormattingEnabled = True
+        cboLugarOrigen.Items.AddRange(New Object() {"Ciudad del Valle", "Rivendell", "Rohan", "Hobbiton", "La Montaña Solitaria", "Mordor"})
+        cboLugarOrigen.Location = New Point(106, 329)
+        cboLugarOrigen.Name = "cboLugarOrigen"
+        cboLugarOrigen.Size = New Size(160, 23)
+        cboLugarOrigen.TabIndex = 5
         ' 
-        ' cbCuotas
+        ' cboCuotas
         ' 
-        cbCuotas.FormattingEnabled = True
-        cbCuotas.Items.AddRange(New Object() {"3", "6", "12", "18", "24"})
-        cbCuotas.Location = New Point(432, 329)
-        cbCuotas.Name = "cbCuotas"
-        cbCuotas.Size = New Size(160, 23)
-        cbCuotas.TabIndex = 7
+        cboCuotas.FormattingEnabled = True
+        cboCuotas.Items.AddRange(New Object() {"3", "6", "12", "18", "24"})
+        cboCuotas.Location = New Point(432, 329)
+        cboCuotas.Name = "cboCuotas"
+        cboCuotas.Size = New Size(160, 23)
+        cboCuotas.TabIndex = 7
         ' 
         ' txbMonto
         ' 
@@ -186,9 +186,9 @@ Partial Class FormPrestamos
         Controls.Add(lblLugarOrigen)
         Controls.Add(lblRaza)
         Controls.Add(txbMonto)
-        Controls.Add(cbCuotas)
-        Controls.Add(cbLugarOrigen)
-        Controls.Add(cbRaza)
+        Controls.Add(cboCuotas)
+        Controls.Add(cboLugarOrigen)
+        Controls.Add(cboRaza)
         Controls.Add(lblDetallesPrestamo)
         Controls.Add(lblDatosPersonales)
         Controls.Add(txbNombreUsuario)
@@ -203,9 +203,9 @@ Partial Class FormPrestamos
     Friend WithEvents txbNombreUsuario As TextBox
     Friend WithEvents lblDatosPersonales As Label
     Friend WithEvents lblDetallesPrestamo As Label
-    Friend WithEvents cbRaza As ComboBox
-    Friend WithEvents cbLugarOrigen As ComboBox
-    Friend WithEvents cbCuotas As ComboBox
+    Friend WithEvents cboRaza As ComboBox
+    Friend WithEvents cboLugarOrigen As ComboBox
+    Friend WithEvents cboCuotas As ComboBox
     Friend WithEvents txbMonto As TextBox
     Friend WithEvents lblRaza As Label
     Friend WithEvents lblLugarOrigen As Label
