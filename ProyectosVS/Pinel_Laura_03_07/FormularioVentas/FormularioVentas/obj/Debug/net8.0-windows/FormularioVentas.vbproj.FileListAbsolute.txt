@@ -1,0 +1,17 @@
+D:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_07\FormularioVentas\FormularioVentas\bin\Debug\net8.0-windows\FormularioVentas.exe
+D:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_07\FormularioVentas\FormularioVentas\bin\Debug\net8.0-windows\FormularioVentas.deps.json
+D:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_07\FormularioVentas\FormularioVentas\bin\Debug\net8.0-windows\FormularioVentas.runtimeconfig.json
+D:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_07\FormularioVentas\FormularioVentas\bin\Debug\net8.0-windows\FormularioVentas.dll
+D:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_07\FormularioVentas\FormularioVentas\bin\Debug\net8.0-windows\FormularioVentas.pdb
+D:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_07\FormularioVentas\FormularioVentas\obj\Debug\net8.0-windows\FormularioVentas.Form1.resources
+D:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_07\FormularioVentas\FormularioVentas\obj\Debug\net8.0-windows\FormularioVentas.vbproj.GenerateResource.cache
+D:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_07\FormularioVentas\FormularioVentas\obj\Debug\net8.0-windows\FormularioVentas.GeneratedMSBuildEditorConfig.editorconfig
+D:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_07\FormularioVentas\FormularioVentas\obj\Debug\net8.0-windows\FormularioVentas.AssemblyInfoInputs.cache
+D:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_07\FormularioVentas\FormularioVentas\obj\Debug\net8.0-windows\FormularioVentas.AssemblyInfo.vb
+D:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_07\FormularioVentas\FormularioVentas\obj\Debug\net8.0-windows\FormularioVentas.vbproj.CoreCompileInputs.cache
+D:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_07\FormularioVentas\FormularioVentas\obj\Debug\net8.0-windows\FormularioVentas.sourcelink.json
+D:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_07\FormularioVentas\FormularioVentas\obj\Debug\net8.0-windows\FormularioVentas.dll
+D:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_07\FormularioVentas\FormularioVentas\obj\Debug\net8.0-windows\refint\FormularioVentas.dll
+D:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_07\FormularioVentas\FormularioVentas\obj\Debug\net8.0-windows\FormularioVentas.pdb
+D:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_07\FormularioVentas\FormularioVentas\obj\Debug\net8.0-windows\FormularioVentas.genruntimeconfig.cache
+D:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_07\FormularioVentas\FormularioVentas\obj\Debug\net8.0-windows\ref\FormularioVentas.dll
