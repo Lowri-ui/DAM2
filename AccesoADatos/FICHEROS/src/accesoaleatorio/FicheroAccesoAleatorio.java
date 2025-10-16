@@ -47,7 +47,7 @@ public class FicheroAccesoAleatorio {
      * @param campos  Una lista de pares (nombre del campo, longitud del campo)
      * @throws IOException Si ocurre un error al acceder al archivo.
      */
-    FicheroAccesoAleatorio(String nomFich, List<Pair<String, Integer>> campos)
+    public FicheroAccesoAleatorio(String nomFich, List<Pair<String, Integer>> campos)
             throws IOException {
         this.campos = campos;
         this.f = new File(nomFich);
