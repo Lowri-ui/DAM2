@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo_azul_claro"
+    tools:context=".MainActivity">
+    <FrameLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#FFB6C1"
+        android:layout_gravity="right|top">
+    </FrameLayout >
+    <FrameLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#FFB6C1"
+        android:layout_gravity="center|top">
+    </FrameLayout >
+    <FrameLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#FFB6C1"
+        android:layout_gravity="left|top">
+    </FrameLayout >
+    <FrameLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#A9CCE3"
+        android:layout_gravity="center|right">
+    </FrameLayout >
+    <FrameLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#A9CCE3"
+        android:layout_gravity="center">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Laura Pinel García"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#333333"
+            android:textSize="12sp"
+            android:textStyle="bold">
+        </TextView>
+    </FrameLayout >
+
+    <FrameLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#A9CCE3"
+        android:layout_gravity="center|left">
+    </FrameLayout >
+    <FrameLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#D7BDE2"
+        android:layout_gravity="bottom|right">
+    </FrameLayout >
+    <FrameLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#D7BDE2"
+        android:layout_gravity="bottom|center">
+    </FrameLayout >
+    <FrameLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#D7BDE2"
+        android:layout_gravity="bottom|left">
+    </FrameLayout >
+</FrameLayout>
