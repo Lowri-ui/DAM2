@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Panel1 = New Panel()
         ToolStrip2 = New ToolStrip()
         ToolStripComboBox2 = New ToolStripComboBox()
@@ -51,9 +52,14 @@ Partial Class Form1
         ToolStripMenuItem11 = New ToolStripMenuItem()
         ToolStripMenuItem12 = New ToolStripMenuItem()
         RichTextBox1 = New RichTextBox()
+        Panel2 = New Panel()
+        pbImagen = New PictureBox()
+        lbTitulo = New Label()
         Panel1.SuspendLayout()
         ToolStrip2.SuspendLayout()
         MenuStrip2.SuspendLayout()
+        Panel2.SuspendLayout()
+        CType(pbImagen, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Panel1
@@ -61,7 +67,7 @@ Partial Class Form1
         Panel1.BackColor = Color.DimGray
         Panel1.Controls.Add(ToolStrip2)
         Panel1.Controls.Add(MenuStrip2)
-        Panel1.Location = New Point(1, 0)
+        Panel1.Location = New Point(2, 39)
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(800, 61)
         Panel1.TabIndex = 2
@@ -240,19 +246,53 @@ Partial Class Form1
         ' 
         ' RichTextBox1
         ' 
-        RichTextBox1.Location = New Point(32, 88)
+        RichTextBox1.Location = New Point(24, 106)
         RichTextBox1.Name = "RichTextBox1"
         RichTextBox1.Size = New Size(747, 332)
         RichTextBox1.TabIndex = 3
         RichTextBox1.Text = ""
         ' 
+        ' Panel2
+        ' 
+        Panel2.BackColor = Color.IndianRed
+        Panel2.Controls.Add(lbTitulo)
+        Panel2.Controls.Add(pbImagen)
+        Panel2.Location = New Point(2, 2)
+        Panel2.Name = "Panel2"
+        Panel2.Size = New Size(800, 36)
+        Panel2.TabIndex = 4
+        ' 
+        ' pbImagen
+        ' 
+        pbImagen.BackColor = Color.Transparent
+        pbImagen.Image = My.Resources.Resources.notas_adhesivas1
+        pbImagen.InitialImage = CType(resources.GetObject("pbImagen.InitialImage"), Image)
+        pbImagen.Location = New Point(10, 4)
+        pbImagen.Name = "pbImagen"
+        pbImagen.Size = New Size(64, 29)
+        pbImagen.SizeMode = PictureBoxSizeMode.Zoom
+        pbImagen.TabIndex = 0
+        pbImagen.TabStop = False
+        ' 
+        ' lbTitulo
+        ' 
+        lbTitulo.AutoSize = True
+        lbTitulo.Font = New Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lbTitulo.Location = New Point(80, 7)
+        lbTitulo.Name = "lbTitulo"
+        lbTitulo.Size = New Size(182, 20)
+        lbTitulo.TabIndex = 5
+        lbTitulo.Text = "BLOC DE NOTAS LAURA "
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(800, 450)
+        ClientSize = New Size(800, 510)
+        Controls.Add(Panel2)
         Controls.Add(RichTextBox1)
         Controls.Add(Panel1)
+        ForeColor = SystemColors.Control
         Name = "Form1"
         Text = "Form1"
         Panel1.ResumeLayout(False)
@@ -261,6 +301,9 @@ Partial Class Form1
         ToolStrip2.PerformLayout()
         MenuStrip2.ResumeLayout(False)
         MenuStrip2.PerformLayout()
+        Panel2.ResumeLayout(False)
+        Panel2.PerformLayout()
+        CType(pbImagen, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
     Friend WithEvents Panel1 As Panel
@@ -292,5 +335,8 @@ Partial Class Form1
     Friend WithEvents ToolStripMenuItem11 As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem12 As ToolStripMenuItem
     Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents pbImagen As PictureBox
+    Friend WithEvents lbTitulo As Label
 
 End Class
