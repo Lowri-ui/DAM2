@@ -27,9 +27,9 @@ Partial Class Form1
         ToolStrip2 = New ToolStrip()
         ToolStripComboBox2 = New ToolStripComboBox()
         ToolStripSeparator11 = New ToolStripSeparator()
-        ToolStripLabel1 = New ToolStripLabel()
+        ToolStripLabel1 = New ToolStripButton()
         ToolStripSeparator12 = New ToolStripSeparator()
-        ToolStripLabel2 = New ToolStripLabel()
+        ToolStripLabel2 = New ToolStripButton()
         ToolStripSeparator13 = New ToolStripSeparator()
         ToolStripLabel6 = New ToolStripLabel()
         ToolStripTextBox2 = New ToolStripTextBox()
@@ -53,8 +53,8 @@ Partial Class Form1
         ToolStripMenuItem12 = New ToolStripMenuItem()
         RichTextBox1 = New RichTextBox()
         Panel2 = New Panel()
-        pbImagen = New PictureBox()
         lbTitulo = New Label()
+        pbImagen = New PictureBox()
         Panel1.SuspendLayout()
         ToolStrip2.SuspendLayout()
         MenuStrip2.SuspendLayout()
@@ -64,6 +64,7 @@ Partial Class Form1
         ' 
         ' Panel1
         ' 
+        Panel1.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
         Panel1.BackColor = Color.DimGray
         Panel1.Controls.Add(ToolStrip2)
         Panel1.Controls.Add(MenuStrip2)
@@ -94,9 +95,12 @@ Partial Class Form1
         ' 
         ' ToolStripLabel1
         ' 
+        ToolStripLabel1.DisplayStyle = ToolStripItemDisplayStyle.Image
         ToolStripLabel1.ForeColor = SystemColors.ButtonFace
+        ToolStripLabel1.Image = CType(resources.GetObject("ToolStripLabel1.Image"), Image)
+        ToolStripLabel1.ImageTransparentColor = Color.Magenta
         ToolStripLabel1.Name = "ToolStripLabel1"
-        ToolStripLabel1.Size = New Size(16, 22)
+        ToolStripLabel1.Size = New Size(23, 22)
         ToolStripLabel1.Text = "N"
         ' 
         ' ToolStripSeparator12
@@ -106,9 +110,12 @@ Partial Class Form1
         ' 
         ' ToolStripLabel2
         ' 
+        ToolStripLabel2.DisplayStyle = ToolStripItemDisplayStyle.Image
         ToolStripLabel2.ForeColor = SystemColors.ButtonFace
+        ToolStripLabel2.Image = CType(resources.GetObject("ToolStripLabel2.Image"), Image)
+        ToolStripLabel2.ImageTransparentColor = Color.Magenta
         ToolStripLabel2.Name = "ToolStripLabel2"
-        ToolStripLabel2.Size = New Size(14, 22)
+        ToolStripLabel2.Size = New Size(23, 22)
         ToolStripLabel2.Text = "K"
         ' 
         ' ToolStripSeparator13
@@ -246,6 +253,7 @@ Partial Class Form1
         ' 
         ' RichTextBox1
         ' 
+        RichTextBox1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         RichTextBox1.Location = New Point(24, 106)
         RichTextBox1.Name = "RichTextBox1"
         RichTextBox1.Size = New Size(747, 332)
@@ -254,6 +262,7 @@ Partial Class Form1
         ' 
         ' Panel2
         ' 
+        Panel2.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
         Panel2.BackColor = Color.IndianRed
         Panel2.Controls.Add(lbTitulo)
         Panel2.Controls.Add(pbImagen)
@@ -261,6 +270,17 @@ Partial Class Form1
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(800, 36)
         Panel2.TabIndex = 4
+        ' 
+        ' lbTitulo
+        ' 
+        lbTitulo.AutoSize = True
+        lbTitulo.Font = New Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lbTitulo.ForeColor = Color.Maroon
+        lbTitulo.Location = New Point(80, 7)
+        lbTitulo.Name = "lbTitulo"
+        lbTitulo.Size = New Size(182, 20)
+        lbTitulo.TabIndex = 5
+        lbTitulo.Text = "BLOC DE NOTAS LAURA "
         ' 
         ' pbImagen
         ' 
@@ -273,16 +293,6 @@ Partial Class Form1
         pbImagen.SizeMode = PictureBoxSizeMode.Zoom
         pbImagen.TabIndex = 0
         pbImagen.TabStop = False
-        ' 
-        ' lbTitulo
-        ' 
-        lbTitulo.AutoSize = True
-        lbTitulo.Font = New Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lbTitulo.Location = New Point(80, 7)
-        lbTitulo.Name = "lbTitulo"
-        lbTitulo.Size = New Size(182, 20)
-        lbTitulo.TabIndex = 5
-        lbTitulo.Text = "BLOC DE NOTAS LAURA "
         ' 
         ' Form1
         ' 
@@ -310,9 +320,7 @@ Partial Class Form1
     Friend WithEvents ToolStrip2 As ToolStrip
     Friend WithEvents ToolStripComboBox2 As ToolStripComboBox
     Friend WithEvents ToolStripSeparator11 As ToolStripSeparator
-    Friend WithEvents ToolStripLabel1 As ToolStripLabel
     Friend WithEvents ToolStripSeparator12 As ToolStripSeparator
-    Friend WithEvents ToolStripLabel2 As ToolStripLabel
     Friend WithEvents ToolStripSeparator13 As ToolStripSeparator
     Friend WithEvents ToolStripLabel6 As ToolStripLabel
     Friend WithEvents ToolStripTextBox2 As ToolStripTextBox
@@ -338,5 +346,7 @@ Partial Class Form1
     Friend WithEvents Panel2 As Panel
     Friend WithEvents pbImagen As PictureBox
     Friend WithEvents lbTitulo As Label
+    Friend WithEvents ToolStripLabel1 As ToolStripButton
+    Friend WithEvents ToolStripLabel2 As ToolStripButton
 
 End Class
