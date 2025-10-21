@@ -146,7 +146,7 @@ public class actividad3_1 {
             // Damos un fichero con fecha y hora ---
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss");
             String fechaHora = sdf.format(new Date());
-            String nombreSalida = "parsing_dom_" + fechaHora + ".txt";
+            String nombreSalida = "parsing_dom" + fechaHora + ".txt";
 
             // Creamos el PrintStream para escribir el fichero ---
             PrintStream ps = new PrintStream(new File(nombreSalida));
