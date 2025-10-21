@@ -1,0 +1,12 @@
+<clientes>
+    <cliente>
+        <dni>12345678A</dni>
+        <apellidos>García López</apellidos>
+        <cp>28080</cp>
+    </cliente>
+    <cliente>
+        <dni>87654321B</dni>
+        <apellidos>Pérez Díaz</apellidos>
+        <cp>46001</cp>
+    </cliente>
+</clientes>
