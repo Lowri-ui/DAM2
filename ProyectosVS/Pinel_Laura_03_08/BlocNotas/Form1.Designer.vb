@@ -25,24 +25,24 @@ Partial Class Form1
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Panel1 = New Panel()
         ToolStrip2 = New ToolStrip()
-        ToolStripComboBox2 = New ToolStripComboBox()
+        cbTipografia = New ToolStripComboBox()
         ToolStripSeparator11 = New ToolStripSeparator()
-        ToolStripLabel1 = New ToolStripButton()
+        btnNegrita = New ToolStripButton()
         ToolStripSeparator12 = New ToolStripSeparator()
-        ToolStripLabel2 = New ToolStripButton()
+        btnCursiva = New ToolStripButton()
         ToolStripSeparator13 = New ToolStripSeparator()
-        ToolStripLabel6 = New ToolStripLabel()
-        ToolStripTextBox2 = New ToolStripTextBox()
+        lblTamaño = New ToolStripLabel()
+        txbTamañoLetra = New ToolStripTextBox()
         ToolStripSeparator14 = New ToolStripSeparator()
         ToolStripButton2 = New ToolStripButton()
         MenuStrip2 = New MenuStrip()
-        ToolStripMenuItem1 = New ToolStripMenuItem()
+        ToolStripMenuArchivo = New ToolStripMenuItem()
         ToolStripMenuItem2 = New ToolStripMenuItem()
         ToolStripMenuItem3 = New ToolStripMenuItem()
         ToolStripMenuItem4 = New ToolStripMenuItem()
         ToolStripSeparator8 = New ToolStripSeparator()
         ToolStripMenuItem5 = New ToolStripMenuItem()
-        ToolStripMenuItem6 = New ToolStripMenuItem()
+        ToolStripMenuEditar = New ToolStripMenuItem()
         ToolStripMenuItem7 = New ToolStripMenuItem()
         ToolStripMenuItem8 = New ToolStripMenuItem()
         ToolStripMenuItem9 = New ToolStripMenuItem()
@@ -51,10 +51,13 @@ Partial Class Form1
         ToolStripSeparator10 = New ToolStripSeparator()
         ToolStripMenuItem11 = New ToolStripMenuItem()
         ToolStripMenuItem12 = New ToolStripMenuItem()
-        RichTextBox1 = New RichTextBox()
+        rtbxBloc = New RichTextBox()
         Panel2 = New Panel()
         lbTitulo = New Label()
         pbImagen = New PictureBox()
+        btnMinimizar = New Button()
+        btnMaximizar = New Button()
+        btnSalir = New Button()
         Panel1.SuspendLayout()
         ToolStrip2.SuspendLayout()
         MenuStrip2.SuspendLayout()
@@ -76,47 +79,47 @@ Partial Class Form1
         ' ToolStrip2
         ' 
         ToolStrip2.BackColor = Color.DimGray
-        ToolStrip2.Items.AddRange(New ToolStripItem() {ToolStripComboBox2, ToolStripSeparator11, ToolStripLabel1, ToolStripSeparator12, ToolStripLabel2, ToolStripSeparator13, ToolStripLabel6, ToolStripTextBox2, ToolStripSeparator14, ToolStripButton2})
+        ToolStrip2.Items.AddRange(New ToolStripItem() {cbTipografia, ToolStripSeparator11, btnNegrita, ToolStripSeparator12, btnCursiva, ToolStripSeparator13, lblTamaño, txbTamañoLetra, ToolStripSeparator14, ToolStripButton2})
         ToolStrip2.Location = New Point(0, 24)
         ToolStrip2.Name = "ToolStrip2"
         ToolStrip2.Size = New Size(800, 25)
         ToolStrip2.TabIndex = 3
         ToolStrip2.Text = "ToolStrip2"
         ' 
-        ' ToolStripComboBox2
+        ' cbTipografia
         ' 
-        ToolStripComboBox2.Name = "ToolStripComboBox2"
-        ToolStripComboBox2.Size = New Size(121, 25)
+        cbTipografia.Name = "cbTipografia"
+        cbTipografia.Size = New Size(121, 25)
         ' 
         ' ToolStripSeparator11
         ' 
         ToolStripSeparator11.Name = "ToolStripSeparator11"
         ToolStripSeparator11.Size = New Size(6, 25)
         ' 
-        ' ToolStripLabel1
+        ' btnNegrita
         ' 
-        ToolStripLabel1.DisplayStyle = ToolStripItemDisplayStyle.Image
-        ToolStripLabel1.ForeColor = SystemColors.ButtonFace
-        ToolStripLabel1.Image = CType(resources.GetObject("ToolStripLabel1.Image"), Image)
-        ToolStripLabel1.ImageTransparentColor = Color.Magenta
-        ToolStripLabel1.Name = "ToolStripLabel1"
-        ToolStripLabel1.Size = New Size(23, 22)
-        ToolStripLabel1.Text = "N"
+        btnNegrita.DisplayStyle = ToolStripItemDisplayStyle.Image
+        btnNegrita.ForeColor = SystemColors.ButtonFace
+        btnNegrita.Image = CType(resources.GetObject("btnNegrita.Image"), Image)
+        btnNegrita.ImageTransparentColor = Color.Magenta
+        btnNegrita.Name = "btnNegrita"
+        btnNegrita.Size = New Size(23, 22)
+        btnNegrita.Text = "N"
         ' 
         ' ToolStripSeparator12
         ' 
         ToolStripSeparator12.Name = "ToolStripSeparator12"
         ToolStripSeparator12.Size = New Size(6, 25)
         ' 
-        ' ToolStripLabel2
+        ' btnCursiva
         ' 
-        ToolStripLabel2.DisplayStyle = ToolStripItemDisplayStyle.Image
-        ToolStripLabel2.ForeColor = SystemColors.ButtonFace
-        ToolStripLabel2.Image = CType(resources.GetObject("ToolStripLabel2.Image"), Image)
-        ToolStripLabel2.ImageTransparentColor = Color.Magenta
-        ToolStripLabel2.Name = "ToolStripLabel2"
-        ToolStripLabel2.Size = New Size(23, 22)
-        ToolStripLabel2.Text = "K"
+        btnCursiva.DisplayStyle = ToolStripItemDisplayStyle.Image
+        btnCursiva.ForeColor = SystemColors.ButtonFace
+        btnCursiva.Image = CType(resources.GetObject("btnCursiva.Image"), Image)
+        btnCursiva.ImageTransparentColor = Color.Magenta
+        btnCursiva.Name = "btnCursiva"
+        btnCursiva.Size = New Size(23, 22)
+        btnCursiva.Text = "K"
         ' 
         ' ToolStripSeparator13
         ' 
@@ -124,17 +127,17 @@ Partial Class Form1
         ToolStripSeparator13.Name = "ToolStripSeparator13"
         ToolStripSeparator13.Size = New Size(6, 25)
         ' 
-        ' ToolStripLabel6
+        ' lblTamaño
         ' 
-        ToolStripLabel6.ForeColor = SystemColors.ButtonFace
-        ToolStripLabel6.Name = "ToolStripLabel6"
-        ToolStripLabel6.Size = New Size(53, 22)
-        ToolStripLabel6.Text = "Tamaño:"
+        lblTamaño.ForeColor = SystemColors.ButtonFace
+        lblTamaño.Name = "lblTamaño"
+        lblTamaño.Size = New Size(53, 22)
+        lblTamaño.Text = "Tamaño:"
         ' 
-        ' ToolStripTextBox2
+        ' txbTamañoLetra
         ' 
-        ToolStripTextBox2.Name = "ToolStripTextBox2"
-        ToolStripTextBox2.Size = New Size(100, 25)
+        txbTamañoLetra.Name = "txbTamañoLetra"
+        txbTamañoLetra.Size = New Size(100, 25)
         ' 
         ' ToolStripSeparator14
         ' 
@@ -148,25 +151,25 @@ Partial Class Form1
         ToolStripButton2.ImageTransparentColor = Color.Magenta
         ToolStripButton2.Name = "ToolStripButton2"
         ToolStripButton2.Size = New Size(23, 22)
-        ToolStripButton2.Text = "ToolStripButton1"
+        ToolStripButton2.Text = "btnColorLetra"
         ' 
         ' MenuStrip2
         ' 
         MenuStrip2.BackColor = Color.DimGray
-        MenuStrip2.Items.AddRange(New ToolStripItem() {ToolStripMenuItem1, ToolStripMenuItem6})
+        MenuStrip2.Items.AddRange(New ToolStripItem() {ToolStripMenuArchivo, ToolStripMenuEditar})
         MenuStrip2.Location = New Point(0, 0)
         MenuStrip2.Name = "MenuStrip2"
         MenuStrip2.Size = New Size(800, 24)
         MenuStrip2.TabIndex = 2
         MenuStrip2.Text = "MenuStrip2"
         ' 
-        ' ToolStripMenuItem1
+        ' ToolStripMenuArchivo
         ' 
-        ToolStripMenuItem1.DropDownItems.AddRange(New ToolStripItem() {ToolStripMenuItem2, ToolStripMenuItem3, ToolStripMenuItem4, ToolStripSeparator8, ToolStripMenuItem5})
-        ToolStripMenuItem1.ForeColor = SystemColors.ButtonFace
-        ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        ToolStripMenuItem1.Size = New Size(60, 20)
-        ToolStripMenuItem1.Text = "Archivo"
+        ToolStripMenuArchivo.DropDownItems.AddRange(New ToolStripItem() {ToolStripMenuItem2, ToolStripMenuItem3, ToolStripMenuItem4, ToolStripSeparator8, ToolStripMenuItem5})
+        ToolStripMenuArchivo.ForeColor = SystemColors.ButtonFace
+        ToolStripMenuArchivo.Name = "ToolStripMenuArchivo"
+        ToolStripMenuArchivo.Size = New Size(60, 20)
+        ToolStripMenuArchivo.Text = "Archivo"
         ' 
         ' ToolStripMenuItem2
         ' 
@@ -197,13 +200,13 @@ Partial Class Form1
         ToolStripMenuItem5.Size = New Size(146, 22)
         ToolStripMenuItem5.Text = "Salir"
         ' 
-        ' ToolStripMenuItem6
+        ' ToolStripMenuEditar
         ' 
-        ToolStripMenuItem6.DropDownItems.AddRange(New ToolStripItem() {ToolStripMenuItem7, ToolStripMenuItem8, ToolStripMenuItem9, ToolStripSeparator9, ToolStripMenuItem10, ToolStripSeparator10, ToolStripMenuItem11, ToolStripMenuItem12})
-        ToolStripMenuItem6.ForeColor = SystemColors.ButtonFace
-        ToolStripMenuItem6.Name = "ToolStripMenuItem6"
-        ToolStripMenuItem6.Size = New Size(49, 20)
-        ToolStripMenuItem6.Text = "Editar"
+        ToolStripMenuEditar.DropDownItems.AddRange(New ToolStripItem() {ToolStripMenuItem7, ToolStripMenuItem8, ToolStripMenuItem9, ToolStripSeparator9, ToolStripMenuItem10, ToolStripSeparator10, ToolStripMenuItem11, ToolStripMenuItem12})
+        ToolStripMenuEditar.ForeColor = SystemColors.ButtonFace
+        ToolStripMenuEditar.Name = "ToolStripMenuEditar"
+        ToolStripMenuEditar.Size = New Size(49, 20)
+        ToolStripMenuEditar.Text = "Editar"
         ' 
         ' ToolStripMenuItem7
         ' 
@@ -251,19 +254,22 @@ Partial Class Form1
         ToolStripMenuItem12.Size = New Size(162, 22)
         ToolStripMenuItem12.Text = "Rehacer"
         ' 
-        ' RichTextBox1
+        ' rtbxBloc
         ' 
-        RichTextBox1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        RichTextBox1.Location = New Point(24, 106)
-        RichTextBox1.Name = "RichTextBox1"
-        RichTextBox1.Size = New Size(747, 332)
-        RichTextBox1.TabIndex = 3
-        RichTextBox1.Text = ""
+        rtbxBloc.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        rtbxBloc.Location = New Point(12, 106)
+        rtbxBloc.Name = "rtbxBloc"
+        rtbxBloc.Size = New Size(776, 332)
+        rtbxBloc.TabIndex = 3
+        rtbxBloc.Text = ""
         ' 
         ' Panel2
         ' 
         Panel2.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
         Panel2.BackColor = Color.IndianRed
+        Panel2.Controls.Add(btnSalir)
+        Panel2.Controls.Add(btnMaximizar)
+        Panel2.Controls.Add(btnMinimizar)
         Panel2.Controls.Add(lbTitulo)
         Panel2.Controls.Add(pbImagen)
         Panel2.Location = New Point(2, 2)
@@ -294,13 +300,41 @@ Partial Class Form1
         pbImagen.TabIndex = 0
         pbImagen.TabStop = False
         ' 
+        ' btnMinimizar
+        ' 
+        btnMinimizar.BackColor = SystemColors.InactiveBorder
+        btnMinimizar.ForeColor = Color.Transparent
+        btnMinimizar.Image = My.Resources.Resources.minimizar_signo
+        btnMinimizar.Location = New Point(684, 19)
+        btnMinimizar.Name = "btnMinimizar"
+        btnMinimizar.Size = New Size(30, 10)
+        btnMinimizar.TabIndex = 6
+        btnMinimizar.UseVisualStyleBackColor = False
+        ' 
+        ' btnMaximizar
+        ' 
+        btnMaximizar.Image = My.Resources.Resources.maximizar
+        btnMaximizar.Location = New Point(720, 10)
+        btnMaximizar.Name = "btnMaximizar"
+        btnMaximizar.Size = New Size(30, 19)
+        btnMaximizar.TabIndex = 7
+        btnMaximizar.UseVisualStyleBackColor = True
+        ' 
+        ' btnSalir
+        ' 
+        btnSalir.Location = New Point(756, 10)
+        btnSalir.Name = "btnSalir"
+        btnSalir.Size = New Size(30, 19)
+        btnSalir.TabIndex = 8
+        btnSalir.UseVisualStyleBackColor = True
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 510)
         Controls.Add(Panel2)
-        Controls.Add(RichTextBox1)
+        Controls.Add(rtbxBloc)
         Controls.Add(Panel1)
         ForeColor = SystemColors.Control
         Name = "Form1"
@@ -318,22 +352,22 @@ Partial Class Form1
     End Sub
     Friend WithEvents Panel1 As Panel
     Friend WithEvents ToolStrip2 As ToolStrip
-    Friend WithEvents ToolStripComboBox2 As ToolStripComboBox
+    Friend WithEvents cbTipografia As ToolStripComboBox
     Friend WithEvents ToolStripSeparator11 As ToolStripSeparator
     Friend WithEvents ToolStripSeparator12 As ToolStripSeparator
     Friend WithEvents ToolStripSeparator13 As ToolStripSeparator
-    Friend WithEvents ToolStripLabel6 As ToolStripLabel
-    Friend WithEvents ToolStripTextBox2 As ToolStripTextBox
+    Friend WithEvents lblTamaño As ToolStripLabel
+    Friend WithEvents txbTamañoLetra As ToolStripTextBox
     Friend WithEvents ToolStripSeparator14 As ToolStripSeparator
     Friend WithEvents ToolStripButton2 As ToolStripButton
     Friend WithEvents MenuStrip2 As MenuStrip
-    Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuArchivo As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem2 As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem3 As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem4 As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator8 As ToolStripSeparator
     Friend WithEvents ToolStripMenuItem5 As ToolStripMenuItem
-    Friend WithEvents ToolStripMenuItem6 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuEditar As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem7 As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem8 As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem9 As ToolStripMenuItem
@@ -342,11 +376,14 @@ Partial Class Form1
     Friend WithEvents ToolStripSeparator10 As ToolStripSeparator
     Friend WithEvents ToolStripMenuItem11 As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem12 As ToolStripMenuItem
-    Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents rtbxBloc As RichTextBox
     Friend WithEvents Panel2 As Panel
     Friend WithEvents pbImagen As PictureBox
     Friend WithEvents lbTitulo As Label
-    Friend WithEvents ToolStripLabel1 As ToolStripButton
-    Friend WithEvents ToolStripLabel2 As ToolStripButton
+    Friend WithEvents btnNegrita As ToolStripButton
+    Friend WithEvents btnCursiva As ToolStripButton
+    Friend WithEvents btnSalir As Button
+    Friend WithEvents btnMaximizar As Button
+    Friend WithEvents btnMinimizar As Button
 
 End Class
