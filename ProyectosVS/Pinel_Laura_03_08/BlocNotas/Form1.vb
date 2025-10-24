@@ -43,14 +43,21 @@
     'En inicio deshabilitadas
     Dim negrita As Boolean = False
     Dim cursiva As Boolean = False
+    Private Function ObtenerFuenteSeleccionada() As String 'Obtiene la fuente seleccionada en el ComboBox
+        If cbFuentes.SelectedItem IsNot Nothing Then
+            Return cbFuentes.SelectedItem.ToString()
+        Else
+            Return txtEditor.SelectionFont.FontFamily.Name ' Usa la actual
+        End If
+    End Function
 
     'Para cambiar el tipo de fuente manteniendo tamaño y estilo
     Private Sub btnNegrita_Click(sender As Object, e As EventArgs) Handles btnNegrita.Click
 
         If negrita = True Then
-            txtEditor.SelectionFont = New Font(cbFuentes.SelectedItem.ToString, FontStyle.Bold)
+            txtEditor.SelectionFont = New Font(cbFuentes.SelectedItem.ToString, txtEditor.SelectionFont.Size, FontStyle.Bold)
         Else
-            txtEditor.SelectionFont = New Font(cbFuentes.SelectedItem.ToString, FontStyle.Regular)
+            txtEditor.SelectionFont = New Font(cbFuentes.SelectedItem.ToString, txtEditor.SelectionFont.Size, FontStyle.Regular)
         End If
     End Sub
 
@@ -58,12 +65,11 @@
     Private Sub btnCursiva_Click(sender As Object, e As EventArgs) Handles btnCursiva.Click
         Try
             If cursiva = True Then
-                txtEditor.SelectionFont = New Font(cbFuentes.Text, Int(txtSize.Text), FontStyle.Italic)
-                btnCursiva.ForeColor = Color.Chocolate
+                txtEditor.SelectionFont = New Font(cbFuentes.Text, txtEditor.SelectionFont.Size, FontStyle.Italic)
+                btnCursiva.ForeColor = Color.Black
                 cursiva = False
             Else
-                txtEditor.SelectionFont = New Font(cbFuentes.Text, Int(txtSize.Text),
-FontStyle.Regular)
+                txtEditor.SelectionFont = New Font(cbFuentes.Text, txtEditor.SelectionFont.Size, FontStyle.Regular)
                 btnCursiva.ForeColor = Color.White
                 cursiva = True
             End If

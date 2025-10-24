@@ -104,7 +104,7 @@ Partial Class Form1
         btnNegrita.ImageTransparentColor = Color.Magenta
         btnNegrita.Name = "btnNegrita"
         btnNegrita.Size = New Size(23, 22)
-        btnNegrita.Text = "N"
+        btnNegrita.Text = "Negrita"
         ' 
         ' ToolStripSeparator12
         ' 
@@ -119,7 +119,7 @@ Partial Class Form1
         btnCursiva.ImageTransparentColor = Color.Magenta
         btnCursiva.Name = "btnCursiva"
         btnCursiva.Size = New Size(23, 22)
-        btnCursiva.Text = "K"
+        btnCursiva.Text = "Cursiva"
         ' 
         ' ToolStripSeparator13
         ' 
