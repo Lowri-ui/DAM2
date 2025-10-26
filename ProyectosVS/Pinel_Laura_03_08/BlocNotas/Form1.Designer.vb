@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        components = New ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         PanelMenu = New Panel()
         ToolStrip2 = New ToolStrip()
@@ -52,17 +53,26 @@ Partial Class Form1
         ToolStripMenuDeshacer = New ToolStripMenuItem()
         ToolStripMenuRehacer = New ToolStripMenuItem()
         txtEditor = New RichTextBox()
-        panelTitulo = New Panel()
+        ContextMenuStrip1 = New ContextMenuStrip(components)
+        CortarContextMenuStrip = New ToolStripMenuItem()
+        CopiarContextMenuStrip = New ToolStripMenuItem()
+        PegarContextMenuStrip = New ToolStripMenuItem()
+        SeleccionarTodoContextMenuStrip = New ToolStripMenuItem()
+        PanelTitulo = New Panel()
         btnSalir = New Button()
         btnMaximizar = New Button()
         btnMinimizar = New Button()
         lbTitulo = New Label()
         pbImagen = New PictureBox()
+        TrackBar = New TrackBar()
+        lblPorcentaje = New Label()
         PanelMenu.SuspendLayout()
         ToolStrip2.SuspendLayout()
         MenuStrip2.SuspendLayout()
-        panelTitulo.SuspendLayout()
+        ContextMenuStrip1.SuspendLayout()
+        PanelTitulo.SuspendLayout()
         CType(pbImagen, ComponentModel.ISupportInitialize).BeginInit()
+        CType(TrackBar, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' PanelMenu
@@ -256,25 +266,56 @@ Partial Class Form1
         ' txtEditor
         ' 
         txtEditor.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        txtEditor.ContextMenuStrip = ContextMenuStrip1
         txtEditor.Location = New Point(130, 130)
         txtEditor.Name = "txtEditor"
         txtEditor.Size = New Size(500, 368)
         txtEditor.TabIndex = 3
         txtEditor.Text = ""
         ' 
-        ' panelTitulo
+        ' ContextMenuStrip1
         ' 
-        panelTitulo.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
-        panelTitulo.BackColor = Color.IndianRed
-        panelTitulo.Controls.Add(btnSalir)
-        panelTitulo.Controls.Add(btnMaximizar)
-        panelTitulo.Controls.Add(btnMinimizar)
-        panelTitulo.Controls.Add(lbTitulo)
-        panelTitulo.Controls.Add(pbImagen)
-        panelTitulo.Location = New Point(2, 2)
-        panelTitulo.Name = "panelTitulo"
-        panelTitulo.Size = New Size(800, 36)
-        panelTitulo.TabIndex = 4
+        ContextMenuStrip1.Items.AddRange(New ToolStripItem() {CortarContextMenuStrip, CopiarContextMenuStrip, PegarContextMenuStrip, SeleccionarTodoContextMenuStrip})
+        ContextMenuStrip1.Name = "ContextMenuStrip1"
+        ContextMenuStrip1.Size = New Size(163, 92)
+        ' 
+        ' CortarContextMenuStrip
+        ' 
+        CortarContextMenuStrip.Name = "CortarContextMenuStrip"
+        CortarContextMenuStrip.Size = New Size(162, 22)
+        CortarContextMenuStrip.Text = "Cortar"
+        ' 
+        ' CopiarContextMenuStrip
+        ' 
+        CopiarContextMenuStrip.Name = "CopiarContextMenuStrip"
+        CopiarContextMenuStrip.Size = New Size(162, 22)
+        CopiarContextMenuStrip.Text = "Copiar"
+        ' 
+        ' PegarContextMenuStrip
+        ' 
+        PegarContextMenuStrip.Name = "PegarContextMenuStrip"
+        PegarContextMenuStrip.Size = New Size(162, 22)
+        PegarContextMenuStrip.Text = "Pegar"
+        ' 
+        ' SeleccionarTodoContextMenuStrip
+        ' 
+        SeleccionarTodoContextMenuStrip.Name = "SeleccionarTodoContextMenuStrip"
+        SeleccionarTodoContextMenuStrip.Size = New Size(162, 22)
+        SeleccionarTodoContextMenuStrip.Text = "Seleccionar todo"
+        ' 
+        ' PanelTitulo
+        ' 
+        PanelTitulo.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
+        PanelTitulo.BackColor = Color.IndianRed
+        PanelTitulo.Controls.Add(btnSalir)
+        PanelTitulo.Controls.Add(btnMaximizar)
+        PanelTitulo.Controls.Add(btnMinimizar)
+        PanelTitulo.Controls.Add(lbTitulo)
+        PanelTitulo.Controls.Add(pbImagen)
+        PanelTitulo.Location = New Point(2, 2)
+        PanelTitulo.Name = "PanelTitulo"
+        PanelTitulo.Size = New Size(800, 36)
+        PanelTitulo.TabIndex = 4
         ' 
         ' btnSalir
         ' 
@@ -344,12 +385,34 @@ Partial Class Form1
         pbImagen.TabIndex = 0
         pbImagen.TabStop = False
         ' 
+        ' TrackBar
+        ' 
+        TrackBar.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
+        TrackBar.Location = New Point(670, 476)
+        TrackBar.Name = "TrackBar"
+        TrackBar.Size = New Size(132, 45)
+        TrackBar.TabIndex = 10
+        ' 
+        ' lblPorcentaje
+        ' 
+        lblPorcentaje.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
+        lblPorcentaje.AutoSize = True
+        lblPorcentaje.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblPorcentaje.ForeColor = SystemColors.ActiveCaptionText
+        lblPorcentaje.Location = New Point(756, 456)
+        lblPorcentaje.Name = "lblPorcentaje"
+        lblPorcentaje.Size = New Size(19, 17)
+        lblPorcentaje.TabIndex = 11
+        lblPorcentaje.Text = "%"
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 510)
-        Controls.Add(panelTitulo)
+        Controls.Add(lblPorcentaje)
+        Controls.Add(TrackBar)
+        Controls.Add(PanelTitulo)
         Controls.Add(txtEditor)
         Controls.Add(PanelMenu)
         ForeColor = SystemColors.Control
@@ -361,10 +424,13 @@ Partial Class Form1
         ToolStrip2.PerformLayout()
         MenuStrip2.ResumeLayout(False)
         MenuStrip2.PerformLayout()
-        panelTitulo.ResumeLayout(False)
-        panelTitulo.PerformLayout()
+        ContextMenuStrip1.ResumeLayout(False)
+        PanelTitulo.ResumeLayout(False)
+        PanelTitulo.PerformLayout()
         CType(pbImagen, ComponentModel.ISupportInitialize).EndInit()
+        CType(TrackBar, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
+        PerformLayout()
     End Sub
     Friend WithEvents PanelMenu As Panel
     Friend WithEvents ToolStrip2 As ToolStrip
@@ -393,7 +459,7 @@ Partial Class Form1
     Friend WithEvents ToolStripMenuDeshacer As ToolStripMenuItem
     Friend WithEvents ToolStripMenuRehacer As ToolStripMenuItem
     Friend WithEvents txtEditor As RichTextBox
-    Friend WithEvents panelTitulo As Panel
+    Friend WithEvents PanelTitulo As Panel
     Friend WithEvents pbImagen As PictureBox
     Friend WithEvents lbTitulo As Label
     Friend WithEvents btnNegrita As ToolStripButton
@@ -401,5 +467,12 @@ Partial Class Form1
     Friend WithEvents btnSalir As Button
     Friend WithEvents btnMaximizar As Button
     Friend WithEvents btnMinimizar As Button
+    Friend WithEvents TrackBar As TrackBar
+    Friend WithEvents lblPorcentaje As Label
+    Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
+    Friend WithEvents CortarContextMenuStrip As ToolStripMenuItem
+    Friend WithEvents CopiarContextMenuStrip As ToolStripMenuItem
+    Friend WithEvents PegarContextMenuStrip As ToolStripMenuItem
+    Friend WithEvents SeleccionarTodoContextMenuStrip As ToolStripMenuItem
 
 End Class

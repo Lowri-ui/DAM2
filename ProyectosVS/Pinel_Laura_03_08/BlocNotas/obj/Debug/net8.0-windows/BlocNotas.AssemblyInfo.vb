@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("BlocNotas"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+28139e9d47df3eff5226cf4b1f89e9d22797de7b"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+780b966a443f4498292464addb08c43fe5a9e3d4"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("BlocNotas"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("BlocNotas"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _
