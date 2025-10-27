@@ -169,6 +169,53 @@ public class Dao {
             e.printStackTrace();
         }
     }
+    public void actualizarClientes(Connection conn, List<Cliente> clientes) {
+        String sql = "UPDATE CLIENTES SET APELLIDOS = ?, CP = ? WHERE DNI = ?";
+
+        try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            for (Cliente cliente : clientes) {
+                pstmt.setString(1, cliente.getApellidos());
+                pstmt.setInt(2, cliente.getCodigoPostal());
+                pstmt.setString(3, cliente.getDni());
+
+                // Código Postal (permitir null)
+                if (cliente.getCodigoPostal() == 0) {
+                    pstmt.setNull(2, java.sql.Types.CHAR);
+                } else {
+                    pstmt.setString(2, String.valueOf(cliente.getCodigoPostal()));
+                }
+
+                // Ejecutamos la actualización de los clientes.
+               int filasAfectadas = pstmt.executeUpdate();
+            }
+
+            System.out.println("Proceso finalizado. Clientes actualizados.");
+
+        } catch (SQLException e) {
+            System.err.println("Error durante la actualización.");
+            e.printStackTrace();
+        }
+    }
+    public void eliminarClientes(Connection conn, List<Cliente> clientes) {
+        String sql = "DELETE FROM CLIENTES WHERE DNI = ?";
+
+        try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            for (Cliente cliente : clientes) {
+                pstmt.setString(1, cliente.getDni());
+                // Ejecutamos
+                pstmt.executeUpdate();
+            }
+
+            System.out.println("Proceso finalizado. Cliente con dni : " + clientes.get(0).getDni() + " eliminado.");
+
+        } catch (SQLException e) {
+            System.err.println("Error durante la ejecución.");
+            e.printStackTrace();
+        }
+    }
+    
 
     /**
      * Inserta clientes usando un lote dentro de una transacción controlada manualmente.

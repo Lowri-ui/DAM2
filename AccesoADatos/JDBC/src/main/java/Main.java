@@ -1,8 +1,12 @@
 import dao.Dao;
 import dao.DatabaseConnector;
+import pojos.Cliente;
 import print.ImprimirResultados;
 
 import java.sql.Connection;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class Main {
     public static String CATALOGO = "hr_database";
@@ -38,8 +42,28 @@ public class Main {
 //            // Insertamos registros en la tabla clientes
             //dao.insertarDatosConStatement(connection, INSERT_CLIENTES);
 //            // Sacamos por consola los registros insertados
-            print.imprimirRegistros(connection, CATALOGO, NOMBRE_TABLA);
+            //print.imprimirRegistros(connection, CATALOGO, NOMBRE_TABLA);
 //
+            // -- ACTIVIDAD 4.1. UPDATE Y DELETE ('78901234X', 'NADALES', '44126'),  ('89012345E', 'ROJAS', null), ('56789012B', 'SAMPER', '29730').
+           //ACTUALIZAMOS ESTOS 3 CLIENTES:
+            List<Cliente> actualizarLista = Arrays.asList(
+                    new Cliente("78901234X", "NADALES",44126),
+                    new Cliente("89012345E", "ROJAS",0), //null=0
+                    new Cliente("56789012B", "SAMPER",29730)
+
+            );
+            dao.actualizarClientes(connection, actualizarLista);
+            System.out.println("Clientes actualizados:");
+            print.imprimirRegistros(connection,CATALOGO,NOMBRE_TABLA);
+
+            //ELIMINAMOS UN CLIENTE --> ('09876543K','LAMIQUIZ', null)
+            List<Cliente> eliminarClientesLista = Arrays.asList(
+                    new Cliente("09876543K","LAMIQUIZ",0)
+            );
+            dao.eliminarClientes(connection, eliminarClientesLista);
+            System.out.println("Clientes eliminados:");
+            print.imprimirRegistros(connection,CATALOGO,NOMBRE_TABLA);
+
 //            // --- Datos de los 5 nuevos clientes a insertar ---
 //            List<Cliente> nuevosClientes = Arrays.asList(
 //                    new Cliente("12345678A", "Pérez Gómez", 28001),
