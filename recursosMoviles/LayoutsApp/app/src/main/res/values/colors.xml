@@ -14,4 +14,10 @@
     <color name="azul_oscuro">#1005ED</color>
     <color name="amarillo">#FFF59D</color>
     <color name="marron_claro">#FFE0B2</color>
+    <color name="rosa_pastel">#FADADD</color>
+    <color name="azul_pastel">#AFCBFF</color>
+    <color name="verde_pastel">#BFFCC6</color>
+    <color name="amarillo_pastel">#FFF7AE</color>
+    <color name="lila_pastel">#D6C6FF</color>
+    <color name="melocoton">#FFD1BA</color>
 </resources>
