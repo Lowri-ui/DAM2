@@ -1,9 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_09\\MiCalculadora\\",
+  "WorkspaceRootPath": "C:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_09\\MiCalculadora\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{15AA6928-FC90-42A8-B4C0-3E8D3C8E3E04}|MiCalculadora.vbproj|d:\\github\\dam2\\proyectosvs\\pinel_laura_03_09\\micalculadora\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{15AA6928-FC90-42A8-B4C0-3E8D3C8E3E04}|MiCalculadora.vbproj|c:\\github\\dam2\\proyectosvs\\pinel_laura_03_09\\micalculadora\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{15AA6928-FC90-42A8-B4C0-3E8D3C8E3E04}|MiCalculadora.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15AA6928-FC90-42A8-B4C0-3E8D3C8E3E04}|MiCalculadora.vbproj|c:\\github\\dam2\\proyectosvs\\pinel_laura_03_09\\micalculadora\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{15AA6928-FC90-42A8-B4C0-3E8D3C8E3E04}|MiCalculadora.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     }
   ],
@@ -19,13 +23,26 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Form1.vb [Dise\u00F1o]",
-              "DocumentMoniker": "D:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_09\\MiCalculadora\\Form1.vb",
+              "Title": "Form1.vb",
+              "DocumentMoniker": "C:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_09\\MiCalculadora\\Form1.vb",
               "RelativeDocumentMoniker": "Form1.vb",
-              "ToolTip": "D:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_09\\MiCalculadora\\Form1.vb [Dise\u00F1o]",
+              "ToolTip": "C:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_09\\MiCalculadora\\Form1.vb",
+              "RelativeToolTip": "Form1.vb",
+              "ViewState": "AgIAAIwAAAAAAAAAAAAAAKoAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-10-28T15:55:11.347Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_09\\MiCalculadora\\Form1.vb",
+              "RelativeDocumentMoniker": "Form1.vb",
+              "ToolTip": "C:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_09\\MiCalculadora\\Form1.vb [Dise\u00F1o]",
               "RelativeToolTip": "Form1.vb [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-10-27T12:12:39.602Z",
+              "WhenOpened": "2025-10-28T15:49:10.455Z",
               "EditorCaption": " [Dise\u00F1o]"
             }
           ]

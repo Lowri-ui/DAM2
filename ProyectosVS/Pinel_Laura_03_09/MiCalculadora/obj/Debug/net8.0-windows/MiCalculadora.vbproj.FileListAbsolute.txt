@@ -1,0 +1,17 @@
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_09\MiCalculadora\bin\Debug\net8.0-windows\MiCalculadora.exe
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_09\MiCalculadora\bin\Debug\net8.0-windows\MiCalculadora.deps.json
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_09\MiCalculadora\bin\Debug\net8.0-windows\MiCalculadora.runtimeconfig.json
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_09\MiCalculadora\bin\Debug\net8.0-windows\MiCalculadora.dll
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_09\MiCalculadora\bin\Debug\net8.0-windows\MiCalculadora.pdb
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_09\MiCalculadora\obj\Debug\net8.0-windows\MiCalculadora.Form1.resources
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_09\MiCalculadora\obj\Debug\net8.0-windows\MiCalculadora.vbproj.GenerateResource.cache
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_09\MiCalculadora\obj\Debug\net8.0-windows\MiCalculadora.GeneratedMSBuildEditorConfig.editorconfig
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_09\MiCalculadora\obj\Debug\net8.0-windows\MiCalculadora.AssemblyInfoInputs.cache
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_09\MiCalculadora\obj\Debug\net8.0-windows\MiCalculadora.AssemblyInfo.vb
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_09\MiCalculadora\obj\Debug\net8.0-windows\MiCalculadora.vbproj.CoreCompileInputs.cache
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_09\MiCalculadora\obj\Debug\net8.0-windows\MiCalculadora.sourcelink.json
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_09\MiCalculadora\obj\Debug\net8.0-windows\MiCalculadora.dll
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_09\MiCalculadora\obj\Debug\net8.0-windows\refint\MiCalculadora.dll
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_09\MiCalculadora\obj\Debug\net8.0-windows\MiCalculadora.pdb
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_09\MiCalculadora\obj\Debug\net8.0-windows\MiCalculadora.genruntimeconfig.cache
+C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_09\MiCalculadora\obj\Debug\net8.0-windows\ref\MiCalculadora.dll
