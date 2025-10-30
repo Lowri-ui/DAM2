@@ -37,7 +37,7 @@ public class Main {
              */
             //dao.crearTablaClientesSiNoExiste();
              //Imprimimos los resultados
-            //print.imprimirTablas(connection, CATALOGO);
+            print.imprimirTablas(connection, CATALOGO);
 //
 //            // Insertamos registros en la tabla clientes
             //dao.insertarDatosConStatement(connection, INSERT_CLIENTES);
@@ -46,23 +46,25 @@ public class Main {
 //
             // -- ACTIVIDAD 4.1. UPDATE Y DELETE ('78901234X', 'NADALES', '44126'),  ('89012345E', 'ROJAS', null), ('56789012B', 'SAMPER', '29730').
            //ACTUALIZAMOS ESTOS 3 CLIENTES:
-            List<Cliente> actualizarLista = Arrays.asList(
-                    new Cliente("78901234X", "NADALES",44126),
-                    new Cliente("89012345E", "ROJAS",0), //null=0
-                    new Cliente("56789012B", "SAMPER",29730)
-
-            );
-            dao.actualizarClientes(connection, actualizarLista);
-            System.out.println("Clientes actualizados:");
-            print.imprimirRegistros(connection,CATALOGO,NOMBRE_TABLA);
-
-            //ELIMINAMOS UN CLIENTE --> ('09876543K','LAMIQUIZ', null)
-            List<Cliente> eliminarClientesLista = Arrays.asList(
-                    new Cliente("09876543K","LAMIQUIZ",0)
-            );
-            dao.eliminarClientes(connection, eliminarClientesLista);
-            System.out.println("Clientes eliminados:");
-            print.imprimirRegistros(connection,CATALOGO,NOMBRE_TABLA);
+//            List<Cliente> actualizarLista = Arrays.asList(
+//                    new Cliente("78901234X", "NADALES",44126),
+//                    new Cliente("89012345E", "ROJAS",0), //null=0
+//                    new Cliente("56789012B", "SAMPER",29730)
+//
+//            );
+//            dao.actualizarClientes(connection, actualizarLista);
+//            System.out.println("Clientes actualizados:");
+           //print.imprimirRegistros(connection,CATALOGO,NOMBRE_TABLA);
+            //ACTIVIDAD 4.2. PRINT con int.
+            print.imprimirRegistros2(connection, CATALOGO, NOMBRE_TABLA);
+//
+//            //ELIMINAMOS UN CLIENTE --> ('09876543K','LAMIQUIZ', null)
+//            List<Cliente> eliminarClientesLista = Arrays.asList(
+//                    new Cliente("09876543K","LAMIQUIZ",0)
+//            );
+//            dao.eliminarClientes(connection, eliminarClientesLista);
+//            System.out.println("Clientes eliminados:");
+//            print.imprimirRegistros(connection,CATALOGO,NOMBRE_TABLA);
 
 //            // --- Datos de los 5 nuevos clientes a insertar ---
 //            List<Cliente> nuevosClientes = Arrays.asList(

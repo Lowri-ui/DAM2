@@ -92,4 +92,62 @@ public class ImprimirResultados {
             }
         }
     }
+
+    /** ACTIVIDAD 4.2.
+    El código postal (columna CP) está definido con tipo CHAR(5) en la tabla CLIENTES, pero es siempre un número entero.
+     ¿Se podría utilizar getInt() en lugar de getString() para recuperar su valor?
+     Cambia el metodo imprimirRegistros (puedes crear un metodo que se llame imprimirRegistros2 sobre la base de imprimirRegistros y así mantienes intacto este último)
+    y verifica tu hipótesis, o justifica los resultados si no son los que esperabas.*/
+
+    public void imprimirRegistros2(Connection conn, String catalogo, String nombreTabla) throws SQLException {
+        // 1. Verificar primero si la tabla existe para evitar errores y SQL Injection básico.
+        DatabaseMetaData metaData = conn.getMetaData();
+        try (ResultSet tables = metaData.getTables(catalogo, null, nombreTabla, new String[]{"TABLE"})) {
+            if (!tables.next()) {
+                System.err.println("Error: La tabla '" + nombreTabla + "' no existe en la base de datos.");
+                return; // Salir del método si la tabla no se encuentra.
+            }
+        }
+
+        // 2. Construir la consulta SQL. Usar un PreparedStatement aunque el nombre de la tabla no se pueda parametrizar,
+        // es una buena práctica y nos protege si añadiéramos un WHERE en el futuro.
+        // OJO: El nombre de la tabla no puede ser reemplazado por '?', por eso lo concatenamos.
+        // La validación anterior nos da una capa de seguridad.
+        String sql = "SELECT * FROM " + nombreTabla;
+
+        System.out.println("📄 Registros de la tabla: " + nombreTabla);
+        System.out.println("----------------------------------------");
+
+        // 3. Usar try-with-resources para garantizar el cierre automático de PreparedStatement y ResultSet.
+        try (PreparedStatement pstmt = conn.prepareStatement(sql);
+             ResultSet rs = pstmt.executeQuery()) {
+
+            // 4. Obtener los metadatos del ResultSet.
+            // Esto nos permite descubrir dinámicamente las columnas del resultado.
+            ResultSetMetaData rsMetaData = rs.getMetaData();
+            int numeroColumnas = rsMetaData.getColumnCount();
+
+            // 5. Imprimir las cabeceras (nombres de las columnas).
+            for (int i = 1; i <= numeroColumnas; i++) {
+                // getColumnName() obtiene el nombre de la columna en la posición 'i'.
+                System.out.print(rsMetaData.getColumnName(i) + "\t\t");
+            }
+            System.out.println("\n----------------------------------------");
+
+            // 6. Iterar sobre cada fila (registro) del ResultSet.
+            while (rs.next()) {
+                // 7. Por cada fila, iterar sobre cada una de sus columnas.
+                String nombreColumna = rs.getMetaData().getColumnName(1);
+                for (int i = 1; i <= numeroColumnas; i++) {
+                    if(i % 3 == 0){
+                        // getString(i) obtiene el valor de la columna 'i' de la fila actual como un String.
+                        System.out.print(rs.getInt(i) + "\t\t");
+                    }else{
+                        System.out.print(rs.getString(i) + "\t\t");
+                    }
+                }
+                System.out.println(); // Salto de línea para pasar al siguiente registro.
+            }
+        }
+    }
 }
