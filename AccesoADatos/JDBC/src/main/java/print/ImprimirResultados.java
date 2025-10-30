@@ -150,4 +150,7 @@ public class ImprimirResultados {
             }
         }
     }
+    public class mostrarNombresInversoConLista(Connection conn) throws SQLException{
+        
+    }
 }
