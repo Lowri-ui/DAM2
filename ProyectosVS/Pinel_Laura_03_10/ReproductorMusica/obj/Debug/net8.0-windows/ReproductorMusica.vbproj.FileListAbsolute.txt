@@ -1,0 +1,17 @@
+D:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_10\ReproductorMusica\bin\Debug\net8.0-windows\ReproductorMusica.exe
+D:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_10\ReproductorMusica\bin\Debug\net8.0-windows\ReproductorMusica.deps.json
+D:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_10\ReproductorMusica\bin\Debug\net8.0-windows\ReproductorMusica.runtimeconfig.json
+D:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_10\ReproductorMusica\bin\Debug\net8.0-windows\ReproductorMusica.dll
+D:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_10\ReproductorMusica\bin\Debug\net8.0-windows\ReproductorMusica.pdb
+D:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_10\ReproductorMusica\obj\Debug\net8.0-windows\ReproductorMusica.Form1.resources
+D:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_10\ReproductorMusica\obj\Debug\net8.0-windows\ReproductorMusica.vbproj.GenerateResource.cache
+D:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_10\ReproductorMusica\obj\Debug\net8.0-windows\ReproductorMusica.GeneratedMSBuildEditorConfig.editorconfig
+D:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_10\ReproductorMusica\obj\Debug\net8.0-windows\ReproductorMusica.AssemblyInfoInputs.cache
+D:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_10\ReproductorMusica\obj\Debug\net8.0-windows\ReproductorMusica.AssemblyInfo.vb
+D:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_10\ReproductorMusica\obj\Debug\net8.0-windows\ReproductorMusica.vbproj.CoreCompileInputs.cache
+D:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_10\ReproductorMusica\obj\Debug\net8.0-windows\ReproductorMusica.sourcelink.json
+D:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_10\ReproductorMusica\obj\Debug\net8.0-windows\ReproductorMusica.dll
+D:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_10\ReproductorMusica\obj\Debug\net8.0-windows\refint\ReproductorMusica.dll
+D:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_10\ReproductorMusica\obj\Debug\net8.0-windows\ReproductorMusica.pdb
+D:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_10\ReproductorMusica\obj\Debug\net8.0-windows\ReproductorMusica.genruntimeconfig.cache
+D:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_10\ReproductorMusica\obj\Debug\net8.0-windows\ref\ReproductorMusica.dll
