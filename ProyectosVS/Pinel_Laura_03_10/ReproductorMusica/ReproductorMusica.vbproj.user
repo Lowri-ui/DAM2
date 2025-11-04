@@ -4,5 +4,23 @@
     <Compile Update="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FormBuscar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormFotos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormGuardar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormImportar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormMultimedia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormVideos.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
