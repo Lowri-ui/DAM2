@@ -44,3 +44,15 @@ C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_10\ReproductorMusica\obj\Debug\net8.0-
 C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_10\ReproductorMusica\obj\Debug\net8.0-windows\ReproductorMusica.FormImportar.resources
 C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_10\ReproductorMusica\obj\Debug\net8.0-windows\ReproductorMusica.FormMultimedia.resources
 C:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_10\ReproductorMusica\obj\Debug\net8.0-windows\ReproductorMusica.FormVideos.resources
+D:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_10\ReproductorMusica\bin\Debug\net8.0-windows\Interop.WMPLib.dll
+D:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_10\ReproductorMusica\bin\Debug\net8.0-windows\AxInterop.WMPLib.dll
+D:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_10\ReproductorMusica\obj\Debug\net8.0-windows\Interop.WMPLib.dll
+D:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_10\ReproductorMusica\obj\Debug\net8.0-windows\AxInterop.WMPLib.dll
+D:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_10\ReproductorMusica\obj\Debug\net8.0-windows\ReproductorMusica.vbproj.ResolveComReference.cache
+D:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_10\ReproductorMusica\obj\Debug\net8.0-windows\ReproductorMusica.FormBuscar.resources
+D:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_10\ReproductorMusica\obj\Debug\net8.0-windows\ReproductorMusica.FormFotos.resources
+D:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_10\ReproductorMusica\obj\Debug\net8.0-windows\ReproductorMusica.FormGuardar.resources
+D:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_10\ReproductorMusica\obj\Debug\net8.0-windows\ReproductorMusica.FormImportar.resources
+D:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_10\ReproductorMusica\obj\Debug\net8.0-windows\ReproductorMusica.FormMultimedia.resources
+D:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_10\ReproductorMusica\obj\Debug\net8.0-windows\ReproductorMusica.FormVideos.resources
+D:\GITHUB\DAM2\ProyectosVS\Pinel_Laura_03_10\ReproductorMusica\obj\Debug\net8.0-windows\ReproductorMusica.Resources.resources

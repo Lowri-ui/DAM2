@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("ReproductorMusica"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+db33d71eb81eba73ad95a2a25722212b16ae0817"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+27f4e0cff4c3b8964eb1a1fc41db5e4cecef2915"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("ReproductorMusica"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("ReproductorMusica"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _
