@@ -83,8 +83,17 @@ public class Main {
              * SQL “SELECT CONCAT(first_name, ' ', last_name) AS name FROM employees;”
              * pero en orden inverso, del último al primero.
              * La consulta de SQL debe ser la misma, sin ningún cambio.*/
-            List<Cliente> ordenInversoLista = new ArrayList<>();
-            dao.ordenInverso(connection, ordenInversoLista);
+           // List<Cliente> ordenInversoLista = new ArrayList<>();
+           // dao.ordenInverso(connection, ordenInversoLista);
+
+            /**
+             * ACTIVIDAD 4.4.
+             * ¿Cómo se podría averiguar el número de filas obtenidas por una consulta utilizando los métodos de ResultSet,
+             * pero sin recorrer sus contenidos para contarlas? Escribe un programa que lo haga.
+             * Puedes emplear cualquier consulta.
+             */
+            Dao dao3 = new Dao(connection);
+            dao3.verCliente(connection);
 
 //            List<Cliente> nuevosClientes2 = Arrays.asList(
 //                    new Cliente("15345678A", "Ana Gómez", 28001),

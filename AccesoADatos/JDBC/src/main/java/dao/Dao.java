@@ -222,6 +222,44 @@ public class Dao {
         }
     }
 
+    /**
+     * Actividad 4.4
+     * ¿Cómo se podría averiguar el número de filas obtenidas por una consulta utilizando los métodos de ResultSet,
+     * pero sin recorrer sus contenidos para contarlas? Escribe un programa que lo haga.
+     * Puedes emplear cualquier consulta.
+     */
+    public void verCliente(Connection conn) throws SQLException {
+        String sql = "SELECT * FROM clientes WHERE DNI = ?";
+        try (PreparedStatement pstmt = conn.prepareStatement(sql,
+                ResultSet.TYPE_SCROLL_INSENSITIVE, //indicamos que el ResultSet sea desplazable
+                ResultSet.CONCUR_READ_ONLY)) {
+            pstmt.setString(1, "78901234X"); // 1 = índice del parámetro DNI = ?, empieza en 1
+
+            try (ResultSet rs = pstmt.executeQuery()) {
+                //CONTAR LAS FILAS SIN RECORRER LOS DATOS
+                int totalFilas = 0;
+                if (rs.last()) { //Vamos a la última fila
+                    totalFilas = rs.getRow(); //nos da el número de fila que será la cantidad total
+                }
+                // El cursor ahora está en la última fila, mostramos las filas totales por pantalla
+                System.out.println("Número de filas obtenidas: " + totalFilas);
+
+                // Para leer los datos movemos el puntero de vuelta al principio
+                rs.beforeFirst();
+
+                while (rs.next()) {
+                    String dni = rs.getString("DNI");
+                    String apellidos = rs.getString("APELLIDOS");
+                    String cp = rs.getString("CP");
+                    System.out.println(dni + " " + apellidos + " " + (cp != null ? cp : "null"));
+                }
+            }
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+    }
+
+
     public void eliminarClientes(Connection conn, List<Cliente> clientes) {
         String sql = "DELETE FROM CLIENTES WHERE DNI = ?";
 
