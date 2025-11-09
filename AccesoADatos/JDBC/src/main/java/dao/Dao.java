@@ -1,6 +1,5 @@
 package dao;
 
-import com.mysql.cj.protocol.Resultset;
 import pojos.Cliente;
 import pojos.ClienteNuevo;
 import pojos.LineaFactura;
@@ -254,6 +253,35 @@ public class Dao {
                     System.out.println(dni + " " + apellidos + " " + (cp != null ? cp : "null"));
                 }
             }
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     *ACTIVIDAD 4.5.
+     * Escribe un metodo en Java que reciba una conexión muestre los datos
+     * de varios clientes, o todos, de la tabla CLIENTES.
+     * El programa debe utilizar una sentencia preparada para la consulta
+     * SELECT * FROM CLIENTES WHERE DNI=?
+     * Debe realizarse una consulta para cada cliente, especificando su DNI, y
+     * obtener los datos del ResultSet resultante, que solo tendrá una fila, al ser el acceso por clave primaria.
+     * Haz comentarios al código.
+     */
+    public void obtenerCliente(Connection conn, List<String> listaDnis) throws SQLException {
+        String sql = "SELECT * FROM clientes WHERE DNI = ?";
+        try (PreparedStatement pstmt = conn.prepareStatement(sql)){
+            for (String dni : listaDnis) { //recorremos la lista de dnis para consultar un dni distinto
+                pstmt.setString(1, dni); //ponemos en el placeholder un dni
+                try (ResultSet rs = pstmt.executeQuery()) { //ejecutamos la consulta
+                    while (rs.next()) {
+                        String apellidos = rs.getString("APELLIDOS");
+                        String cp = rs.getString("CP");
+                        System.out.println(dni + " " + apellidos + " " + (cp != null ? cp : "null"));
+                    }
+                }
+            }
+
         }catch (SQLException e){
             e.printStackTrace();
         }

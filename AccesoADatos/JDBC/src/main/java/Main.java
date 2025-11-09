@@ -92,9 +92,22 @@ public class Main {
              * pero sin recorrer sus contenidos para contarlas? Escribe un programa que lo haga.
              * Puedes emplear cualquier consulta.
              */
-            Dao dao3 = new Dao(connection);
-            dao3.verCliente(connection);
+            //Dao dao3 = new Dao(connection);
+            //dao3.verCliente(connection);
 
+            /**
+             * ACTIVIDAD 4.5
+             * Escribe un metodo en Java que reciba una conexión muestre los datos
+             * de varios clientes, o todos, de la tabla CLIENTES.
+             * El programa debe utilizar una sentencia preparada para la consulta
+             * SELECT * FROM CLIENTES WHERE DNI=?
+             * Debe realizarse una consulta para cada cliente, especificando su DNI, y
+             * obtener los datos del ResultSet resultante, que solo tendrá una fila, al ser el acceso por clave primaria.
+             * Haz comentarios al código.
+             */
+            Dao dao3 = new Dao(connection);
+            List<String> listaDnis = Arrays.asList("78901234X", "89012345E", "56789012B");
+            dao3.obtenerCliente(connection, listaDnis);
 //            List<Cliente> nuevosClientes2 = Arrays.asList(
 //                    new Cliente("15345678A", "Ana Gómez", 28001),
 //                    new Cliente("26456789B", "Jose Martín", 41002),
