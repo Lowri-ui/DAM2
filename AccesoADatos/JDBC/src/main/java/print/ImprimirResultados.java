@@ -1,6 +1,8 @@
 package print;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ImprimirResultados {
 
@@ -149,8 +151,5 @@ public class ImprimirResultados {
                 System.out.println(); // Salto de línea para pasar al siguiente registro.
             }
         }
-    }
-    public class mostrarNombresInversoConLista(Connection conn) throws SQLException{
-
     }
 }

@@ -37,14 +37,15 @@ public class Main {
              */
             //dao.crearTablaClientesSiNoExiste();
              //Imprimimos los resultados
-            print.imprimirTablas(connection, CATALOGO);
-//
-//            // Insertamos registros en la tabla clientes
-            //dao.insertarDatosConStatement(connection, INSERT_CLIENTES);
-//            // Sacamos por consola los registros insertados
+            //print.imprimirTablas(connection, CATALOGO);
+
+            // Insertamos registros en la tabla clientes
+           // dao.insertarDatosConStatement(connection, INSERT_CLIENTES);
+           // Sacamos por consola los registros insertados
             //print.imprimirRegistros(connection, CATALOGO, NOMBRE_TABLA);
-//
-            // -- ACTIVIDAD 4.1. UPDATE Y DELETE ('78901234X', 'NADALES', '44126'),  ('89012345E', 'ROJAS', null), ('56789012B', 'SAMPER', '29730').
+
+            /**-- ACTIVIDAD 4.1. UPDATE Y DELETE ('78901234X', 'NADALES', '44126'),
+             * ('89012345E', 'ROJAS', null), ('56789012B', 'SAMPER', '29730').*/
            //ACTUALIZAMOS ESTOS 3 CLIENTES:
 //            List<Cliente> actualizarLista = Arrays.asList(
 //                    new Cliente("78901234X", "NADALES",44126),
@@ -55,9 +56,8 @@ public class Main {
 //            dao.actualizarClientes(connection, actualizarLista);
 //            System.out.println("Clientes actualizados:");
            //print.imprimirRegistros(connection,CATALOGO,NOMBRE_TABLA);
-            //ACTIVIDAD 4.2. PRINT con int.
-            print.imprimirRegistros2(connection, CATALOGO, NOMBRE_TABLA);
-//
+
+            /** ACTIVIDAD 4.2. PRINT con int.*/
 //            //ELIMINAMOS UN CLIENTE --> ('09876543K','LAMIQUIZ', null)
 //            List<Cliente> eliminarClientesLista = Arrays.asList(
 //                    new Cliente("09876543K","LAMIQUIZ",0)
@@ -76,7 +76,16 @@ public class Main {
 //            );
 //
 ////            dao.insertarClientes(connection, nuevosClientes);
-////            print.imprimirRegistros(connection, CATALOGO, NOMBRE_TABLA);
+            //print.imprimirRegistros2(connection, CATALOGO, NOMBRE_TABLA);
+
+            /** ACTIVIDAD 4.3.
+             * Haz un metodo en Java que muestre los resultados de la siguiente consulta de
+             * SQL “SELECT CONCAT(first_name, ' ', last_name) AS name FROM employees;”
+             * pero en orden inverso, del último al primero.
+             * La consulta de SQL debe ser la misma, sin ningún cambio.*/
+            List<Cliente> ordenInversoLista = new ArrayList<>();
+            dao.ordenInverso(connection, ordenInversoLista);
+
 //            List<Cliente> nuevosClientes2 = Arrays.asList(
 //                    new Cliente("15345678A", "Ana Gómez", 28001),
 //                    new Cliente("26456789B", "Jose Martín", 41002),

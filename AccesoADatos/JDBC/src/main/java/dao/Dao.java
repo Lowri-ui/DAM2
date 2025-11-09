@@ -1,5 +1,6 @@
 package dao;
 
+import com.mysql.cj.protocol.Resultset;
 import pojos.Cliente;
 import pojos.ClienteNuevo;
 import pojos.LineaFactura;
@@ -19,7 +20,7 @@ public class Dao {
 
     /**
      * Comprueba si la tabla CLIENTES existe y, si no, la crea.
-     * Este método es idempotente, lo que significa que se puede ejecutar
+     * Este metodo es idempotente, lo que significa que se puede ejecutar
      * varias veces sin causar errores ni cambios después de la primera ejecución exitosa.
      *
      * @throws SQLException Si ocurre un error de acceso a la base de datos durante la operación.
@@ -197,6 +198,30 @@ public class Dao {
             e.printStackTrace();
         }
     }
+
+    /**
+     *ACTIVIDAD 4.3
+     */
+    public void ordenInverso (Connection conn, List<Cliente> clientes) throws SQLException {
+        String sql = "SELECT CONCAT(APELLIDOS,'',CP) AS name FROM clientes";
+        try (PreparedStatement pstmt = conn.prepareStatement(sql);
+             ResultSet rs = pstmt.executeQuery()) {//Esto devuelve un ResultSet() que tendremos que guardar en un array
+            //para leerlo al revés y mostrarlo por pantalla
+
+            //Creamos una array de los nombres de clientes
+            List<String> names = new ArrayList<>();
+            while (rs.next()){
+               String name = rs.getString("name");
+                names.add(name);//añadimos los nombres al arraylist
+            }
+
+            //Recorremos la lista al revés
+            for (int i = names.size() - 1; i >= 0; i--) {
+                System.out.println(names.get(i));
+            }
+        }
+    }
+
     public void eliminarClientes(Connection conn, List<Cliente> clientes) {
         String sql = "DELETE FROM CLIENTES WHERE DNI = ?";
 
