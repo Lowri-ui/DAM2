@@ -30,6 +30,7 @@ Partial Class Form1
         lblTitulo = New Label()
         btnPausa = New Button()
         Panel1 = New Panel()
+        btnSalir = New Button()
         lblTimer = New Label()
         Panel2 = New Panel()
         Timer1 = New System.Windows.Forms.Timer(components)
@@ -111,6 +112,7 @@ Partial Class Form1
         ' Panel1
         ' 
         Panel1.BackColor = Color.DimGray
+        Panel1.Controls.Add(btnSalir)
         Panel1.Controls.Add(lblTimer)
         Panel1.Controls.Add(btnPausa)
         Panel1.Controls.Add(lblTitulo)
@@ -122,6 +124,21 @@ Partial Class Form1
         Panel1.Size = New Size(681, 253)
         Panel1.TabIndex = 6
         ' 
+        ' btnSalir
+        ' 
+        btnSalir.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
+        btnSalir.BackColor = Color.Orange
+        btnSalir.FlatAppearance.BorderSize = 0
+        btnSalir.FlatStyle = FlatStyle.Flat
+        btnSalir.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnSalir.ForeColor = Color.Black
+        btnSalir.Location = New Point(597, 204)
+        btnSalir.Name = "btnSalir"
+        btnSalir.Size = New Size(72, 37)
+        btnSalir.TabIndex = 7
+        btnSalir.Text = "Salir"
+        btnSalir.UseVisualStyleBackColor = False
+        ' 
         ' lblTimer
         ' 
         lblTimer.Anchor = AnchorStyles.Top
@@ -132,7 +149,7 @@ Partial Class Form1
         lblTimer.Name = "lblTimer"
         lblTimer.Size = New Size(78, 55)
         lblTimer.TabIndex = 6
-        lblTimer.Text = "30"
+        lblTimer.Text = "45"
         ' 
         ' Panel2
         ' 
@@ -146,6 +163,9 @@ Partial Class Form1
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(681, 170)
         Panel2.TabIndex = 7
+        ' 
+        ' Timer1
+        ' 
         ' 
         ' Form1
         ' 
@@ -174,5 +194,6 @@ Partial Class Form1
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents lblTimer As Label
+    Friend WithEvents btnSalir As Button
 
 End Class
