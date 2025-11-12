@@ -1,6 +1,7 @@
 import dao.Dao;
 import dao.DatabaseConnector;
 import pojos.Cliente;
+import pojos.Company;
 import print.ImprimirResultados;
 
 import java.sql.Connection;
@@ -12,6 +13,7 @@ public class Main {
     public static String CATALOGO = "hr_database";
     public static String WORLD = "world";
     public static String NOMBRE_TABLA = "CLIENTES";
+    public static String T_COMPANIES = "COMPANIES";
     public static String T_FACTURAS = "FACTURAS";
     public static String T_LINEAS_FACTURA = "LINEAS_FACTURA";
     public static String INSERT_CLIENTES = "INSERT INTO CLIENTES(DNI,APELLIDOS,CP) VALUES "
@@ -21,6 +23,13 @@ public class Main {
             + "('09876543K','LAMIQUIZ', null);";
 
     public static void main(String[] args) {
+
+        //Lista de compañías a insertar
+        List<Company> listaCompanies = Arrays.asList(
+                new Company("A12345678", "TechCorp", "Tecnología"),
+                new Company("B23456789", "AgroPlus", "Agricultura"),
+                new Company("C34567890", "FinanGroup", "Finanzas")
+        );
         try {
             DatabaseConnector connector = new DatabaseConnector();
             Connection connection = connector.connection;
@@ -105,9 +114,22 @@ public class Main {
              * obtener los datos del ResultSet resultante, que solo tendrá una fila, al ser el acceso por clave primaria.
              * Haz comentarios al código.
              */
-            Dao dao3 = new Dao(connection);
-            List<String> listaDnis = Arrays.asList("78901234X", "89012345E", "56789012B");
-            dao3.obtenerCliente(connection, listaDnis);
+//            Dao dao3 = new Dao(connection);
+//            List<String> listaDnis = Arrays.asList("78901234X", "89012345E", "56789012B");
+//            dao3.obtenerCliente(connection, listaDnis);
+
+            /**
+             * ACTIVIDAD 4.6
+             */
+            //instancia del DAO
+            Dao dao4 = new Dao(connection);
+            //Crear la tabla si no existe
+            dao4.crearTablaCompanies(connection);
+            //Insertar las compañías con transacción controlada
+            dao4.insertarCompaniesBatchConTransaccion(connection, listaCompanies);
+            System.out.println("Proceso de insercción completado.");
+            print.imprimirRegistros(connection, CATALOGO, T_COMPANIES);
+
 //            List<Cliente> nuevosClientes2 = Arrays.asList(
 //                    new Cliente("15345678A", "Ana Gómez", 28001),
 //                    new Cliente("26456789B", "Jose Martín", 41002),
@@ -214,7 +236,7 @@ public class Main {
             // Cerramos la conexion
             connection.close();
         } catch (Exception e) {
-            System.err.println("Erro al conectar a la base de dados");
+            System.err.println("Erro al conectar a la base de datos");
             System.out.println(e.getMessage());
             e.printStackTrace();
         }
