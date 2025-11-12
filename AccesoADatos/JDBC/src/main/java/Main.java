@@ -133,13 +133,22 @@ public class Main {
             /**
              * ACTIVIDAD 4.7
              */
-            Dao dao5 = new Dao(connection);
-            String apellidos = dao5.obtenerApellidosCliente(connection,"78901234X");
-            if (apellidos == null) {
-                System.out.println("No existe el apellido del cliente");
-            }else {
-                System.out.println("Apellidos del cliente: "+apellidos);
-            }
+//            Dao dao5 = new Dao(connection);
+//            String apellidos = dao5.obtenerApellidosCliente(connection,"78901234X");
+//            if (apellidos == null) {
+//                System.out.println("No existe el apellido del cliente");
+//            }else {
+//                System.out.println("Apellidos del cliente: "+apellidos);
+//            }
+
+            /**
+             * ACTIVIDAD 4.8
+             */
+            Dao dao6 = new Dao(connection);
+            // ACTIVIDAD 4.8 - Navegador de tabla interactivo
+            System.out.println("-- Navegador interactivo de la tabla CLIENTES --");
+            dao6.navegarTabla(connection, NOMBRE_TABLA);
+
 
 //            List<Cliente> nuevosClientes2 = Arrays.asList(
 //                    new Cliente("15345678A", "Ana Gómez", 28001),

@@ -2,6 +2,9 @@ package dao;
 
 import pojos.*;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -416,6 +419,94 @@ public class Dao {
                 }
             }
         }
+    }
+
+    /**
+     * ACTIVIDAD 4.8
+     * @param conn
+     */
+
+    // Metodo que permite navegar interactivamente por cualquier tabla
+    public void navegarTabla(Connection conn, String nombreTabla) {
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
+
+            // Crear ResultSet desplazable
+            String sql = "SELECT * FROM " + nombreTabla;
+            try (Statement stmt = conn.createStatement(
+                    ResultSet.TYPE_SCROLL_INSENSITIVE,
+                    ResultSet.CONCUR_READ_ONLY);
+                 ResultSet rs = stmt.executeQuery(sql)) {
+
+                // Mostrar primera fila si existe
+                if (rs.next()) {
+                    mostrarFila(rs);
+                } else {
+                    System.out.println("La tabla está vacía.");
+                    return;
+                }
+
+                // Leer comandos
+                String comando;
+                while (true) {
+                    System.out.print("Introduce comando (k=next, d=prev, número=ir a fila, .=salir): ");
+                    comando = br.readLine();
+
+                    if (comando.equals(".")) {
+                        System.out.println("Saliendo...");
+                        break;
+                    } else if (comando.equalsIgnoreCase("k")) {
+                        if (rs.next()) {
+                            mostrarFila(rs);
+                        } else {
+                            System.out.println("Ya estás en la última fila.");
+                        }
+                    } else if (comando.equalsIgnoreCase("d")) {
+                        if (rs.previous()) {
+                            mostrarFila(rs);
+                        } else {
+                            System.out.println("Ya estás en la primera fila.");
+                        }
+                    } else {
+                        try {
+                            int fila = Integer.parseInt(comando);
+                            if (fila < 1 || fila > getTotalFilas(rs)) {
+                                System.out.println("La fila " + fila + " no existe.");
+                            } else {
+                                rs.absolute(fila);
+                                mostrarFila(rs);
+                            }
+                        } catch (NumberFormatException e) {
+                            System.out.println("Comando inválido.");
+                        }
+                    }
+                }
+
+            }
+
+        } catch (SQLException | IOException e) {
+            e.printStackTrace();
+        }
+    }
+    // Metodo para mostrar una fila del ResultSet
+    private static void mostrarFila(ResultSet rs) throws SQLException {
+        ResultSetMetaData meta = rs.getMetaData();
+        int numColumnas = meta.getColumnCount();
+        System.out.println("Fila " + rs.getRow() + ":");
+        for (int i = 1; i <= numColumnas; i++) {
+            String nombreColumna = meta.getColumnName(i);
+            String valor = rs.getString(i);
+            System.out.println(nombreColumna + " = " + (valor != null ? valor : "null"));
+        }
+        System.out.println("------------------------------");
+    }
+
+    // Metodo para obtener el número total de filas
+    private static int getTotalFilas(ResultSet rs) throws SQLException {
+        int total;
+        rs.last();
+        total = rs.getRow();
+        rs.beforeFirst(); // Volvemos al inicio
+        return total;
     }
 
     public void eliminarClientes(Connection conn, List<Cliente> clientes) {
