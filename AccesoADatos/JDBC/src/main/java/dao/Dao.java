@@ -396,6 +396,27 @@ public class Dao {
         }
     }
 
+    /**
+     * ACTIVIDAD 4.7
+     * @param conn
+     */
+
+    public String obtenerApellidosCliente (Connection conn, String dni) throws SQLException {
+
+        String sql = "SELECT obtener_apellidos_cliente(?) AS apellidos";
+
+        try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1,dni);
+
+            try (ResultSet rs = pstmt.executeQuery()) {
+                if (rs.next()) {
+                    return rs.getString("APELLIDOS");
+                } else {
+                    return null; // No se encontró cliente
+                }
+            }
+        }
+    }
 
     public void eliminarClientes(Connection conn, List<Cliente> clientes) {
         String sql = "DELETE FROM CLIENTES WHERE DNI = ?";

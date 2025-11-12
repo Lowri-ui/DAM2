@@ -122,13 +122,24 @@ public class Main {
              * ACTIVIDAD 4.6
              */
             //instancia del DAO
-            Dao dao4 = new Dao(connection);
-            //Crear la tabla si no existe
-            dao4.crearTablaCompanies(connection);
-            //Insertar las compañías con transacción controlada
-            dao4.insertarCompaniesBatchConTransaccion(connection, listaCompanies);
-            System.out.println("Proceso de insercción completado.");
-            print.imprimirRegistros(connection, CATALOGO, T_COMPANIES);
+//            Dao dao4 = new Dao(connection);
+//            //Crear la tabla si no existe
+//            dao4.crearTablaCompanies(connection);
+//            //Insertar las compañías con transacción controlada
+//            dao4.insertarCompaniesBatchConTransaccion(connection, listaCompanies);
+//            System.out.println("Proceso de insercción completado.");
+//            print.imprimirRegistros(connection, CATALOGO, T_COMPANIES);
+
+            /**
+             * ACTIVIDAD 4.7
+             */
+            Dao dao5 = new Dao(connection);
+            String apellidos = dao5.obtenerApellidosCliente(connection,"78901234X");
+            if (apellidos == null) {
+                System.out.println("No existe el apellido del cliente");
+            }else {
+                System.out.println("Apellidos del cliente: "+apellidos);
+            }
 
 //            List<Cliente> nuevosClientes2 = Arrays.asList(
 //                    new Cliente("15345678A", "Ana Gómez", 28001),
