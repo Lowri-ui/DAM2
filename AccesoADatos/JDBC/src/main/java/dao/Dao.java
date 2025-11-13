@@ -354,7 +354,7 @@ public class Dao {
         ResultSet facturas = dbm.getTables(null, null, nombreTabla, null);
 
         // 3. Evaluar el resultado.
-        if (tables.next()) {
+        if (facturas.next()) {
             // Si tables.next() devuelve 'true', significa que el ResultSet tiene al menos una fila,
             // lo que confirma que la tabla ya existe.
             System.out.println("La tabla '" + nombreTabla + "' ya existe. No se requiere ninguna acción.");
