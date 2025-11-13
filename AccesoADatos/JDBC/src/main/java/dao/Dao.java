@@ -332,7 +332,74 @@ public class Dao {
             }
         }
     }
-    /** ACTIVIDAD 4.5 -- 2ª PARTE
+
+    /**
+     * EXTRA CREAR TABLA DE FACTURAS
+     */
+
+    public void crearTablaFacturas(Connection connection) throws SQLException {
+        //Recibimos la conexión
+        this.connection = connection;
+
+        // Definimos el nombre de la tabla que queremos crear.
+        final String nombreTabla = "FACTURAS";
+
+        // 1. Obtener los metadatos de la base de datos a través de la conexión.
+        // DatabaseMetaData nos proporciona métodos para explorar la estructura de la BBDD.
+        DatabaseMetaData dbm = connection.getMetaData();
+
+        // 2. Comprobar si la tabla "FACTURAS" ya existe.
+        // getTables() devuelve un ResultSet con la lista de tablas que coinciden con el patrón.
+        // Pasamos null a catálogo y esquema para buscar en cualquier lugar, y el nombre exacto de la tabla.
+        ResultSet facturas = dbm.getTables(null, null, nombreTabla, null);
+
+        // 3. Evaluar el resultado.
+        if (tables.next()) {
+            // Si tables.next() devuelve 'true', significa que el ResultSet tiene al menos una fila,
+            // lo que confirma que la tabla ya existe.
+            System.out.println("La tabla '" + nombreTabla + "' ya existe. No se requiere ninguna acción.");
+        } else {
+            // Si el ResultSet está vacío, la tabla no existe y procedemos a crearla.
+            System.out.println("La tabla '" + nombreTabla + "' no existe. Creándola...");
+
+            // Usamos un bloque 'try-with-resources' para asegurar que el Statement se cierre automáticamente.
+            try (Statement stmt = connection.createStatement()) {
+                // La sentencia DDL a ejecutar.
+                String sql = "CREATE TABLE FACTURAS ("
+                        + "NUM_FACTURA INT AUTO_INCREMENT PRIMARY KEY, "
+                        + "DNI_CLIENTE VARCHAR(20) NOT NULL"
+                        + ")";
+
+                // 4. Ejecutar la sentencia de creación.
+                // Usamos executeUpdate() para sentencias DDL (CREATE, ALTER, DROP) y DML (INSERT, UPDATE, DELETE).
+                stmt.executeUpdate(sql);
+                System.out.println("Tabla '" + nombreTabla + "' creada con éxito.");
+            }
+        }
+
+        //CREAMOS LA TABLA LINEAS_FACTURAS
+        ResultSet lineasFacturas = dbm.getTables(null, null, nombreTabla, null);
+        if (lineasFacturas.next()) {
+            System.out.println("La tabla " + nombreTabla + "ya existe. No requiere ninguna acción.");
+        }else {
+            System.out.println("La tabla " + nombreTabla + "no existe. Creándola...");
+            try (Statement stmt = connection.createStatement()) {
+                String sql = "CREATE TABLE LINEAS_FACTURAS ("
+                        + "NUM_FACTURA INT NOT NULL, "
+                        + "LINEA_FACTURA INT NOT NULL, "
+                        + "CONCEPTO VARCHAR(255) NOT NULL, "
+                        + "CANTIDAD INT NOT NULL, "
+                        + "PRIMARY KEY (NUM_FACTURA, LINEA_FACTURA), "
+                        + "FOREIGN KEY (NUM_FACTURA) REFERENCES FACTURAS(NUM_FACTURA)"
+                        + ")";
+                stmt.executeUpdate(sql);
+                System.out.println("Tabla '" + nombreTabla + "' creada con éxito.");
+            }
+        }
+
+    }
+
+    /** ACTIVIDAD 4.6 -- 2ª PARTE
      * Inserta una lista de compañías en la tabla COMPANIES usando procesamiento por lotes (batch)
      * dentro de una transacción controlada manualmente.
      * Si alguna inserción falla, se revierte (rollback) toda la transacción,
@@ -342,11 +409,11 @@ public class Dao {
     public void insertarCompaniesBatchConTransaccion(Connection conn, List<Company> companies) throws SQLException {
 
         String sql = "INSERT INTO COMPANIES (CIF, NOMBRE, SECTOR) VALUES (?, ?, ?)";
-       //Para evitar duplicados al probar el metodo limpiamos la tabla antes de insertar
-        try (Statement stmt = conn.createStatement()) {
-            stmt.executeUpdate("DELETE FROM COMPANIES");
-            System.out.println("Tabla COMPANIES vaciada antes de la inserción de prueba.");
-        }
+//       //Para evitar duplicados al probar el metodo limpiamos la tabla antes de insertar
+//        try (Statement stmt = conn.createStatement()) {
+//            stmt.executeUpdate("DELETE FROM COMPANIES");
+//            System.out.println("Tabla COMPANIES vaciada antes de la inserción de prueba.");
+//        }
 
         try {
             // 1. INICIAR LA TRANSACCIÓN
@@ -418,7 +485,10 @@ public class Dao {
                     return null; // No se encontró cliente
                 }
             }
+        }catch (SQLException e){
+            e.printStackTrace();
         }
+        return sql;
     }
 
     /**

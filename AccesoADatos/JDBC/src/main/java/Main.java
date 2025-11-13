@@ -2,12 +2,14 @@ import dao.Dao;
 import dao.DatabaseConnector;
 import pojos.Cliente;
 import pojos.Company;
+import pojos.LineaFactura;
 import print.ImprimirResultados;
 
 import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
 public class Main {
     public static String CATALOGO = "hr_database";
@@ -25,11 +27,11 @@ public class Main {
     public static void main(String[] args) {
 
         //Lista de compañías a insertar
-        List<Company> listaCompanies = Arrays.asList(
-                new Company("A12345678", "TechCorp", "Tecnología"),
-                new Company("B23456789", "AgroPlus", "Agricultura"),
-                new Company("C34567890", "FinanGroup", "Finanzas")
-        );
+//        List<Company> listaCompanies = Arrays.asList(
+//                new Company("A12345678", "TechCorp", "Tecnología"),
+//                new Company("B23456789", "AgroPlus", "Agricultura"),
+//                new Company("C34567890", "FinanGroup", "Finanzas")
+//        );
         try {
             DatabaseConnector connector = new DatabaseConnector();
             Connection connection = connector.connection;
@@ -123,9 +125,9 @@ public class Main {
              */
             //instancia del DAO
 //            Dao dao4 = new Dao(connection);
-//            //Crear la tabla si no existe
+            //Crear la tabla si no existe
 //            dao4.crearTablaCompanies(connection);
-//            //Insertar las compañías con transacción controlada
+            //Insertar las compañías con transacción controlada
 //            dao4.insertarCompaniesBatchConTransaccion(connection, listaCompanies);
 //            System.out.println("Proceso de insercción completado.");
 //            print.imprimirRegistros(connection, CATALOGO, T_COMPANIES);
@@ -134,59 +136,59 @@ public class Main {
              * ACTIVIDAD 4.7
              */
 //            Dao dao5 = new Dao(connection);
+//            //Pasamos un DNI de cliente
 //            String apellidos = dao5.obtenerApellidosCliente(connection,"78901234X");
+//            //Si es nulo
 //            if (apellidos == null) {
 //                System.out.println("No existe el apellido del cliente");
 //            }else {
+//                //Si no es nulo mostramos el apellido del cliente con X DNI
 //                System.out.println("Apellidos del cliente: "+apellidos);
 //            }
 
-            /**
-             * ACTIVIDAD 4.8
-             */
-            Dao dao6 = new Dao(connection);
-            // ACTIVIDAD 4.8 - Navegador de tabla interactivo
-            System.out.println("-- Navegador interactivo de la tabla CLIENTES --");
-            dao6.navegarTabla(connection, NOMBRE_TABLA);
+//            /**
+//             * ACTIVIDAD 4.8 Navegador de Tabla interactivo
+//             */
+//            Dao dao6 = new Dao(connection);
+//            System.out.println("-- Navegador interactivo de la tabla CLIENTES --");
+//            dao6.navegarTabla(connection, NOMBRE_TABLA);
 
+            List<Cliente> nuevosClientes2 = Arrays.asList(
+                    new Cliente("15345678A", "Ana Gómez", 28001),
+                    new Cliente("26456789B", "Jose Martín", 41002),
+                    new Cliente("37567890C", "Ramon Ruiz", 46003),
+                    new Cliente("48678901D", "Lucia Díaz", 98004),
+                    new Cliente("59789012E", "Amalia Jiménez", 50005)
+            );
+         dao.insertarClientesBatchConTransaccion(connection, nuevosClientes2);
+         print.imprimirRegistros(connection, CATALOGO, NOMBRE_TABLA);
 
-//            List<Cliente> nuevosClientes2 = Arrays.asList(
-//                    new Cliente("15345678A", "Ana Gómez", 28001),
-//                    new Cliente("26456789B", "Jose Martín", 41002),
-//                    new Cliente("37567890C", "Ramon Ruiz", 46003),
-//                    new Cliente("48678901D", "Lucia Díaz", 98004),
-//                    new Cliente("59789012E", "Amalia Jiménez", 50005)
-//            );
-////            dao.insertarClientesBatchConTransaccion(connection, nuevosClientes2);
-////            print.imprimirRegistros(connection, CATALOGO, NOMBRE_TABLA);
-//
-//            // Preparamos los datos para las nuevas facturas
-//            List<String> dnis = Arrays.asList(
-//                    "78901234X",
-//                    "09876543K",
-//                    "15345678A",
-//                    "INVALIDO", // DNI que podría causar un error para probar el rollback
-//                    "59789012E"
-//            );
-//
-//            List<LineaFactura> lineas = Arrays.asList(
-//                    new LineaFactura("TORNILLOS", 10),
-//                    new LineaFactura("TUERCAS", 50),
-//                    new LineaFactura("ARANDELAS", 100),
-//                    new LineaFactura("TACOS", 150)
-//            );
-//
-//            // Llamamos a nuestro metodo para procesar el lote de facturas
-////            Map<String, Integer> resultados = dao.crearFacturas(connection, dnis, lineas);
-////
-////            System.out.println("\n--- RESUMEN DEL PROCESO ---");
-////            System.out.println("Facturas creadas exitosamente: " + resultados.size() + " de " + dnis.size());
-////            resultados.forEach((dni, numFactura) ->
-////                    System.out.println("  - DNI: " + dni + " -> Factura Nº: " + numFactura)
-////            );
-////            print.imprimirRegistros(connection, CATALOGO, T_FACTURAS);
-////            print.imprimirRegistros(connection, CATALOGO, T_LINEAS_FACTURA);
-//
+            // Preparamos los datos para las nuevas facturas
+            List<String> dnis = Arrays.asList(
+                    "78901234X",
+                    "09876543K",
+                    "15345678A",
+                    "INVALIDO", // DNI que podría causar un error para probar el rollback
+                    "59789012E"
+            );
+
+            List<LineaFactura> lineas = Arrays.asList(
+                    new LineaFactura("TORNILLOS", 10),
+                    new LineaFactura("TUERCAS", 50),
+                    new LineaFactura("ARANDELAS", 100),
+                    new LineaFactura("TACOS", 150)
+            );
+
+            // Llamamos a nuestro metodo para procesar el lote de facturas
+           Map<String, Integer> resultados = dao.crearFacturas(connection, dnis, lineas);
+
+           System.out.println("\n--- RESUMEN DEL PROCESO ---");
+            System.out.println("Facturas creadas exitosamente: " + resultados.size() + " de " + dnis.size());
+            resultados.forEach((dni, numFactura) ->
+                    System.out.println("  - DNI: " + dni + " -> Factura Nº: " + numFactura));
+            print.imprimirRegistros(connection, CATALOGO, T_FACTURAS);
+            print.imprimirRegistros(connection, CATALOGO, T_LINEAS_FACTURA);
+
 //            // La lógica de negocio ahora es una simple llamada a un método.
 ////            String dniBusqueda = "78901234X";
 ////            ResultadoListado resultado = dao.llamarListadoClientes(connection, dniBusqueda);
