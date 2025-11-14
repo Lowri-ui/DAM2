@@ -6,41 +6,46 @@ import static android.graphics.Typeface.ITALIC;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.widget.TextView;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.res.ResourcesCompat;
 
 public class Activity51 extends AppCompatActivity {
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_5_1);
 
+        TextView tvContenido = findViewById(R.id.tvContenido);
+
         /*
-        Actividad 5.1.1
+         * EJEMPLO 5.1.1 – TEXTO DESDE XML
+         * (ya está en el layout, no hace falta código)
          */
 
-//        TextView tvContenido = (TextView) findViewById(R.id.tvContenido);
-//        Typeface typeface = ResourcesCompat.getFont(this, R.font.milky_candy);
-//        tvContenido.setTypeface(typeface);
-//        tvContenido.setText("Texto construido desde el XML. Tamaño 20dp, Bold y color Red. Laura Pinel.");
+        /*
+         * EJEMPLO 5.1.2 – TEXTO DESDE JAVA (italic y azul)
+         */
+//        tvContenido.setText("Texto construido desde Java\nTamaño 20dp, Italic y color Blue.");
+//        tvContenido.setTextColor(Color.BLUE);
+//        tvContenido.setTypeface(null, ITALIC);
+//        tvContenido.setTextSize(20);
+
+        /*
+         * EJEMPLO 5.1.3 – XML + append desde Java
+         */
+//        tvContenido.append("\nTexto añadido con append desde Java.");
 //        tvContenido.setTextColor(Color.RED);
 
         /*
-        Actividad 5.1.2
+         * EJEMPLO 5.1.4 – FUENTE DESCARGADA
          */
-
-        TextView tvContenido = (TextView) findViewById(R.id.tvContenido);
-        Typeface typeface = ResourcesCompat.getFont(this, R.font.licorice_regular);
-        tvContenido.setTypeface(typeface,ITALIC);
-        tvContenido.setText("Texto construido desde el XML. Tamaño 20dp, Bold y color Red. Laura Pinel.");
+        Typeface typeface = ResourcesCompat.getFont(this, R.font.pacifico_regular);
+        tvContenido.setTypeface(typeface);
+        tvContenido.setText("TEXTO ESCRITO FUENTE UMBRELLIA");
         tvContenido.setTextColor(Color.BLUE);
-
-
-
+        tvContenido.setTextSize(20);
     }
 }

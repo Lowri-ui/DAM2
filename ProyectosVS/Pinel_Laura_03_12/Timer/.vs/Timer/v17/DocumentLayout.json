@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_12\\Timer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5D89FE83-47FD-4D25-BA13-8D2A2894E449}|Timer.vbproj|d:\\github\\dam2\\proyectosvs\\pinel_laura_03_12\\timer\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{5D89FE83-47FD-4D25-BA13-8D2A2894E449}|Timer.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5D89FE83-47FD-4D25-BA13-8D2A2894E449}|Timer.vbproj|d:\\github\\dam2\\proyectosvs\\pinel_laura_03_12\\timer\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{5D89FE83-47FD-4D25-BA13-8D2A2894E449}|Timer.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D89FE83-47FD-4D25-BA13-8D2A2894E449}|Timer.vbproj|d:\\github\\dam2\\proyectosvs\\pinel_laura_03_12\\timer\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{5D89FE83-47FD-4D25-BA13-8D2A2894E449}|Timer.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,24 +18,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Form1.vb",
               "DocumentMoniker": "D:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_12\\Timer\\Form1.vb",
               "RelativeDocumentMoniker": "Form1.vb",
               "ToolTip": "D:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_12\\Timer\\Form1.vb",
               "RelativeToolTip": "Form1.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAgwA8AAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-11-11T11:50:10.296Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form1.vb [Dise\u00F1o]",
               "DocumentMoniker": "D:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_03_12\\Timer\\Form1.vb",
               "RelativeDocumentMoniker": "Form1.vb",
