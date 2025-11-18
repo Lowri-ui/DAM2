@@ -22,11 +22,21 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As DataGridViewCellStyle = New DataGridViewCellStyle()
         PanelTitulo = New Panel()
         PanelIcono = New Panel()
         pbLogo = New PictureBox()
         Label1 = New Label()
         gbDatos = New GroupBox()
+        cbSexo = New ComboBox()
         lblSexo = New Label()
         tbDireccion = New TextBox()
         lblDireccion = New Label()
@@ -44,13 +54,20 @@ Partial Class Form1
         btnAgregar = New Button()
         PanelLista = New Panel()
         gbLista = New GroupBox()
-        cbSexo = New ComboBox()
+        DataGridView1 = New DataGridView()
+        Column1 = New DataGridViewTextBoxColumn()
+        Column2 = New DataGridViewTextBoxColumn()
+        Column3 = New DataGridViewTextBoxColumn()
+        Column4 = New DataGridViewTextBoxColumn()
+        Column5 = New DataGridViewTextBoxColumn()
         PanelTitulo.SuspendLayout()
         PanelIcono.SuspendLayout()
         CType(pbLogo, ComponentModel.ISupportInitialize).BeginInit()
         gbDatos.SuspendLayout()
         PanelDatos.SuspendLayout()
         PanelLista.SuspendLayout()
+        gbLista.SuspendLayout()
+        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' PanelTitulo
@@ -116,6 +133,15 @@ Partial Class Form1
         gbDatos.TabIndex = 1
         gbDatos.TabStop = False
         gbDatos.Text = "Datos del contacto"
+        ' 
+        ' cbSexo
+        ' 
+        cbSexo.DropDownStyle = ComboBoxStyle.DropDownList
+        cbSexo.FormattingEnabled = True
+        cbSexo.Location = New Point(146, 223)
+        cbSexo.Name = "cbSexo"
+        cbSexo.Size = New Size(304, 26)
+        cbSexo.TabIndex = 4
         ' 
         ' lblSexo
         ' 
@@ -290,8 +316,10 @@ Partial Class Form1
         ' 
         ' PanelLista
         ' 
+        PanelLista.BorderStyle = BorderStyle.FixedSingle
         PanelLista.Controls.Add(gbLista)
         PanelLista.Dock = DockStyle.Top
+        PanelLista.ForeColor = SystemColors.ControlText
         PanelLista.Location = New Point(0, 362)
         PanelLista.Name = "PanelLista"
         PanelLista.Size = New Size(750, 216)
@@ -299,23 +327,115 @@ Partial Class Form1
         ' 
         ' gbLista
         ' 
+        gbLista.Controls.Add(DataGridView1)
+        gbLista.FlatStyle = FlatStyle.Flat
         gbLista.Font = New Font("Verdana", 12F, FontStyle.Bold)
         gbLista.ForeColor = Color.FromArgb(CByte(80), CByte(52), CByte(42))
         gbLista.Location = New Point(47, 19)
         gbLista.Name = "gbLista"
-        gbLista.Size = New Size(515, 186)
+        gbLista.Size = New Size(584, 186)
         gbLista.TabIndex = 1
         gbLista.TabStop = False
         gbLista.Text = "Lista de contactos"
         ' 
-        ' cbSexo
+        ' DataGridView1
         ' 
-        cbSexo.DropDownStyle = ComboBoxStyle.DropDownList
-        cbSexo.FormattingEnabled = True
-        cbSexo.Location = New Point(146, 223)
-        cbSexo.Name = "cbSexo"
-        cbSexo.Size = New Size(304, 26)
-        cbSexo.TabIndex = 4
+        DataGridViewCellStyle1.BackColor = Color.FromArgb(CByte(255), CByte(228), CByte(230))
+        DataGridViewCellStyle1.ForeColor = Color.Black
+        DataGridViewCellStyle1.SelectionBackColor = Color.LightCoral
+        DataGridViewCellStyle1.SelectionForeColor = Color.White
+        DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridView1.BackgroundColor = Color.FromArgb(CByte(255), CByte(242), CByte(242))
+        DataGridView1.BorderStyle = BorderStyle.None
+        DataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
+        DataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single
+        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = Color.FromArgb(CByte(255), CByte(228), CByte(230))
+        DataGridViewCellStyle2.Font = New Font("Verdana", 10F)
+        DataGridViewCellStyle2.ForeColor = Color.FromArgb(CByte(80), CByte(52), CByte(42))
+        DataGridViewCellStyle2.SelectionBackColor = Color.LightCoral
+        DataGridViewCellStyle2.SelectionForeColor = Color.White
+        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.False
+        DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridView1.Columns.AddRange(New DataGridViewColumn() {Column1, Column2, Column3, Column4, Column5})
+        DataGridView1.Dock = DockStyle.Fill
+        DataGridView1.GridColor = Color.FromArgb(CByte(220), CByte(170), CByte(170))
+        DataGridView1.Location = New Point(3, 23)
+        DataGridView1.Name = "DataGridView1"
+        DataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single
+        DataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = Color.FromArgb(CByte(255), CByte(228), CByte(230))
+        DataGridViewCellStyle8.Font = New Font("Verdana", 10F)
+        DataGridViewCellStyle8.ForeColor = Color.FromArgb(CByte(80), CByte(52), CByte(42))
+        DataGridViewCellStyle8.SelectionBackColor = Color.LightCoral
+        DataGridViewCellStyle8.SelectionForeColor = Color.White
+        DataGridViewCellStyle8.WrapMode = DataGridViewTriState.False
+        DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle9.BackColor = Color.FromArgb(CByte(255), CByte(228), CByte(230))
+        DataGridViewCellStyle9.Font = New Font("Verdana", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle9.ForeColor = Color.FromArgb(CByte(80), CByte(52), CByte(42))
+        DataGridViewCellStyle9.SelectionBackColor = Color.LightCoral
+        DataGridViewCellStyle9.SelectionForeColor = Color.White
+        DataGridViewCellStyle9.WrapMode = DataGridViewTriState.False
+        DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle9
+        DataGridView1.Size = New Size(578, 160)
+        DataGridView1.TabIndex = 0
+        ' 
+        ' Column1
+        ' 
+        DataGridViewCellStyle3.BackColor = Color.FromArgb(CByte(255), CByte(228), CByte(230))
+        DataGridViewCellStyle3.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle3.ForeColor = Color.Black
+        DataGridViewCellStyle3.SelectionBackColor = Color.LightCoral
+        DataGridViewCellStyle3.SelectionForeColor = Color.White
+        Column1.DefaultCellStyle = DataGridViewCellStyle3
+        Column1.HeaderText = "Nombre"
+        Column1.Name = "Column1"
+        ' 
+        ' Column2
+        ' 
+        DataGridViewCellStyle4.BackColor = Color.FromArgb(CByte(255), CByte(228), CByte(230))
+        DataGridViewCellStyle4.Font = New Font("Segoe UI", 9.75F)
+        DataGridViewCellStyle4.ForeColor = Color.Black
+        DataGridViewCellStyle4.SelectionBackColor = Color.LightCoral
+        DataGridViewCellStyle4.SelectionForeColor = Color.White
+        Column2.DefaultCellStyle = DataGridViewCellStyle4
+        Column2.HeaderText = "DNI"
+        Column2.Name = "Column2"
+        ' 
+        ' Column3
+        ' 
+        DataGridViewCellStyle5.BackColor = Color.FromArgb(CByte(255), CByte(228), CByte(230))
+        DataGridViewCellStyle5.Font = New Font("Segoe UI", 9.75F)
+        DataGridViewCellStyle5.ForeColor = Color.Black
+        DataGridViewCellStyle5.SelectionBackColor = Color.LightCoral
+        DataGridViewCellStyle5.SelectionForeColor = Color.White
+        Column3.DefaultCellStyle = DataGridViewCellStyle5
+        Column3.HeaderText = "Teléfono"
+        Column3.Name = "Column3"
+        ' 
+        ' Column4
+        ' 
+        DataGridViewCellStyle6.BackColor = Color.FromArgb(CByte(255), CByte(228), CByte(230))
+        DataGridViewCellStyle6.Font = New Font("Segoe UI", 9.75F)
+        DataGridViewCellStyle6.ForeColor = Color.Black
+        DataGridViewCellStyle6.SelectionBackColor = Color.LightCoral
+        DataGridViewCellStyle6.SelectionForeColor = Color.White
+        Column4.DefaultCellStyle = DataGridViewCellStyle6
+        Column4.HeaderText = "Dirección"
+        Column4.Name = "Column4"
+        ' 
+        ' Column5
+        ' 
+        DataGridViewCellStyle7.BackColor = Color.FromArgb(CByte(255), CByte(228), CByte(230))
+        DataGridViewCellStyle7.Font = New Font("Segoe UI", 9.75F)
+        DataGridViewCellStyle7.ForeColor = Color.Black
+        DataGridViewCellStyle7.SelectionBackColor = Color.LightCoral
+        DataGridViewCellStyle7.SelectionForeColor = Color.White
+        Column5.DefaultCellStyle = DataGridViewCellStyle7
+        Column5.HeaderText = "Sexo"
+        Column5.Name = "Column5"
         ' 
         ' Form1
         ' 
@@ -326,7 +446,9 @@ Partial Class Form1
         Controls.Add(PanelLista)
         Controls.Add(PanelDatos)
         Controls.Add(PanelTitulo)
+        FormBorderStyle = FormBorderStyle.None
         Name = "Form1"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Form1"
         PanelTitulo.ResumeLayout(False)
         PanelTitulo.PerformLayout()
@@ -336,6 +458,8 @@ Partial Class Form1
         gbDatos.PerformLayout()
         PanelDatos.ResumeLayout(False)
         PanelLista.ResumeLayout(False)
+        gbLista.ResumeLayout(False)
+        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
@@ -362,5 +486,11 @@ Partial Class Form1
     Friend WithEvents btnModificar As Button
     Friend WithEvents btnAgregar As Button
     Friend WithEvents cbSexo As ComboBox
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
 
 End Class

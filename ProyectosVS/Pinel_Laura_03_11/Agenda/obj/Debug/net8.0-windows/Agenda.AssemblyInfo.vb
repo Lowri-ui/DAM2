@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("Agenda"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+97bdd9701f996e717cb95e2d48bf273531afdfd0"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2f4a27e2a68a06d61b94b3653585a0772e27b192"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("Agenda"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("Agenda"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _
