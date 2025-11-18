@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        components = New ComponentModel.Container()
         Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle8 As DataGridViewCellStyle = New DataGridViewCellStyle()
@@ -31,10 +32,11 @@ Partial Class Form1
         Dim DataGridViewCellStyle5 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle6 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle7 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         PanelTitulo = New Panel()
         PanelIcono = New Panel()
         pbLogo = New PictureBox()
-        Label1 = New Label()
+        lblTitulo = New Label()
         gbDatos = New GroupBox()
         cbSexo = New ComboBox()
         lblSexo = New Label()
@@ -55,11 +57,13 @@ Partial Class Form1
         PanelLista = New Panel()
         gbLista = New GroupBox()
         DataGridView1 = New DataGridView()
-        Column1 = New DataGridViewTextBoxColumn()
-        Column2 = New DataGridViewTextBoxColumn()
-        Column3 = New DataGridViewTextBoxColumn()
-        Column4 = New DataGridViewTextBoxColumn()
-        Column5 = New DataGridViewTextBoxColumn()
+        ColumnNombre = New DataGridViewTextBoxColumn()
+        ColumnDni = New DataGridViewTextBoxColumn()
+        ColumnTelefono = New DataGridViewTextBoxColumn()
+        ColumnDireccion = New DataGridViewTextBoxColumn()
+        ColumnSexo = New DataGridViewTextBoxColumn()
+        ErrorProvider1 = New ErrorProvider(components)
+        PictureBox1 = New PictureBox()
         PanelTitulo.SuspendLayout()
         PanelIcono.SuspendLayout()
         CType(pbLogo, ComponentModel.ISupportInitialize).BeginInit()
@@ -68,13 +72,16 @@ Partial Class Form1
         PanelLista.SuspendLayout()
         gbLista.SuspendLayout()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(ErrorProvider1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' PanelTitulo
         ' 
         PanelTitulo.BackColor = Color.FromArgb(CByte(255), CByte(228), CByte(230))
+        PanelTitulo.Controls.Add(PictureBox1)
         PanelTitulo.Controls.Add(PanelIcono)
-        PanelTitulo.Controls.Add(Label1)
+        PanelTitulo.Controls.Add(lblTitulo)
         PanelTitulo.Dock = DockStyle.Top
         PanelTitulo.ForeColor = Color.FromArgb(CByte(255), CByte(228), CByte(230))
         PanelTitulo.Location = New Point(0, 0)
@@ -102,16 +109,16 @@ Partial Class Form1
         pbLogo.TabIndex = 0
         pbLogo.TabStop = False
         ' 
-        ' Label1
+        ' lblTitulo
         ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label1.ForeColor = Color.FromArgb(CByte(80), CByte(52), CByte(42))
-        Label1.Location = New Point(82, 19)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(110, 25)
-        Label1.TabIndex = 1
-        Label1.Text = "AGENDA"
+        lblTitulo.AutoSize = True
+        lblTitulo.Font = New Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblTitulo.ForeColor = Color.FromArgb(CByte(80), CByte(52), CByte(42))
+        lblTitulo.Location = New Point(82, 19)
+        lblTitulo.Name = "lblTitulo"
+        lblTitulo.Size = New Size(110, 25)
+        lblTitulo.TabIndex = 1
+        lblTitulo.Text = "AGENDA"
         ' 
         ' gbDatos
         ' 
@@ -137,10 +144,12 @@ Partial Class Form1
         ' cbSexo
         ' 
         cbSexo.DropDownStyle = ComboBoxStyle.DropDownList
+        cbSexo.Font = New Font("Verdana", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         cbSexo.FormattingEnabled = True
+        cbSexo.Items.AddRange(New Object() {"Femenino", "Masculino"})
         cbSexo.Location = New Point(146, 223)
         cbSexo.Name = "cbSexo"
-        cbSexo.Size = New Size(304, 26)
+        cbSexo.Size = New Size(304, 24)
         cbSexo.TabIndex = 4
         ' 
         ' lblSexo
@@ -347,7 +356,6 @@ Partial Class Form1
         DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         DataGridView1.BackgroundColor = Color.FromArgb(CByte(255), CByte(242), CByte(242))
         DataGridView1.BorderStyle = BorderStyle.None
-        DataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
         DataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single
         DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = Color.FromArgb(CByte(255), CByte(228), CByte(230))
@@ -358,11 +366,13 @@ Partial Class Form1
         DataGridViewCellStyle2.WrapMode = DataGridViewTriState.False
         DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Columns.AddRange(New DataGridViewColumn() {Column1, Column2, Column3, Column4, Column5})
+        DataGridView1.Columns.AddRange(New DataGridViewColumn() {ColumnNombre, ColumnDni, ColumnTelefono, ColumnDireccion, ColumnSexo})
         DataGridView1.Dock = DockStyle.Fill
         DataGridView1.GridColor = Color.FromArgb(CByte(220), CByte(170), CByte(170))
         DataGridView1.Location = New Point(3, 23)
         DataGridView1.Name = "DataGridView1"
+        DataGridView1.ReadOnly = True
+        DataGridView1.RightToLeft = RightToLeft.No
         DataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single
         DataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle8.BackColor = Color.FromArgb(CByte(255), CByte(228), CByte(230))
@@ -382,60 +392,80 @@ Partial Class Form1
         DataGridView1.Size = New Size(578, 160)
         DataGridView1.TabIndex = 0
         ' 
-        ' Column1
+        ' ColumnNombre
         ' 
         DataGridViewCellStyle3.BackColor = Color.FromArgb(CByte(255), CByte(228), CByte(230))
         DataGridViewCellStyle3.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         DataGridViewCellStyle3.ForeColor = Color.Black
         DataGridViewCellStyle3.SelectionBackColor = Color.LightCoral
         DataGridViewCellStyle3.SelectionForeColor = Color.White
-        Column1.DefaultCellStyle = DataGridViewCellStyle3
-        Column1.HeaderText = "Nombre"
-        Column1.Name = "Column1"
+        ColumnNombre.DefaultCellStyle = DataGridViewCellStyle3
+        ColumnNombre.HeaderText = "Nombre"
+        ColumnNombre.Name = "ColumnNombre"
+        ColumnNombre.ReadOnly = True
         ' 
-        ' Column2
+        ' ColumnDni
         ' 
         DataGridViewCellStyle4.BackColor = Color.FromArgb(CByte(255), CByte(228), CByte(230))
         DataGridViewCellStyle4.Font = New Font("Segoe UI", 9.75F)
         DataGridViewCellStyle4.ForeColor = Color.Black
         DataGridViewCellStyle4.SelectionBackColor = Color.LightCoral
         DataGridViewCellStyle4.SelectionForeColor = Color.White
-        Column2.DefaultCellStyle = DataGridViewCellStyle4
-        Column2.HeaderText = "DNI"
-        Column2.Name = "Column2"
+        ColumnDni.DefaultCellStyle = DataGridViewCellStyle4
+        ColumnDni.HeaderText = "DNI"
+        ColumnDni.Name = "ColumnDni"
+        ColumnDni.ReadOnly = True
         ' 
-        ' Column3
+        ' ColumnTelefono
         ' 
         DataGridViewCellStyle5.BackColor = Color.FromArgb(CByte(255), CByte(228), CByte(230))
         DataGridViewCellStyle5.Font = New Font("Segoe UI", 9.75F)
         DataGridViewCellStyle5.ForeColor = Color.Black
         DataGridViewCellStyle5.SelectionBackColor = Color.LightCoral
         DataGridViewCellStyle5.SelectionForeColor = Color.White
-        Column3.DefaultCellStyle = DataGridViewCellStyle5
-        Column3.HeaderText = "Teléfono"
-        Column3.Name = "Column3"
+        ColumnTelefono.DefaultCellStyle = DataGridViewCellStyle5
+        ColumnTelefono.HeaderText = "Teléfono"
+        ColumnTelefono.Name = "ColumnTelefono"
+        ColumnTelefono.ReadOnly = True
         ' 
-        ' Column4
+        ' ColumnDireccion
         ' 
         DataGridViewCellStyle6.BackColor = Color.FromArgb(CByte(255), CByte(228), CByte(230))
         DataGridViewCellStyle6.Font = New Font("Segoe UI", 9.75F)
         DataGridViewCellStyle6.ForeColor = Color.Black
         DataGridViewCellStyle6.SelectionBackColor = Color.LightCoral
         DataGridViewCellStyle6.SelectionForeColor = Color.White
-        Column4.DefaultCellStyle = DataGridViewCellStyle6
-        Column4.HeaderText = "Dirección"
-        Column4.Name = "Column4"
+        ColumnDireccion.DefaultCellStyle = DataGridViewCellStyle6
+        ColumnDireccion.HeaderText = "Dirección"
+        ColumnDireccion.Name = "ColumnDireccion"
+        ColumnDireccion.ReadOnly = True
         ' 
-        ' Column5
+        ' ColumnSexo
         ' 
         DataGridViewCellStyle7.BackColor = Color.FromArgb(CByte(255), CByte(228), CByte(230))
         DataGridViewCellStyle7.Font = New Font("Segoe UI", 9.75F)
         DataGridViewCellStyle7.ForeColor = Color.Black
         DataGridViewCellStyle7.SelectionBackColor = Color.LightCoral
         DataGridViewCellStyle7.SelectionForeColor = Color.White
-        Column5.DefaultCellStyle = DataGridViewCellStyle7
-        Column5.HeaderText = "Sexo"
-        Column5.Name = "Column5"
+        ColumnSexo.DefaultCellStyle = DataGridViewCellStyle7
+        ColumnSexo.HeaderText = "Sexo"
+        ColumnSexo.Name = "ColumnSexo"
+        ColumnSexo.ReadOnly = True
+        ' 
+        ' ErrorProvider1
+        ' 
+        ErrorProvider1.ContainerControl = Me
+        ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Dock = DockStyle.Right
+        PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
+        PictureBox1.Location = New Point(674, 0)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(76, 59)
+        PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox1.TabIndex = 3
+        PictureBox1.TabStop = False
         ' 
         ' Form1
         ' 
@@ -460,11 +490,13 @@ Partial Class Form1
         PanelLista.ResumeLayout(False)
         gbLista.ResumeLayout(False)
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
+        CType(ErrorProvider1, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
     Friend WithEvents PanelTitulo As Panel
-    Friend WithEvents Label1 As Label
+    Friend WithEvents lblTitulo As Label
     Friend WithEvents PanelIcono As Panel
     Friend WithEvents pbLogo As PictureBox
     Friend WithEvents gbDatos As GroupBox
@@ -487,10 +519,12 @@ Partial Class Form1
     Friend WithEvents btnAgregar As Button
     Friend WithEvents cbSexo As ComboBox
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Column1 As DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As DataGridViewTextBoxColumn
-    Friend WithEvents Column3 As DataGridViewTextBoxColumn
-    Friend WithEvents Column4 As DataGridViewTextBoxColumn
-    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents ErrorProvider1 As ErrorProvider
+    Friend WithEvents ColumnNombre As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnDni As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnTelefono As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnDireccion As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnSexo As DataGridViewTextBoxColumn
+    Friend WithEvents PictureBox1 As PictureBox
 
 End Class
