@@ -1,46 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- Interfaz de usuario para una calculadora simple o teclado numérico,
+     utilizando GridLayout dentro de un ConstraintLayout para centrarlo. -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- GridLayout para organizar los botones en una cuadrícula de 4 columnas.
+         He cambiado el 'layout_width' a 'match_parent' para que ocupe todo el ancho
+         y 'layout_height' a 'wrap_content'. -->
+    <GridLayout
+        android:id="@+id/keypad_grid"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:columnCount="4"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:useDefaultMargins="true"
+        android:alignmentMode="alignBounds"
+        android:rowOrderPreserved="false">
+
+        <!-- Fila 1: Botones de delete y división -->
         <Button
-            android:text="1"
-            android:layout_column="2"/>
+            android:text="C"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"/>
         <Button
-            android:text="2"
-            android:layout_column="3"/>
+            android:text="/"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"/>
         <Button
-            android:text="3"
-            android:layout_column=""/>
+            android:text="×"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"/>
         <Button
-            android:text="4"
-            android:layout_columnSpan=""/>
-        <Button
-            android:text="5"
-            android:layout_columnSpam=""/>
-        <Button
-            android:text="6"
-            android:layout_columnSpan=""/>
+            android:text="DEL"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"/>
+
+        <!-- Fila 2: Números 7, 8, 9 y Resta -->
         <Button
             android:text="7"
-            android:layout_columnSpan=""/>
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"/>
         <Button
             android:text="8"
-            android:layout_columnSpan=""/>
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"/>
         <Button
             android:text="9"
-            android:layout_columnSpan=""/>
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"/>
+        <Button
+            android:text="-"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"/>
+
+        <!-- Fila 3: Números 4, 5, 6 y Suma -->
+        <Button
+            android:text="4"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"/>
+        <Button
+            android:text="5"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"/>
+        <Button
+            android:text="6"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"/>
+        <Button
+            android:text="+"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"/>
+
+        <!-- Fila 4: Números 1, 2, 3 e Igual -->
+        <Button
+            android:text="1"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"/>
+        <Button
+            android:text="2"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"/>
+        <Button
+            android:text="3"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"/>
+        <Button
+            android:text="="
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"/>
+
+        <!-- Fila 5: Cero (abarca dos columnas), Punto Decimal y Enter -->
         <Button
             android:text="0"
-            android:layout_columnSpan=""/>
-
-
-
+            android:layout_width="0dp"
+            android:layout_columnSpan="2"
+            android:layout_columnWeight="2"
+            android:layout_rowWeight="1"/>
+        <Button
+            android:text="."
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"/>
+        <Button
+            android:text="Enter"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"/>
 
     </GridLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
