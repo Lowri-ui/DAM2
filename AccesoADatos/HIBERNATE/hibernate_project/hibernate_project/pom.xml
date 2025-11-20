@@ -53,7 +53,32 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-		</plugins>
+            <plugin>
+                <groupId>org.hibernate.tool</groupId>
+                <artifactId>hibernate-tools-maven</artifactId>
+                <version>${hibernate.version}</version>
+                <executions> <execution>
+                    <id>generate-entities</id>
+                    <phase>generate-sources</phase>
+                    <goals>
+                        <goal>hbm2java</goal>
+                    </goals>
+                </execution>
+                </executions>
+                <configuration>
+                    <revengfile>src/main/resources/hibernate.reveng.xml</revengfile>
+                    <packageName>com.acc.datos.hibernate_project.pojos</packageName>
+                    <ejb3>true</ejb3>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>com.mysql</groupId>
+                        <artifactId>mysql-connector-j</artifactId>
+                        <version>8.0.33</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+        </plugins>
 	</build>
 
 </project>
