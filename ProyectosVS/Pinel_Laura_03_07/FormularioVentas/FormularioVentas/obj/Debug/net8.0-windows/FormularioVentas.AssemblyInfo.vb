@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("FormularioVentas"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5f6eb978170c596cf5c91f60f463ba6ca0dc9052"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+573f98ad86846de4f4f43c4ad32d442762d3c33e"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("FormularioVentas"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("FormularioVentas"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _
