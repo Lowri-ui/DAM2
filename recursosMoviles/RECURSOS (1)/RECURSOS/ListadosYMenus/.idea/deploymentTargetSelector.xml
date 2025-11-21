@@ -5,19 +5,19 @@
       <SelectionState runConfigName="app">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="OptionMenuActivity (1)">
+      <SelectionState runConfigName="MainActividad2">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="MenuSubmenuActivity">
+      <SelectionState runConfigName="MainActividad2 (1)">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="MenuContextualActivity">
+      <SelectionState runConfigName="MainActividad2 (2)">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="MenuContextualEnListaActivity">
+      <SelectionState runConfigName="MainActividad1 (1)">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="MainActividad9">
+      <SelectionState runConfigName="MainActividad1 (2)">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
     </selectionStates>

@@ -15,9 +15,10 @@
     <ListView
         android:id="@+id/listViewPlanetas"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:divider="@android:color/holo_red_dark"
         android:dividerHeight="2dp"
-        android:headerDividersEnabled="true"
-        android:footerDividersEnabled="true" />
+        android:footerDividersEnabled="true"
+        android:headerDividersEnabled="true" />
+
 </LinearLayout>
