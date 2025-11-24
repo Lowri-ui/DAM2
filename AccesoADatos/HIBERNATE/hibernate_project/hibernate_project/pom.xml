@@ -66,7 +66,7 @@
                 </execution>
                 </executions>
                 <configuration>
-                    <revengfile>src/main/resources/hibernate.reveng.xml</revengfile>
+                    <revengFile>src/main/resources/hibernate.reveng.xml</revengFile>
                     <packageName>com.acc.datos.hibernate_project.pojos</packageName>
                     <ejb3>true</ejb3>
                 </configuration>
