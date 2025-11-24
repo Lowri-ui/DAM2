@@ -14,18 +14,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActividad6 extends AppCompatActivity {
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.actividad6_layout);
 
-        //1.
-        ListView listViewVersiones = findViewById(R.id.listViewVersiones);
-        TextView tvTituloDetalle = findViewById(R.id.textViewTituloDetalle);
-        TextView tvDescripcionDetalle = findViewById(R.id.textViewDescripcionDetalle);
-        TextView tvInfoInferior = findViewById(R.id.textViewInfoInferior);
-
+    // Método que crea y devuelve la lista de versiones de Android
+    // Cada Encapsulador tiene imagen, título, descripción y estado de selección
+    private ArrayList<Encapsulador> cargarDatos() {
         ArrayList<Encapsulador> datos = new ArrayList<>();
+
+        // Primer elemento seleccionado por defecto (true)
         datos.add(new Encapsulador(
                 R.drawable.donuts,
                 "DONUTS",
@@ -33,6 +28,7 @@ public class MainActividad6 extends AppCompatActivity {
                 true
         ));
 
+        // Los demás elementos no seleccionados al inicio (false)
         datos.add(new Encapsulador(
                 R.drawable.froyo,
                 "FROYO",
@@ -82,22 +78,39 @@ public class MainActividad6 extends AppCompatActivity {
                 false
         ));
 
+        return datos; // devolvemos la lista completa
+    }
 
-        cargarDatos();
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.actividad6_layout); // cargamos el layout principal
+
+        // 1. Referencias a los elementos del layout
+        ListView listViewVersiones = findViewById(R.id.listViewVersiones);
+        TextView tvTituloDetalle = findViewById(R.id.textViewTituloDetalle);
+        TextView tvDescripcionDetalle = findViewById(R.id.textViewDescripcionDetalle);
+        TextView tvInfoInferior = findViewById(R.id.textViewInfoInferior);
+
+        // 2. Cargamos los datos de versiones de Android
+        ArrayList<Encapsulador> datos = cargarDatos();
+
+        // 3. Creamos el adaptador personalizado y lo asignamos al ListView
         VersionAdapter adaptador = new VersionAdapter(this, datos);
         listViewVersiones.setAdapter(adaptador);
 
+        // 4. Listener para detectar cuando se selecciona un elemento de la lista
         listViewVersiones.setOnItemClickListener((parent, view, position, id) -> {
-            //actualizarSeleccion(position);
-            adaptador.notifyDataSetChanged();
+            // Aquí podríamos actualizar el estado de selección, pero de momento solo refrescamos
+            adaptador.notifyDataSetChanged(); // refresca la lista para que se marque/desmarque
+
+            // Obtenemos el elemento seleccionado
             Encapsulador seleccion = datos.get(position);
+
+            // Actualizamos los TextViews con los detalles de la versión seleccionada
             tvTituloDetalle.setText(seleccion.getTitulo());
             tvDescripcionDetalle.setText(seleccion.getDescripcion());
             tvInfoInferior.setText(seleccion.getDescripcion());
         });
-    }
-
-    private void cargarDatos() {
-
     }
 }
