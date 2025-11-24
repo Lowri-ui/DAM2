@@ -1,16 +1,17 @@
 package com.example.listadosymenus;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActividad4 extends AppCompatActivity {
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.actividad4_layout);
 
@@ -25,9 +26,16 @@ public class MainActividad4 extends AppCompatActivity {
                 R.id.textViewItemPais,
                 paises);
         spinner.setAdapter(adapter);
-        spinner.setOnItemClickListener((parent, view, position, id) -> {
-            String seleccionado = paises[position];
-            textViewSeleccion.setText("Has seleccionado: " + seleccionado);
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String seleccionado = paises[position];
+                textViewSeleccion.setText("Has seleccionado: " + seleccionado);
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                textViewSeleccion.setText("No se ha seleccionado ningún país");
+            }
         });
     }
 }
