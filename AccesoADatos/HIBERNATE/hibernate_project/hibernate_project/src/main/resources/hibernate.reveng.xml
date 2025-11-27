@@ -4,12 +4,12 @@
         "https://hibernate.org/dtd/hibernate-reverse-engineering-3.0.dtd">
 <hibernate-reverse-engineering>
     <schema-selection match-catalog="proyecto_orm"/>
-    <table name="sede" class="com.acc.datos.laura.hibernate_project.POJOS.Sede">
+    <table name="sede" class="com.acc.datos.laura.hibernate_project.pojos.Sede">
         <primary-key>
             <generator class="identity"/>
         </primary-key>
     </table>
-    <table name="departamento" class="com.acc.datos.laura.hibernate_project.POJOS.Departamento">
+    <table name="departamento" class="com.acc.datos.laura.hibernate_project.pojos.Departamento">
         <primary-key>
             <generator class="identity"/>
         </primary-key>
@@ -17,14 +17,14 @@
             <many-to-one property="sede"/>
         </foreign-key>
     </table>
-    <table name="empleado" class="com.acc.datos.laura.hibernate_project.POJOS.Empleado">
+    <table name="empleado" class="com.acc.datos.laura.hibernate_project.pojos.Empleado">
 
         <column name="nom_emp" property="nombre"/> <foreign-key constraint-name="fk_empleado_depto">
 
         <many-to-one property="departamento"/>
     </foreign-key>
     </table>
-    <table name="empleado_datos_prof" class="com.acc.datos.laura.hibernate_project.POJOS.DatosProfesionales">
+    <table name="empleado_datos_prof" class="com.acc.datos.laura.hibernate_project.pojos.DatosProfesionales">
         <primary-key>
             <generator class="foreign">
                 <param name="property">empleado</param>
@@ -35,7 +35,7 @@
             <one-to-one property="empleado"/>
         </foreign-key>
     </table>
-    <table name="proyecto" class="com.acc.datos.laura.hibernate_project.POJOS.Proyecto">
+    <table name="proyecto" class="com.acc.datos.laura.hibernate_project.pojos.Proyecto">
         <primary-key>
             <generator class="identity"/>
         </primary-key>

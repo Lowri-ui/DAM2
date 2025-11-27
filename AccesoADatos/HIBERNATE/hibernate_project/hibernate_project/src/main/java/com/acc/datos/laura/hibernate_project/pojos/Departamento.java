@@ -1,17 +1,9 @@
-package com.acc.datos.laura.hibernate_project.POJOS;// default package
+package com.acc.datos.laura.hibernate_project.pojos;// default package
 // Generated 24 nov 2025, 10:22:24 by Hibernate Tools 6.6.33.Final
 
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.GeneratedValue;
-import static jakarta.persistence.GenerationType.IDENTITY;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -43,11 +35,10 @@ public class Departamento  implements java.io.Serializable {
        this.nomDepto = nomDepto;
        this.empleados = empleados;
     }
-   
-     @Id @GeneratedValue(strategy=IDENTITY)
 
-    
-    @Column(name="id_depto", unique=true, nullable=false)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_depto", unique = true, nullable = false)
     public Integer getIdDepto() {
         return this.idDepto;
     }

@@ -1,9 +1,7 @@
-package com.acc.datos.laura.hibernate_project.POJOS;
+package com.acc.datos.laura.hibernate_project.pojos;
 // Generated 24 nov 2025, 10:22:24 by Hibernate Tools 6.6.33.Final
 
 
-import com.acc.datos.hibernate_project.pojos.Proyecto;
-import com.acc.datos.hibernate_project.pojos.Sede;
 import jakarta.persistence.AttributeOverride;
 import jakarta.persistence.AttributeOverrides;
 import jakarta.persistence.Column;
@@ -28,8 +26,8 @@ public class ProyectoSede  implements java.io.Serializable {
 
 
      private ProyectoSedeId id;
-     private com.acc.datos.hibernate_project.pojos.Sede sede;
-     private com.acc.datos.hibernate_project.pojos.Proyecto proyecto;
+     private Sede sede;
+     private Proyecto proyecto;
      private Date FInicio;
      private Date FFin;
 
@@ -37,13 +35,13 @@ public class ProyectoSede  implements java.io.Serializable {
     }
 
 	
-    public ProyectoSede(ProyectoSedeId id, com.acc.datos.hibernate_project.pojos.Sede sede, com.acc.datos.hibernate_project.pojos.Proyecto proyecto, Date FInicio) {
+    public ProyectoSede(ProyectoSedeId id, Sede sede, Proyecto proyecto, Date FInicio) {
         this.id = id;
         this.sede = sede;
         this.proyecto = proyecto;
         this.FInicio = FInicio;
     }
-    public ProyectoSede(ProyectoSedeId id, com.acc.datos.hibernate_project.pojos.Sede sede, com.acc.datos.hibernate_project.pojos.Proyecto proyecto, Date FInicio, Date FFin) {
+    public ProyectoSede(ProyectoSedeId id, Sede sede, Proyecto proyecto, Date FInicio, Date FFin) {
        this.id = id;
        this.sede = sede;
        this.proyecto = proyecto;
@@ -67,7 +65,7 @@ public class ProyectoSede  implements java.io.Serializable {
 
 @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name="id_sede", nullable=false, insertable=false, updatable=false)
-    public com.acc.datos.hibernate_project.pojos.Sede getSede() {
+    public Sede getSede() {
         return this.sede;
     }
     
@@ -77,7 +75,7 @@ public class ProyectoSede  implements java.io.Serializable {
 
 @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name="id_proy", nullable=false, insertable=false, updatable=false)
-    public com.acc.datos.hibernate_project.pojos.Proyecto getProyecto() {
+    public Proyecto getProyecto() {
         return this.proyecto;
     }
     

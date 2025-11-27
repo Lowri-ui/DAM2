@@ -1,4 +1,4 @@
-package com.acc.datos.laura.hibernate_project.POJOS;// default package
+package com.acc.datos.laura.hibernate_project.pojos;// default package
 // Generated 24 nov 2025, 10:22:24 by Hibernate Tools 6.6.33.Final
 
 

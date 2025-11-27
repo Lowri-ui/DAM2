@@ -1,13 +1,9 @@
-package com.acc.datos.laura.hibernate_project.POJOS;// default package
+package com.acc.datos.laura.hibernate_project.pojos;// default package
 // Generated 24 nov 2025, 10:22:24 by Hibernate Tools 6.6.33.Final
 
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -41,13 +37,13 @@ public class Sede  implements java.io.Serializable {
        this.proyectoSedes = proyectoSedes;
     }
    
-     @Id 
 
-    
-    @Column(name="id_sede", unique=true, nullable=false)
-    public int getIdSede() {
-        return this.idSede;
-    }
+     @Id
+     @GeneratedValue(strategy = GenerationType.IDENTITY)
+     @Column(name = "id_sede", unique = true, nullable = false)
+     public int getIdSede() {
+         return this.idSede;
+     }
     
     public void setIdSede(int idSede) {
         this.idSede = idSede;
