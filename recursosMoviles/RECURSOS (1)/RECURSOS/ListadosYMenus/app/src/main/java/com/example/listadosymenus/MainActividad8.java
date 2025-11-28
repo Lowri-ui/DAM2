@@ -1,14 +1,13 @@
 package com.example.listadosymenus;
 
 import android.os.Bundle;
-import android.widget.GridView;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Spinner;
 import android.widget.TextView;
-
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.example.listadosymenus.adapters.VersionAdapter;
+import com.example.listadosymenus.adapters.VersionAdapterSpinner;
 import com.example.listadosymenus.pojos.Encapsulador;
 
 import java.util.ArrayList;
@@ -91,30 +90,21 @@ public class MainActividad8 extends AppCompatActivity {
         // 2. Cargamos los datos de versiones de Android
         ArrayList<Encapsulador> datos = cargarDatos();
 
-        // 3. Creamos el adaptador personalizado y lo asignamos al ListView
-        VersionAdapter adaptador = new VersionAdapter(this, datos);
+        // 3. Creamos el adaptador personalizado
+        VersionAdapterSpinner adaptador = new VersionAdapterSpinner(this, datos);
         sp.setAdapter(adaptador);
 
         // 4. Listener para detectar cuando se selecciona un elemento de la lista
-        sp.setOnItemClickListener((parent, view, position, id) -> {
-
-            //Quitamos el marcado del radiobutton
-            for (Encapsulador rb : datos){
-                rb.setSeleccionado(false);
-            }
-            // Marcamos el radiobutton pulsado
-            datos.get(position).setSeleccionado(true);
-
-            // Aquí podríamos actualizar el estado de selección, pero de momento solo refrescamos
-            adaptador.notifyDataSetChanged(); // refresca la lista para que se marque/desmarque
-
-            // Obtenemos el elemento seleccionado
-            Encapsulador seleccion = datos.get(position);
-
-            // Actualizamos los TextViews con los detalles de la versión seleccionada
-            tvTituloDetalle.setText(seleccion.getTitulo());
-            tvDescripcionDetalle.setText(seleccion.getDescripcion());
-        });
-
-    }
+            sp.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                // Llamada a los métodos onItemSelected y onNothingSelected para indicar la selección
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    Encapsulador seleccion = datos.get(position);
+                    tvTituloDetalle.setText(seleccion.getTitulo());
+                    tvDescripcionDetalle.setText(seleccion.getDescripcion());
+                }
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {}
+            });
+        }
 }
