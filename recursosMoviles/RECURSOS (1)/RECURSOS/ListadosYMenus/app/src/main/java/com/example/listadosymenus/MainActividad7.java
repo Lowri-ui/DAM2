@@ -1,15 +1,14 @@
-package com.example.listadosymenus.pojos;
+package com.example.listadosymenus;
 
 import android.os.Bundle;
 import android.widget.GridView;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.listadosymenus.R;
 import com.example.listadosymenus.adapters.VersionAdapter;
+import com.example.listadosymenus.pojos.Encapsulador;
 
 import java.util.ArrayList;
 
