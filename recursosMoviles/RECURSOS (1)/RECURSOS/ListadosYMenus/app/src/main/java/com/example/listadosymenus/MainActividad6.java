@@ -101,6 +101,14 @@ public class MainActividad6 extends AppCompatActivity {
 
         // 4. Listener para detectar cuando se selecciona un elemento de la lista
         listViewVersiones.setOnItemClickListener((parent, view, position, id) -> {
+
+            //Quitamos el marcado del radiobutton
+            for (Encapsulador rb : datos){
+                rb.setSeleccionado(false);
+            }
+            // Marcamos el radiobutton pulsado
+            datos.get(position).setSeleccionado(true);
+
             // Aquí podríamos actualizar el estado de selección, pero de momento solo refrescamos
             adaptador.notifyDataSetChanged(); // refresca la lista para que se marque/desmarque
 

@@ -18,15 +18,14 @@ public class MainActividad7 extends AppCompatActivity {
     private ArrayList<Encapsulador> cargarDatos() {
         ArrayList<Encapsulador> datos = new ArrayList<>();
 
-        // Primer elemento seleccionado por defecto (true)
         datos.add(new Encapsulador(
                 R.drawable.donuts,
                 "DONUTS",
                 "El 15 de septiembre de 2009 fue lanzado el SDK de Android 1.6 Donut, basado en el núcleo Linux 2.6.29. En la actualización se incluyeron numerosas características nuevas.",
-                true
+                false
+
         ));
 
-        // Los demás elementos no seleccionados al inicio (false)
         datos.add(new Encapsulador(
                 R.drawable.froyo,
                 "FROYO",
@@ -97,6 +96,14 @@ public class MainActividad7 extends AppCompatActivity {
 
         // 4. Listener para detectar cuando se selecciona un elemento de la lista
         gv.setOnItemClickListener((parent, view, position, id) -> {
+
+            //Quitamos el marcado del radiobutton
+            for (Encapsulador rb : datos){
+                rb.setSeleccionado(false);
+            }
+            // Marcamos el radiobutton pulsado
+            datos.get(position).setSeleccionado(true);
+
             // Aquí podríamos actualizar el estado de selección, pero de momento solo refrescamos
             adaptador.notifyDataSetChanged(); // refresca la lista para que se marque/desmarque
 
