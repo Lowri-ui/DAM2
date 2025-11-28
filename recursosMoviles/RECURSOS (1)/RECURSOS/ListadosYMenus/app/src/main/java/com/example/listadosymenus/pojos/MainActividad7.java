@@ -1,20 +1,19 @@
-package com.example.listadosymenus;
+package com.example.listadosymenus.pojos;
 
 import android.os.Bundle;
-import android.view.View;
+import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.listadosymenus.R;
 import com.example.listadosymenus.adapters.VersionAdapter;
-import com.example.listadosymenus.pojos.Encapsulador;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public class MainActividad6 extends AppCompatActivity {
-
+public class MainActividad7 extends AppCompatActivity {
     // Metodo que crea y devuelve la lista de versiones de Android
     // Cada Encapsulador tiene imagen, título, descripción y estado de selección
     private ArrayList<Encapsulador> cargarDatos() {
@@ -80,27 +79,25 @@ public class MainActividad6 extends AppCompatActivity {
 
         return datos; // devolvemos la lista completa
     }
-
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.actividad6_layout); // cargamos el layout principal
+        setContentView(R.layout.actividad7_layout); // cargamos el layout principal
 
         // 1. Referencias a los elementos del layout
-        ListView listViewVersiones = findViewById(R.id.listViewVersiones);
+        GridView gv = findViewById(R.id.gridViewVersiones);
         TextView tvTituloDetalle = findViewById(R.id.textViewTituloDetalle);
         TextView tvDescripcionDetalle = findViewById(R.id.textViewDescripcionDetalle);
-        TextView tvInfoInferior = findViewById(R.id.textViewInfoInferior);
 
         // 2. Cargamos los datos de versiones de Android
         ArrayList<Encapsulador> datos = cargarDatos();
 
         // 3. Creamos el adaptador personalizado y lo asignamos al ListView
         VersionAdapter adaptador = new VersionAdapter(this, datos);
-        listViewVersiones.setAdapter(adaptador);
+        gv.setAdapter(adaptador);
 
         // 4. Listener para detectar cuando se selecciona un elemento de la lista
-        listViewVersiones.setOnItemClickListener((parent, view, position, id) -> {
+        gv.setOnItemClickListener((parent, view, position, id) -> {
             // Aquí podríamos actualizar el estado de selección, pero de momento solo refrescamos
             adaptador.notifyDataSetChanged(); // refresca la lista para que se marque/desmarque
 
@@ -110,7 +107,7 @@ public class MainActividad6 extends AppCompatActivity {
             // Actualizamos los TextViews con los detalles de la versión seleccionada
             tvTituloDetalle.setText(seleccion.getTitulo());
             tvDescripcionDetalle.setText(seleccion.getDescripcion());
-            tvInfoInferior.setText(seleccion.getDescripcion());
         });
+
     }
 }
