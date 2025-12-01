@@ -11,7 +11,7 @@ import java.sql.ResultSet;
  * Al implementar CommandLineRunner, el metodo 'run' se ejecutará automáticamente
  * después de que la aplicación Spring Boot se haya iniciado.
  */
-@Component // Le dice a Spring que esta clase es un componente que debe gestionar.
+//@Component // Le dice a Spring que esta clase es un componente que debe gestionar.
 public class VerificadorConexion implements CommandLineRunner {
     // @Autowired le pide a Spring que nos "inyecte" o proporcione el objeto DataSource
 // que ya ha sido configurado automáticamente a partir de application.properties.
