@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F7E7B5"
+    tools:context=".MainActividad1">
+
+    <!-- línea superior azul claro -->
+<TextView
+    android:id="@+id/textViewTitulo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:padding="12dp"
+    android:text="LAURA PINEL --- PROGRAMACIÓN MULTIMEDIA ---"
+    android:textSize="18sp"
+    android:textStyle="bold"
+    android:background="#C3D9EA" />
+    <!-- título -->
+<TextView
+    android:id="@+id/textViewTitulo2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:padding="16dp"
+    android:text="ACTIVIDAD DE PREFERENCIAS"
+    android:textSize="20sp"
+    android:textStyle="bold"/>
+<Button
+    android:id="@+id/btnDefinir"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    android:background="#D3D3D3"
+    android:text="DEFINIR PREFERENCIAS" />
+<Button
+    android:id="@+id/btnRecuperar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    android:background="#D3D3D3"
+    android:text="RECUPERAR PREFERENCIAS" />
+
+    </LinearLayout>
