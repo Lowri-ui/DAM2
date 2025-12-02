@@ -3,20 +3,24 @@ package PracticasConCesar;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Timer;
-import java.util.TimerTask;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
-public class SistemaRiego extends TimerTask {
-    @Override
-    public void run() {
-        try{
+/**
+ * Build a program which uses a Thread to check the IP of the computer every two minutes
+ * and prompts a message if there is being some change. Use ScheduledExecutorService.
+ */
+
+public class Excercise2_ExecutorScheduled {
+    public static void main(String[] args) {
+
+        //create the schedule
+        ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
+
+        Runnable tarea = () ->{ try{
             //setting up external command
             ProcessBuilder pb = new ProcessBuilder( "cmd.exe", "/c", "ipconfig");
-
-            //deleting command process, just in case it's needed
-//            ProcessBuilder pb = new ProcessBuilder("cmd.exe", "/c",
-//                    "schtasks /delete /tn \"IP2Minutes Script\" /f"
-//            );
 
             //starting the process
             Process p = pb.start();
@@ -40,9 +44,10 @@ public class SistemaRiego extends TimerTask {
         }catch (IOException | InterruptedException e){
             System.out.println(e);
         }
-    }
-    public static void main(String[] args) throws InterruptedException {
-        Timer timer = new Timer();
-        timer.schedule(new SistemaRiego(), 1000, 120000);
+    };
+
+        // executes every 2 minutes (120secs)
+        scheduler.scheduleAtFixedRate(tarea, 0, 120, TimeUnit.SECONDS);
     }
 }
+

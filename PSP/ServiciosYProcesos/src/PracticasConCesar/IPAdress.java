@@ -8,7 +8,7 @@ import java.io.InputStreamReader;
  * Build a program which uses a Thread to check the IP of the computer every two minutes
  * and prompts a message if there is being some change. Use ScheduledExecutorService.
  */
-public class Excercise2_IPAdress {
+public class IPAdress {
     static void main(String[] args) throws IOException {
         try{
             //setting up external command
