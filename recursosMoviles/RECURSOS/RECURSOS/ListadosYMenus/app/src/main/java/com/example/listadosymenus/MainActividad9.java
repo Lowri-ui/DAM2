@@ -1,6 +1,10 @@
 package com.example.listadosymenus;
 
 import android.os.Bundle;
+import android.view.ContextMenu;
+import android.view.MenuInflater;
+import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import android.widget.Toolbar;
 
@@ -9,12 +13,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActividad9 extends AppCompatActivity {
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.actividad9_layout);
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.context_menu,menu);
 
-        Toolbar tb = findViewById(R.id.my_toolbar);
-        TextView tv = findViewById(R.id.textViewResultado);
-        
+        onContextItemSelected();
     }
 }
