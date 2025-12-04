@@ -2,42 +2,46 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <!-- Submenú: Animales Acuáticos -->
     <item
-        android:id="@+id/menu_archivo"
-        android:title="Archivo"
+        android:id="@+id/menu_acuaticos"
+        android:title="Animales Acuáticos"
         app:showAsAction="never">
-
         <menu>
             <item
-                android:id="@+id/submenu_nuevo"
-                android:title="Nuevo" />
+                android:id="@+id/animal_kelpie"
+                android:title="Kelpie" />
             <item
-                android:id="@+id/submenu_abrir"
-                android:title="Abrir" />
+                android:id="@+id/animal_merpeople"
+                android:title="Hombres Pez (Merpeople)" />
             <item
-                android:id="@+id/submenu_guardar"
-                android:title="Guardar" />
+                android:id="@+id/animal_goblinpez"
+                android:title="Goblin Pez" />
         </menu>
     </item>
 
+    <!-- Submenú: Animales Terrestres -->
     <item
-        android:id="@+id/menu_editar"
-        android:title="Editar"
+        android:id="@+id/menu_terrestres"
+        android:title="Animales Terrestres"
         app:showAsAction="never">
-
         <menu>
             <item
-                android:id="@+id/submenu_copiar"
-                android:title="Copiar" />
+                android:id="@+id/animal_unicornio"
+                android:title="Unicornio" />
             <item
-                android:id="@+id/submenu_pegar"
-                android:title="Pegar" />
+                android:id="@+id/animal_licantropo"
+                android:title="Licántropo" />
+            <item
+                android:id="@+id/animal_hipogrifo"
+                android:title="Hipogrifo" />
+            <item
+                android:id="@+id/animal_dragon"
+                android:title="Dragón" />
+            <item
+                android:id="@+id/animal_avefenix"
+                android:title="Ave Fénix" />
         </menu>
     </item>
-
-    <item
-        android:id="@+id/menu_ayuda"
-        android:title="Ayuda"
-        app:showAsAction="never" />
 
 </menu>

@@ -2,20 +2,32 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/opcion_a"
+        android:id="@+id/animal_unicornio"
         android:orderInCategory="100"
-        android:title="Opción de menú A"
+        android:title="Unicornio"
         app:showAsAction="never" />
 
     <item
-        android:id="@+id/opcion_b"
+        android:id="@+id/animal_dragon"
         android:orderInCategory="200"
-        android:title="Opción de menú B"
+        android:title="Dragón"
         app:showAsAction="never" />
 
     <item
-        android:id="@+id/opcion_c"
+        android:id="@+id/animal_licantropo"
         android:orderInCategory="300"
-        android:title="Opción de menú C"
+        android:title="Licántropo"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/animal_hipogrifo"
+        android:orderInCategory="400"
+        android:title="Hipogrifo"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/animal_AveFenix"
+        android:orderInCategory="500"
+        android:title="Ave Fénix"
         app:showAsAction="never" />
 </menu>

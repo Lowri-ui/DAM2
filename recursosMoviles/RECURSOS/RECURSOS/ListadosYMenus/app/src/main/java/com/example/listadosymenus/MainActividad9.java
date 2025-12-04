@@ -1,23 +1,31 @@
 package com.example.listadosymenus;
 
 import android.os.Bundle;
-import android.view.ContextMenu;
-import android.view.MenuInflater;
-import android.view.View;
-import android.widget.ArrayAdapter;
+import android.view.Menu;
 import android.widget.TextView;
-import android.widget.Toolbar;
-
-import androidx.annotation.Nullable;
+import androidx.appcompat.widget.Toolbar;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActividad9 extends AppCompatActivity {
-    @Override
-    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
-        super.onCreateContextMenu(menu, v, menuInfo);
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.context_menu,menu);
 
-        onContextItemSelected();
+
+public class MainActividad9 extends AppCompatActivity {
+
+    TextView tv;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.actividad9_layout);
+
+        tv = findViewById(R.id.textViewResultado);
+        Toolbar tb = findViewById(R.id.my_toolbar);
+        setSupportActionBar(tb);
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Cargar el menú desde XML
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return true;
+    }
+
 }

@@ -69,7 +69,7 @@ public class MenuContextualActivity extends AppCompatActivity {
             textView.setTypeface(null, Typeface.ITALIC);
             mostrarToast("Fuente: Cursiva");
             return true;
-        } else if (id == R.id.cambiar_tamano) {
+        } else if (id == R.id.tamano_normal) {
             if (esTamanoGrande) {
                 textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 22); // Volver a 22sp
                 mostrarToast("Tamaño: Normal");

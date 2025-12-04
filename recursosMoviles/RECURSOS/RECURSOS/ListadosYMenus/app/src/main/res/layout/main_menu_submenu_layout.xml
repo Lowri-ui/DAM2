@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MenuSubmenuActivity">
+    tools:context=".MainActividad9Parte2">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/my_toolbar"
@@ -15,12 +15,24 @@
         android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="¡Escoge tu animal fantástico!"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:fontFamily="serif"
+        android:textStyle="bold"
+        android:padding="8dp"
+        android:background="#B0BEC5"/>
     <TextView
         android:id="@+id/textViewResultadoSubmenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:text="Pulsa una opción del submenú..."
+        android:text="Pulsa una opción del submenú -->"
+        android:fontFamily="serif"
         android:textSize="20sp"
         android:gravity="center"/>
 
