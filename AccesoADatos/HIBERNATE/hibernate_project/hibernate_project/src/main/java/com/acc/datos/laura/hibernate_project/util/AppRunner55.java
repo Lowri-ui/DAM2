@@ -20,7 +20,7 @@ public class AppRunner55 implements CommandLineRunner {
 // Intentamos ejecutar el metodo transaccional.
             setupService55.actividad55();
             setupService55.verificarDatosCreados();
-            
+
         } catch (DataIntegrityViolationException e) {
 // Si algo falla dentro del metodo (ej. un DNI duplicado),
 // Spring primero hará ROLLBACK de la transacción.

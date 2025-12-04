@@ -1,46 +1,19 @@
 package PracticasConCesar.Examples;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.concurrent.*;
 
 public class ExecutorScheduled {
     public static void main(String[] args) {
 
-        //create the schedule
         ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
 
-        Runnable tarea = () ->{ try{
-            //setting up external command
-            ProcessBuilder pb = new ProcessBuilder( "cmd.exe", "/c", "ipconfig");
+        Runnable tarea = () -> System.out.println("Ejecución periódica");
 
-            //starting the process
-            Process p = pb.start();
+        // Ejecutar después de 3 segundos
+        scheduler.schedule(tarea, 3, TimeUnit.SECONDS);
 
-            //reading the output
-            BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
-            String line;
-
-            //printing the output lines
-            while ((line = br.readLine()) != null) {
-                System.out.println(line);
-            }
-
-            //closing the buffer
-            br.close();
-
-            //waits for the process to finish
-            int codigo = p.waitFor();
-            System.out.println("CODE SUCCESS: " + codigo);
-
-        }catch (IOException | InterruptedException e){
-            System.out.println(e);
-        }
-    };
-
-        // executes every 2 minutes (120secs)
-        scheduler.scheduleAtFixedRate(tarea, 0, 120, TimeUnit.SECONDS);
+        // Ejecutar cada 2 segundos
+        scheduler.scheduleAtFixedRate(tarea, 0, 2, TimeUnit.SECONDS);
     }
 }
 
