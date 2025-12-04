@@ -17,7 +17,8 @@ public class AppRunner implements CommandLineRunner {
         try {
 // Intentamos ejecutar el metodo transaccional.
 //            setupInicialService.crearDatosDeEjemplo();
-            setupInicialService.actividad55();
+//            setupInicialService.actividad55();
+            setupInicialService.verificarDatosCreados();
 
         } catch (DataIntegrityViolationException e) {
 // Si algo falla dentro del metodo (ej. un DNI duplicado),

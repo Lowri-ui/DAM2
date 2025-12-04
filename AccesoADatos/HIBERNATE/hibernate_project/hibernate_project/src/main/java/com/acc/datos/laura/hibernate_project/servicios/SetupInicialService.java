@@ -103,5 +103,18 @@ public class SetupInicialService {
         System.out.println("Empleado creado con DNI: " + nuevoEmpleado4.getDni());
 
     }
+    public void verificarDatosCreados() {
+        System.out.println("\n==== VERIFICACIÓN DE DATOS ====\n");
+
+        System.out.println("-- SEDES --");
+        sedeRepository.findAll().forEach(s -> System.out.println(s.getIdSede() + " - " + s.getNomSede()));
+
+        System.out.println("\n-- DEPARTAMENTOS --");
+        departamentoRepository.findAll().forEach(d -> System.out.println(d.getIdDepto() + " - " + d.getNomDepto()));
+
+        System.out.println("\n-- EMPLEADOS --");
+        empleadoRepository.findAll().forEach(e -> System.out.println(e.getDni() + " - " + e.getNomEmp()));
+    }
+
 
 }
