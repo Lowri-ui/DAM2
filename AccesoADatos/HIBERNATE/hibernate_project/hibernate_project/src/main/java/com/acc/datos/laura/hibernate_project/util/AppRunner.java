@@ -16,7 +16,9 @@ public class AppRunner implements CommandLineRunner {
         System.out.println("====================================================================");
         try {
 // Intentamos ejecutar el metodo transaccional.
-            setupInicialService.crearDatosDeEjemplo();
+//            setupInicialService.crearDatosDeEjemplo();
+            setupInicialService.actividad55();
+
         } catch (DataIntegrityViolationException e) {
 // Si algo falla dentro del metodo (ej. un DNI duplicado),
 // Spring primero hará ROLLBACK de la transacción.
