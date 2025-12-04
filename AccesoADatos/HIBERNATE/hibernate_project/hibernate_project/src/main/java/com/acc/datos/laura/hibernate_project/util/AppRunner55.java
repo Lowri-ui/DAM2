@@ -1,14 +1,16 @@
 package com.acc.datos.laura.hibernate_project.util;
 
 import com.acc.datos.laura.hibernate_project.servicios.SetupInicialService;
+import com.acc.datos.laura.hibernate_project.servicios.SetupService55;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.dao.DataIntegrityViolationException; // ¡Importante!
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Component;
-//@Component
-public class AppRunner implements CommandLineRunner {
+
+@Component
+public class AppRunner55 implements CommandLineRunner {
     @Autowired
-    private SetupInicialService setupInicialService;
+    private SetupService55 setupService55;
     @Override
     public void run(String... args) throws Exception {
         System.out.println("====================================================================");
@@ -16,8 +18,9 @@ public class AppRunner implements CommandLineRunner {
         System.out.println("====================================================================");
         try {
 // Intentamos ejecutar el metodo transaccional.
-            setupInicialService.crearDatosDeEjemplo();
-
+            setupService55.actividad55();
+            setupService55.verificarDatosCreados();
+            
         } catch (DataIntegrityViolationException e) {
 // Si algo falla dentro del metodo (ej. un DNI duplicado),
 // Spring primero hará ROLLBACK de la transacción.
