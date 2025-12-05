@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_04_01\\Pinel_Laura_04_01\\BBDDGuardarDataGridView\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A3E3C9A5-B8F5-478B-98C9-68285952B647}|BBDDGuardarDataGridView.vbproj|c:\\github\\dam2\\proyectosvs\\pinel_laura_04_01\\pinel_laura_04_01\\bbddguardardatagridview\\formclientes.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{A3E3C9A5-B8F5-478B-98C9-68285952B647}|BBDDGuardarDataGridView.vbproj|solutionrelative:formclientes.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3E3C9A5-B8F5-478B-98C9-68285952B647}|BBDDGuardarDataGridView.vbproj|c:\\github\\dam2\\proyectosvs\\pinel_laura_04_01\\pinel_laura_04_01\\bbddguardardatagridview\\formclientes.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{A3E3C9A5-B8F5-478B-98C9-68285952B647}|BBDDGuardarDataGridView.vbproj|solutionrelative:formclientes.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormClientes.vb",
+              "DocumentMoniker": "C:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_04_01\\Pinel_Laura_04_01\\BBDDGuardarDataGridView\\FormClientes.vb",
+              "RelativeDocumentMoniker": "FormClientes.vb",
+              "ToolTip": "C:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_04_01\\Pinel_Laura_04_01\\BBDDGuardarDataGridView\\FormClientes.vb",
+              "RelativeToolTip": "FormClientes.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-12-05T12:29:32.788Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormClientes.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_04_01\\Pinel_Laura_04_01\\BBDDGuardarDataGridView\\FormClientes.vb",
+              "RelativeDocumentMoniker": "FormClientes.vb",
+              "ToolTip": "C:\\GITHUB\\DAM2\\ProyectosVS\\Pinel_Laura_04_01\\Pinel_Laura_04_01\\BBDDGuardarDataGridView\\FormClientes.vb [Dise\u00F1o]",
+              "RelativeToolTip": "FormClientes.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-12-02T10:55:54.453Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
